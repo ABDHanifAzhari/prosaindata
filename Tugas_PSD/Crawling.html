@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crawling PTA &#8212; ABD. Hanif Azhari</title>
+    <title>Crawling Twitter &#8212; ABD. Hanif Azhari</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -119,7 +119,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Crawling PTA
+   Crawling Twitter
   </a>
  </li>
 </ul>
@@ -324,23 +324,70 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Crawling Twitter
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawling-pta">
+   Crawling PTA
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Crawling PTA</h1>
+                <h1>Crawling Twitter</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Crawling Twitter
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawling-pta">
+   Crawling PTA
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -348,7 +395,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <p>#Crawling Twitter</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="crawling-twitter">
+<h1>Crawling Twitter<a class="headerlink" href="#crawling-twitter" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip uninstall twint
@@ -379,7 +427,9 @@ title="Print to PDF"
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
 Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from twint) (3.8.4)
-Collecting aiodns
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiodns
   Downloading aiodns-3.0.0-py3-none-any.whl (5.0 kB)
 Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from twint) (4.6.3)
 </pre></div>
@@ -387,27 +437,31 @@ Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-p
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting cchardet
   Downloading cchardet-2.1.7-cp38-cp38-manylinux2010_x86_64.whl (265 kB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/266.0 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">266.0/266.0 KB</span> <span class=" -Color -Color-Red">19.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">266.0/266.0 KB</span> <span class=" -Color -Color-Red">19.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting elasticsearch
   Downloading elasticsearch-8.6.2-py3-none-any.whl (385 kB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/385.4 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">385.4/385.4 KB</span> <span class=" -Color -Color-Red">25.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">385.4/385.4 KB</span> <span class=" -Color -Color-Red">36.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hRequirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from twint) (1.7.1)
 Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (from twint) (1.3.5)
-Collecting aiohttp_socks
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiohttp_socks
   Downloading aiohttp_socks-0.8.0-py3-none-any.whl (9.4 kB)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting schedule
   Downloading schedule-1.1.0-py2.py3-none-any.whl (10 kB)
 Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from twint) (1.17.0)
-Collecting fake-useragent
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting fake-useragent
   Downloading fake_useragent-1.1.1-py3-none-any.whl (50 kB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/50.4 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">50.4/50.4 KB</span> <span class=" -Color -Color-Red">6.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">50.4/50.4 KB</span> <span class=" -Color -Color-Red">5.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
@@ -421,55 +475,56 @@ Collecting fake-useragent
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pycares&gt;=4.0.0
   Downloading pycares-4.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/289.0 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">289.0/289.0 KB</span> <span class=" -Color -Color-Red">23.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">289.0/289.0 KB</span> <span class=" -Color -Color-Red">28.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
 Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
-Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
-Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
-Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
 Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
 Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (21.4.0)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0
   Downloading python_socks-2.1.1-py3-none-any.whl (49 kB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/49.7 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">49.7/49.7 KB</span> <span class=" -Color -Color-Red">7.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hCollecting elastic-transport&lt;9,&gt;=8
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">49.7/49.7 KB</span> <span class=" -Color -Color-Red">5.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting elastic-transport&lt;9,&gt;=8
   Downloading elastic_transport-8.4.0-py3-none-any.whl (59 kB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/59.5 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">59.5/59.5 KB</span> <span class=" -Color -Color-Red">8.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">59.5/59.5 KB</span> <span class=" -Color -Color-Red">7.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hRequirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;twint) (5.10.2)
 Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;twint) (1.52)
 Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;twint) (2.25.1)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
 Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (1.21.6)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
 Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2022.7.1)
+Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
-Collecting urllib3&lt;2,&gt;=1.26.2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting urllib3&lt;2,&gt;=1.26.2
   Downloading urllib3-1.26.14-py2.py3-none-any.whl (140 kB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/140.6 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">140.6/140.6 KB</span> <span class=" -Color -Color-Red">17.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">140.6/140.6 KB</span> <span class=" -Color -Color-Red">15.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hRequirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.13.0)
 Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
 Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
 Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
 Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Building wheels for collected packages: twint, googletransx
+Building wheels for collected packages: twint, googletransx
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for twint (setup.py) ... ?25l?25hdone
-  Created wheel for twint: filename=twint-2.1.20-py3-none-any.whl size=33929 sha256=166c1b8e3cf695f4a05468cef505a021bf9a81a11ea6f799c0939514cc71b993
+  Created wheel for twint: filename=twint-2.1.20-py3-none-any.whl size=33929 sha256=f633debf83fcf9fb9250531c5eb4901e7c2c314c270817b5711fdb4c014b5653
   Stored in directory: /root/.cache/pip/wheels/4e/80/ea/5b82b5140b7dec857ec0bbfe908193ebf2e5d7f2ebee297519
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for googletransx (setup.py) ... ?25l?25hdone
-  Created wheel for googletransx: filename=googletransx-2.4.2-py3-none-any.whl size=15968 sha256=3ff8faad390e038f889d201a96df65eeaba0a8467f0ed32b7327727ba4028fe3
+  Created wheel for googletransx: filename=googletransx-2.4.2-py3-none-any.whl size=15968 sha256=98fa08ab6ed0331a3946c9c111bb26d3ad591684a16c523b7d745eaa9e5fbd81
   Stored in directory: /root/.cache/pip/wheels/6a/54/98/96b62f08dd73eca3147e36b5099d77c3f8fedc5472bb488167
 Successfully built twint googletransx
 </pre></div>
@@ -486,8 +541,8 @@ Successfully built twint googletransx
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Collecting twint
-  Cloning https://github.com/twintproject/twint.git (to revision origin/master) to /tmp/pip-install-x48_onpz/twint_fb209f6bfb66447186627006f6095607
-  Running command git clone --filter=blob:none --quiet https://github.com/twintproject/twint.git /tmp/pip-install-x48_onpz/twint_fb209f6bfb66447186627006f6095607
+  Cloning https://github.com/twintproject/twint.git (to revision origin/master) to /tmp/pip-install-i30hdlvp/twint_d2e8957d56794f6cbcbac2faa5087cf8
+  Running command git clone --filter=blob:none --quiet https://github.com/twintproject/twint.git /tmp/pip-install-i30hdlvp/twint_d2e8957d56794f6cbcbac2faa5087cf8
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">  WARNING: Did not find branch or tag &#39;origin/master&#39;, assuming revision or ref.</span>
@@ -513,39 +568,37 @@ Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (
 Requirement already satisfied: fake-useragent in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.1)
 Requirement already satisfied: googletransx in /usr/local/lib/python3.8/dist-packages (from twint) (2.4.2)
 Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.8/dist-packages (from aiodns-&gt;twint) (4.3.0)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
-Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
-Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
 Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
 Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
 Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (21.4.0)
 Requirement already satisfied: python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp_socks-&gt;twint) (2.1.1)
 Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.8/dist-packages (from elasticsearch-&gt;twint) (8.4.0)
 Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;twint) (5.10.2)
 Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;twint) (1.52)
 Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;twint) (2.25.1)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (1.21.6)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2022.7.1)
+Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
+Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (1.21.6)
-Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2022.7.1)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
-Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
-Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
-Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.13.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.13.0)
 Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
 Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
 Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
 Building wheels for collected packages: twint
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for twint (setup.py) ... ?25l?25hdone
-  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38870 sha256=b3a787f9e30ae3da397377a902fedef829b1aa95d0811990d41e6ce96d4d2b0e
-  Stored in directory: /tmp/pip-ephem-wheel-cache-8h0bc4sd/wheels/82/67/14/5495652787d3c55288164de4234c0712a1f785a64f61f1ea70
+  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38870 sha256=89401b036acead258d97ff842b69d2df38dec241e6759ef9433e6e9865c7d788
+  Stored in directory: /tmp/pip-ephem-wheel-cache-yu9rubqi/wheels/82/67/14/5495652787d3c55288164de4234c0712a1f785a64f61f1ea70
 Successfully built twint
 </pre></div>
 </div>
@@ -784,8 +837,1106 @@ Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.8/dist-pac
 </div>
 </div>
 </div>
+</div>
 <div class="tex2jax_ignore mathjax_ignore section" id="crawling-pta">
 <h1>Crawling PTA<a class="headerlink" href="#crawling-pta" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">req</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span> <span class="k">as</span> <span class="n">bs</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="n">hades</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;user-agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36&#39;</span><span class="p">}</span>
+<span class="n">header</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;user-agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#create an object HTTPresponse</span>
+<span class="k">def</span> <span class="nf">scrap_pta</span><span class="p">(</span><span class="n">hal</span><span class="p">):</span>
+  <span class="k">global</span> <span class="n">hades</span>
+  <span class="n">a</span><span class="o">=</span><span class="mi">0</span>
+  <span class="n">data</span><span class="o">=</span><span class="p">[]</span>
+  <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">hal</span><span class="p">):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/10/</span><span class="si">{</span><span class="n">page</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">hades</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+        <span class="n">prodi</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span><span class="s1">&#39;begin&#39;</span><span class="p">})</span>
+        <span class="k">for</span> <span class="n">pro</span> <span class="ow">in</span> <span class="n">prodi</span><span class="p">:</span>
+          <span class="n">prod</span> <span class="o">=</span> <span class="n">pro</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;h2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+          <span class="n">jur</span> <span class="o">=</span> <span class="n">prod</span><span class="p">[</span><span class="o">-</span><span class="mi">18</span><span class="p">:]</span>
+          <span class="n">utama</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ul&#39;</span><span class="p">,</span> <span class="s1">&#39;items list_style&#39;</span><span class="p">)</span>
+          <span class="n">perid</span> <span class="o">=</span> <span class="n">utama</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;data-id&#39;</span><span class="p">:</span><span class="s1">&#39;id-1&#39;</span><span class="p">})</span>
+          <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">perid</span><span class="p">:</span>
+            <span class="n">link</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;gray button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+            <span class="n">request2</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">hades</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+            <span class="n">soup2</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">request2</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+            <span class="n">abst</span><span class="o">=</span> <span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,{</span><span class="s1">&#39;align&#39;</span><span class="p">:</span><span class="s1">&#39;justify&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="n">NPM</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;gray button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">12</span><span class="p">:]</span>
+            <span class="n">headline</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;done[</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">] &gt; </span><span class="si">{</span><span class="n">headline</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">a</span><span class="o">+=</span><span class="mi">1</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">NPM</span><span class="p">,</span><span class="n">headline</span><span class="p">,</span><span class="n">abst</span><span class="p">,</span><span class="n">jur</span><span class="p">])</span>
+            <span class="n">kepala</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NPM&#39;</span><span class="p">,</span><span class="s1">&#39;Judul&#39;</span><span class="p">,</span><span class="s1">&#39;Abstrak&#39;</span><span class="p">]</span>
+            <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/prosaindata/tugas/Tugas_PSD/crawling_pta.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">kepala</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">datas</span> <span class="ow">in</span> <span class="n">data</span> <span class="p">:</span>
+              <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">datas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scrap_pta</span><span class="p">(</span><span class="mi">172</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>done[0] &gt; PERANCANGA
+done[1] &gt; APLIKASI K
+done[2] &gt; RANCANG BA
+done[3] &gt; SISTEM PEN
+done[4] &gt; SISTEM AUG
+done[5] &gt; Gerak Peke
+done[6] &gt; RANCANG BA
+done[7] &gt; EKSTRAKSI 
+done[8] &gt; IMPLEMENTA
+done[9] &gt; Perancanga
+done[10] &gt; PEMANFAATA
+done[11] &gt; APLIKASI M
+done[12] &gt; SISTEM PEN
+done[13] &gt; RANCANG BA
+done[14] &gt; DETEKSI CO
+done[15] &gt; SISTEM PEN
+done[16] &gt; PENGENALAN
+done[17] &gt; PENGENALAN
+done[18] &gt; SISTEM PER
+done[19] &gt; ONTOLOGY S
+done[20] &gt; RANCANG BA
+done[21] &gt; APLIKASI C
+done[22] &gt; ANALISA VA
+done[23] &gt; SISTEM PER
+done[24] &gt; PENGEMBANG
+done[25] &gt; SISTEM PEN
+done[26] &gt; PENGELOMPO
+done[27] &gt; APLIKASI C
+done[28] &gt; PENGENALAN
+done[29] &gt; Implementa
+done[30] &gt; RANCANG BA
+done[31] &gt; Aplikasi P
+done[32] &gt; Kalibrasi 
+done[33] &gt; PENERAPAN 
+done[34] &gt; Model Penj
+done[35] &gt; APLIKASI D
+done[36] &gt; Segmentasi
+done[37] &gt; ANALISA DA
+done[38] &gt; Deteksi Ma
+done[39] &gt; KLASIFIKAS
+done[40] &gt; PERANCANGA
+done[41] &gt; ANALISIS P
+done[42] &gt; SISTEM INF
+done[43] &gt; PENERAPAN 
+done[44] &gt; AUTO LEVEL
+done[45] &gt; RANCANG BA
+done[46] &gt; Pengenalan
+done[47] &gt; SISTEM PER
+done[48] &gt; SISTEM PER
+done[49] &gt; Visualisas
+done[50] &gt; IMPLEMENTA
+done[51] &gt; IMPLEMENTA
+done[52] &gt; PENGEMBANG
+done[53] &gt; ANALISIS D
+done[54] &gt; Rancang Ba
+done[55] &gt; RANCANG BA
+done[56] &gt; Rancang Ba
+done[57] &gt; Pengenalan
+done[58] &gt; Sistem Pen
+done[59] &gt; RANCANG BA
+done[60] &gt; SISTEM PER
+done[61] &gt; Sistem Pen
+done[62] &gt; SISTEM PEN
+done[63] &gt; Aplikasi P
+done[64] &gt; PENERAPAN 
+done[65] &gt; PENJADWALA
+done[66] &gt; Sistem Pem
+done[67] &gt; RANCANG BA
+done[68] &gt; SISTEM PER
+done[69] &gt; PENDETEKSI
+done[70] &gt; EKSTRAKSI 
+done[71] &gt; Rancang Ba
+done[72] &gt; Analisa Pe
+done[73] &gt; EKSTRAKSI 
+done[74] &gt; Manajemen 
+done[75] &gt; APLIKASI S
+done[76] &gt; DESAIN DAN
+done[77] &gt; Sistem Inf
+done[78] &gt; PENERAPAN 
+done[79] &gt; RANCANG BA
+done[80] &gt; Pencarian 
+done[81] &gt; RANCANG BA
+done[82] &gt; Aplikasi P
+done[83] &gt; ANALISA KE
+done[84] &gt; Analisa Kl
+done[85] &gt; APLIKASI X
+done[86] &gt; ANALISA FA
+done[87] &gt; Sistem Pen
+done[88] &gt; IMPLEMENTA
+done[89] &gt; Implementa
+done[90] &gt; APLIKASI P
+done[91] &gt; DISASTER M
+done[92] &gt; Pencocokan
+done[93] &gt; IDENTIFIKA
+done[94] &gt; Pengenalan
+done[95] &gt; PEMANFAATA
+done[96] &gt; SISTEM PEN
+done[97] &gt; KLASIFIKAS
+done[98] &gt; EKSTRAKSI 
+done[99] &gt; Implementa
+done[100] &gt; SEGMENTASI
+done[101] &gt; PENGELOMPO
+done[102] &gt; PENGELOMPO
+done[103] &gt; IDENTIFIKA
+done[104] &gt; PREDIKSI K
+done[105] &gt; PENGELOMPO
+done[106] &gt; RANCANG BA
+done[107] &gt; PENGEMBANG
+done[108] &gt; SISTEM PER
+done[109] &gt; Penerapan 
+done[110] &gt; PENGENALAN
+done[111] &gt; RANCANG BA
+done[112] &gt; Perbanding
+done[113] &gt; PERBANDING
+done[114] &gt; IMPLEMENTA
+done[115] &gt; KLASIFIKAS
+done[116] &gt; Gender Rec
+done[117] &gt; PERBANDING
+done[118] &gt; RANCANG BA
+done[119] &gt; Sistem ana
+done[120] &gt; PERBANDING
+done[121] &gt; RANCANG BA
+done[122] &gt; Aplikasi P
+done[123] &gt; Rancang Ba
+done[124] &gt; Sistem Pem
+done[125] &gt; PENGENALAN
+done[126] &gt; PERBANDING
+done[127] &gt; Implementa
+done[128] &gt; Pengembang
+done[129] &gt; PERANCANGA
+done[130] &gt; Market Bas
+done[131] &gt; KLASIFIKAS
+done[132] &gt; Klasifikas
+done[133] &gt; Penerapan 
+done[134] &gt; PEMANFAATA
+done[135] &gt; Sistem Det
+done[136] &gt; SISTEM PEN
+done[137] &gt; Pengenalan
+done[138] &gt; Berhitung 
+done[139] &gt; Rancang Ba
+done[140] &gt; Rancang Ba
+done[141] &gt; Pemetaan K
+done[142] &gt; Pengenalan
+done[143] &gt; Analisis D
+done[144] &gt; DESAIN SIS
+done[145] &gt; SIMULASI L
+done[146] &gt; Implementa
+done[147] &gt; SISTEM PEN
+done[148] &gt; PENGENALAN
+done[149] &gt; IMPLEMENTA
+done[150] &gt; PEMANFAATA
+done[151] &gt; Sistem Per
+done[152] &gt; Rancang Ba
+done[153] &gt; Sistem Per
+done[154] &gt; PENERAPAN 
+done[155] &gt; PENGELOMPO
+done[156] &gt; IMPLEMENTA
+done[157] &gt; Rancang Ba
+done[158] &gt; SistemReko
+done[159] &gt; Desain gam
+done[160] &gt; SISTEM PEN
+done[161] &gt; SISTEM PEN
+done[162] &gt; Aplikasi M
+done[163] &gt; IMPLEMENTA
+done[164] &gt; SISTEM PEN
+done[165] &gt; APLIKASI B
+done[166] &gt; SISTEM PAK
+done[167] &gt; PENERAPAN 
+done[168] &gt; IDENTIFIKA
+done[169] &gt; Sistem Pak
+done[170] &gt; GPS TRACKI
+done[171] &gt; RANCANG BA
+done[172] &gt; ANALISA PR
+done[173] &gt; POS (POINT
+done[174] &gt; PENGENALAN
+done[175] &gt; SISTEM PEN
+done[176] &gt; GAME EDUKA
+done[177] &gt; SISTEM REK
+done[178] &gt; RANCANG  B
+done[179] &gt; ANALISA BA
+done[180] &gt; ANALISIS J
+done[181] &gt; Aplikasi T
+done[182] &gt; Interaksi 
+done[183] &gt; IMPLEMENTA
+done[184] &gt; KLASIFIKAS
+done[185] &gt; PENGENALAN
+done[186] &gt; âKLASIFI
+done[187] &gt; SISTEM PER
+done[188] &gt; PERAMALAN 
+done[189] &gt; RANCANG BA
+done[190] &gt; CLUSTERING
+done[191] &gt; SISTEM INF
+done[192] &gt; SEGMENTASI
+done[193] &gt; Penerapan 
+done[194] &gt; PERBANDING
+done[195] &gt; SISTEM PEN
+done[196] &gt; DESIGN AND
+done[197] &gt; MEDIA PEMB
+done[198] &gt; Deteksi da
+done[199] &gt; Sistem Vis
+done[200] &gt; Penyatuan 
+done[201] &gt; Implementa
+done[202] &gt; PENGEMBANG
+done[203] &gt; PENGENALAN
+done[204] &gt; SISTEM PEN
+done[205] &gt; PEMANFAATA
+done[206] &gt; RANCANG BA
+done[207] &gt; Kontrol Ul
+done[208] &gt; ANALISA JA
+done[209] &gt; RANCANG BA
+done[210] &gt; PENGELOMPO
+done[211] &gt; Aplikasi P
+done[212] &gt; IMPLEMENTA
+done[213] &gt; Rancang Ba
+done[214] &gt; RANCANGBAN
+done[215] &gt; PERANCANGA
+done[216] &gt; PENGEMBANG
+done[217] &gt; SISTEM PEN
+done[218] &gt; DETEKSI LO
+done[219] &gt; Pengenalan
+done[220] &gt; PENGENALAN
+done[221] &gt; IMPLEMENTA
+done[222] &gt; OPTIMALISA
+done[223] &gt; PERBANDING
+done[224] &gt; Rancang Ba
+done[225] &gt; SEGMENTASI
+done[226] &gt; Penerapan 
+done[227] &gt; Sistem FAQ
+done[228] &gt; SISTEM PEN
+done[229] &gt; RANCANG BA
+done[230] &gt; PENGELOMPO
+done[231] &gt; RANCANG BA
+done[232] &gt; EDI (ELECT
+done[233] &gt; APLIKASI P
+done[234] &gt; Perancanga
+done[235] &gt; Informasi 
+done[236] &gt; Rancang Ba
+done[237] &gt; ANALISA EK
+done[238] &gt; SISTEM REK
+done[239] &gt; SISTEM REK
+done[240] &gt; KLASIFIKAS
+done[241] &gt; RANCANG BA
+done[242] &gt; Rancang Ba
+done[243] &gt; RANCANG BA
+done[244] &gt; Sistem Pen
+done[245] &gt; Perancanga
+done[246] &gt; Rancang Ba
+done[247] &gt; Rancang Ba
+done[248] &gt; IMPLEMENTA
+done[249] &gt; RANCANG BA
+done[250] &gt; SISTEM PEN
+done[251] &gt; IMPLEMENTA
+done[252] &gt; IMPLEMENTA
+done[253] &gt; Pengaturan
+done[254] &gt; VISUALISAS
+done[255] &gt; Pengenalan
+done[256] &gt; SISTEM PEN
+done[257] &gt; PENERAPAN 
+done[258] &gt; SISTEM PER
+done[259] &gt; Segmentasi
+done[260] &gt; Rancang Ba
+done[261] &gt; Pengelompo
+done[262] &gt; MANAJEMEN 
+done[263] &gt; SISTEM INF
+done[264] &gt; OPTIMALISA
+done[265] &gt; PENGELOMPO
+done[266] &gt; Sistem Pen
+done[267] &gt; SISTEM INF
+done[268] &gt; IMPLEMENTA
+done[269] &gt; Sistem Rek
+done[270] &gt; IMPLEMENTA
+done[271] &gt; IMPLEMENTA
+done[272] &gt; Implementa
+done[273] &gt; Sistem  In
+done[274] &gt; PERANCANGA
+done[275] &gt; SISTEM PEN
+done[276] &gt; RANCANG BA
+done[277] &gt; PENGEMBANG
+done[278] &gt; RANCANG BA
+done[279] &gt; IMPLEMENTA
+done[280] &gt; SEGMENTASI
+done[281] &gt; Segmentasi
+done[282] &gt; PENERAPAN 
+done[283] &gt; RANCANG BA
+done[284] &gt; KEAMANAN C
+done[285] &gt; PERANCANGA
+done[286] &gt; RANCANG BA
+done[287] &gt; Pengenalan
+done[288] &gt; RANCANG BA
+done[289] &gt; PERBANDING
+done[290] &gt; rancang ba
+done[291] &gt; APLIKASI T
+done[292] &gt; SISTEM MON
+done[293] &gt; PENGEMBANG
+done[294] &gt; Klasifikas
+done[295] &gt; Rancang Ba
+done[296] &gt; PENERAPAN 
+done[297] &gt; GAME EDUKA
+done[298] &gt; Implementa
+done[299] &gt; SISTEM PEN
+done[300] &gt; Pemetaan S
+done[301] &gt; REKOMENDAS
+done[302] &gt; âVirtual
+done[303] &gt; SISTEM PEN
+done[304] &gt; Pemanfaata
+done[305] &gt; Segmentasi
+done[306] &gt; PENCARIAN 
+done[307] &gt; MEDIA PEMB
+done[308] &gt; SEGMENTASI
+done[309] &gt; Pemetaan K
+done[310] &gt; PENCARIAN 
+done[311] &gt; RANCANG BA
+done[312] &gt; SISTEM PEN
+done[313] &gt; IMPLEMENTA
+done[314] &gt; PEMBUATAN 
+done[315] &gt; âRANCANG
+done[316] &gt; SISTEM  IN
+done[317] &gt; PENERAPAN 
+done[318] &gt; Sistem Pen
+done[319] &gt; SISTEM PEN
+done[320] &gt; Sistem Pen
+done[321] &gt; Sistem Pen
+done[322] &gt; Sistem Pen
+done[323] &gt; IMPLEMENTA
+done[324] &gt; Rekomendas
+done[325] &gt; SISTEM INF
+done[326] &gt; Rancang Ba
+done[327] &gt; RANCANG BA
+done[328] &gt; RANCANG BA
+done[329] &gt; SISTEM MON
+done[330] &gt; RANCANG BA
+done[331] &gt; Sistem Tem
+done[332] &gt; RANCANG BA
+done[333] &gt; PERANCANGA
+done[334] &gt; SISTEM INF
+done[335] &gt; SISTEM BIS
+done[336] &gt; SISTEM REK
+done[337] &gt; SISTEM PEN
+done[338] &gt; SENTIMENT 
+done[339] &gt; IMPLEMENTA
+done[340] &gt; SISTEM MON
+done[341] &gt; KLASTERING
+done[342] &gt; Sistem Inf
+done[343] &gt; SEGMENTASI
+done[344] &gt; PENGEMBANG
+done[345] &gt; SEGMENTASI
+done[346] &gt; PERBANDING
+done[347] &gt; PENGENALAN
+done[348] &gt; SISTEM INF
+done[349] &gt; RANCANG BA
+done[350] &gt; PERANCANGA
+done[351] &gt; RANCANG BA
+done[352] &gt; Pengelompo
+done[353] &gt; RANCANG BA
+done[354] &gt; SISTEM INF
+done[355] &gt; Penerapan 
+done[356] &gt; SISTEM PEN
+done[357] &gt; IDENTIFIKA
+done[358] &gt; PERANCANGA
+done[359] &gt; RANCANG BA
+done[360] &gt; RANCANG BA
+done[361] &gt; SISTEM INF
+done[362] &gt; Sistem Inf
+done[363] &gt; PENERAPAN 
+done[364] &gt; SISTEM INF
+done[365] &gt; Sistem Inf
+done[366] &gt; RANCANG BA
+done[367] &gt; SISTEM INF
+done[368] &gt; ANALISIS P
+done[369] &gt; SISTEM PEN
+done[370] &gt; RANCANG BA
+done[371] &gt; SISTEM INF
+done[372] &gt; IMPLEMENTA
+done[373] &gt; Sistem Inf
+done[374] &gt; RANCANG BA
+done[375] &gt; Sistem Pen
+done[376] &gt; PENGEMBANG
+done[377] &gt; ERANCANGAN
+done[378] &gt; RANCANG BA
+done[379] &gt; PERANCANGA
+done[380] &gt; RANCANG BA
+done[381] &gt; SISTEM PAK
+done[382] &gt; SISTEM PEN
+done[383] &gt; PERANCANGA
+done[384] &gt; PEMBUATAN 
+done[385] &gt; Sistem Din
+done[386] &gt; IMPLEMENTA
+done[387] &gt; Pengembang
+done[388] &gt; Perancanga
+done[389] &gt; PERINGKASA
+done[390] &gt; RANCANG BA
+done[391] &gt; RANCANG BA
+done[392] &gt; RANCANG BA
+done[393] &gt; RANCANG BA
+done[394] &gt; RANCANG BA
+done[395] &gt; RANCANG BA
+done[396] &gt; Rancang Ba
+done[397] &gt; RANCANG BA
+done[398] &gt; ANALISA WE
+done[399] &gt; Sistem Mon
+done[400] &gt; Pengaruh P
+done[401] &gt; PENGURANGA
+done[402] &gt; RANCANG BA
+done[403] &gt; RANCANG BA
+done[404] &gt; PENERAPAN 
+done[405] &gt; SISTEM PEN
+done[406] &gt; APLIKASI P
+done[407] &gt; SISTEM PEN
+done[408] &gt; Sistem Pen
+done[409] &gt; SISTEM INF
+done[410] &gt; SISTEM PEN
+done[411] &gt; âKLASIFI
+done[412] &gt; SISTEM PEN
+done[413] &gt; SISTEM IMP
+done[414] &gt; SISTEM PEN
+done[415] &gt; SISTEM MAN
+done[416] &gt; TUGAS AKHI
+done[417] &gt; PENERAPAN 
+done[418] &gt; RANCANG BA
+done[419] &gt; Sistem Pen
+done[420] &gt; Aplikasi P
+done[421] &gt; Visualisas
+done[422] &gt; Klasifikas
+done[423] &gt; Membangun 
+done[424] &gt; SISTEM PEN
+done[425] &gt; SISTEM PEN
+done[426] &gt; Sistem Pen
+done[427] &gt; RANCANG BA
+done[428] &gt; Penetapan 
+done[429] &gt; SISTEM REK
+done[430] &gt; KLASIFIKAS
+done[431] &gt; SISTEM PAK
+done[432] &gt; KLASIFIKAS
+done[433] &gt; Sistem Pen
+done[434] &gt; Klasifikas
+done[435] &gt; Integrasi 
+done[436] &gt; Penerapan 
+done[437] &gt; PENERAPAN 
+done[438] &gt; Sistem Pen
+done[439] &gt; Klasifikas
+done[440] &gt; KLASIFIKAS
+done[441] &gt; Deteksi Op
+done[442] &gt; SISTEM PEN
+done[443] &gt; RANCANG BA
+done[444] &gt; PENERAPAN 
+done[445] &gt; PENERAPAN 
+done[446] &gt; APLIKASI P
+done[447] &gt; SISTEM PEN
+done[448] &gt; SISTEM PEN
+done[449] &gt; PEMODELAN 
+done[450] &gt; APLIKASI P
+done[451] &gt; SISTEM PEN
+done[452] &gt; ANALISA TI
+done[453] &gt; SISTEM PEN
+done[454] &gt; SISTEM DIN
+done[455] &gt; PERANCANGA
+done[456] &gt; Sistem Rek
+done[457] &gt; KLASIFIKAS
+done[458] &gt; SISTEM PEN
+done[459] &gt; Aplikasi U
+done[460] &gt; Analisa Pe
+done[461] &gt; ANALISA KI
+done[462] &gt; APLIKASI M
+done[463] &gt; PNERAPAN M
+done[464] &gt; Sistem Pen
+done[465] &gt; SISTEM TEM
+done[466] &gt; SISTEM PEN
+done[467] &gt; SISTEM PEN
+done[468] &gt; Sistem Pen
+done[469] &gt; Rancang Ba
+done[470] &gt; Perancanga
+done[471] &gt; Perancanga
+done[472] &gt; Klasifikas
+done[473] &gt; Simulasi I
+done[474] &gt; Implementa
+done[475] &gt; SISTEM PEN
+done[476] &gt; SISTEM PEN
+done[477] &gt; Identifika
+done[478] &gt; SISTEM INF
+done[479] &gt; SISTEM KOR
+done[480] &gt; SISTEM MAN
+done[481] &gt; SISTEM INF
+done[482] &gt; SISTEM INF
+done[483] &gt; IDENTIFIKA
+done[484] &gt; RANCANG BA
+done[485] &gt; IDENTIFIKA
+done[486] &gt; SISTEM INF
+done[487] &gt; Sistem Pen
+done[488] &gt; Pengenalan
+done[489] &gt; ANALISIS S
+done[490] &gt; RANCANG BA
+done[491] &gt; RANCANG BA
+done[492] &gt; PERBANDING
+done[493] &gt; SISTEM PEN
+done[494] &gt; APLIKASI K
+done[495] &gt; SISTEM INF
+done[496] &gt; PEMODELAN 
+done[497] &gt; CUSTOMER P
+done[498] &gt; Analytical
+done[499] &gt; VIRTUAL RE
+done[500] &gt; VIRTUAL RE
+done[501] &gt; SISTEM MON
+done[502] &gt; DETEKSI OP
+done[503] &gt; CONTENT BA
+done[504] &gt; SISTEM INF
+done[505] &gt; PEMBUATAN 
+done[506] &gt; Perangking
+done[507] &gt; RANCANG BA
+done[508] &gt; KLASTERISA
+done[509] &gt; RANCANG BA
+done[510] &gt; IMPLEMENTA
+done[511] &gt; SISTEM PEN
+done[512] &gt; IMPLEMENTA
+done[513] &gt; Implementa
+done[514] &gt; IMPLEMENTA
+done[515] &gt; PERBANDING
+done[516] &gt; IMPLEMENTA
+done[517] &gt; RANCANG BA
+done[518] &gt; PERANCANGA
+done[519] &gt; RANCANG BA
+done[520] &gt; PERBANDING
+done[521] &gt; IMPLEMENTA
+done[522] &gt; Web Crawle
+done[523] &gt; SISTEM PEN
+done[524] &gt; PENERAPAN 
+done[525] &gt; APLIKASI S
+done[526] &gt; RANCANG BA
+done[527] &gt; SISTEM PEN
+done[528] &gt; KLASIFIKAS
+done[529] &gt; DESAIN DAN
+done[530] &gt; RANCANG BA
+done[531] &gt; Pengembang
+done[532] &gt; IDENTIFIKA
+done[533] &gt; OPINION MI
+done[534] &gt; MENILAI KI
+done[535] &gt; RANCANG BA
+done[536] &gt; PERANCANGA
+done[537] &gt; Sistem Pen
+done[538] &gt; CLUSTERING
+done[539] &gt; RANCANG BA
+done[540] &gt; SMART HOME
+done[541] &gt; Klasifikas
+done[542] &gt; IMPLEMENTA
+done[543] &gt; APLIKASI T
+done[544] &gt; APLIKASI T
+done[545] &gt; APLIKASI T
+done[546] &gt; 
+done[547] &gt; IMPLEMENTA
+done[548] &gt; Penentuan 
+done[549] &gt; Pengembang
+done[550] &gt; PENGENALAN
+done[551] &gt; Pengenalan
+done[552] &gt; Sistem Pak
+done[553] &gt; 
+done[554] &gt; SELEKSI FI
+done[555] &gt; PENERAPAN 
+done[556] &gt; PENGUKURAN
+done[557] &gt; PENGEMBANG
+done[558] &gt; IMPLEMENTA
+done[559] &gt; PENERAPAN 
+done[560] &gt; KLASIFIKAS
+done[561] &gt; PEMODELAN 
+done[562] &gt; IDENTIFIKA
+done[563] &gt; PENERAPAN 
+done[564] &gt; Klasterisa
+done[565] &gt; PERANCANGA
+done[566] &gt; PENERAPAN 
+done[567] &gt; APLIKASI P
+done[568] &gt; APLIKASI F
+done[569] &gt; Sistem Pen
+done[570] &gt; IDENTIFIKA
+done[571] &gt; IMPLEMENTA
+done[572] &gt; Implementa
+done[573] &gt; Pengembang
+done[574] &gt; PENERAPAN 
+done[575] &gt; Rancang Ba
+done[576] &gt; 
+done[577] &gt; 
+done[578] &gt; Aplikasi M
+done[579] &gt; SISTEM REK
+done[580] &gt; PENGEMBANG
+done[581] &gt; DETEKSI AC
+done[582] &gt; Penentuan 
+done[583] &gt; Pengembang
+done[584] &gt; KONTROL  S
+done[585] &gt; Web Crawle
+done[586] &gt; Klasifikas
+done[587] &gt; PERANKINGA
+done[588] &gt; Penerapan 
+done[589] &gt; MEDIA PEMB
+done[590] &gt; PENENTUAN 
+done[591] &gt; Sistem Pen
+done[592] &gt; RANCANG BA
+done[593] &gt; PENENTUAN 
+done[594] &gt; Rancang Ba
+done[595] &gt; KLASIFIKAS
+done[596] &gt; Sistem Pem
+done[597] &gt; -
+done[598] &gt; SISTEM PEN
+done[599] &gt; SISTEM INF
+done[600] &gt; Rancang Ba
+done[601] &gt; PERAMALAN 
+done[602] &gt; PENERAPAN 
+done[603] &gt; Sistem Tem
+done[604] &gt; EFEKTIFITA
+done[605] &gt; IMPLEMENTA
+done[606] &gt; Identifika
+done[607] &gt; SELEKSI FI
+done[608] &gt; 
+done[609] &gt; Sistem Pen
+done[610] &gt; 
+done[611] &gt; Sistem Inf
+done[612] &gt; PENERAPAN 
+done[613] &gt; Pengenalan
+done[614] &gt; PENERAPAN 
+done[615] &gt; PENERAPAN 
+done[616] &gt; PERANGKING
+done[617] &gt; Sistem Inf
+done[618] &gt; Rancang Ba
+done[619] &gt; PEMBANGKIT
+done[620] &gt; Penggunaan
+done[621] &gt; PEMBUATAN 
+done[622] &gt; PENERAPAN 
+done[623] &gt; PENERAPAN 
+done[624] &gt; IMPLEMENTA
+done[625] &gt; SISTEM PAK
+done[626] &gt; Penerapan 
+done[627] &gt; RANCANG BA
+done[628] &gt; PENERAPAN 
+done[629] &gt; Aplikasi E
+done[630] &gt; PEMANFAATA
+done[631] &gt; PENERAPAN 
+done[632] &gt; RESTful WE
+done[633] &gt; PENERAPAN 
+done[634] &gt; PENERAPAN 
+done[635] &gt; PENGUKURAN
+done[636] &gt; IMPLEMENTA
+done[637] &gt; SISTEM MON
+done[638] &gt; Sistem Inf
+done[639] &gt; Survey Onl
+done[640] &gt; SISTEM PEN
+done[641] &gt; SISTEM MON
+done[642] &gt; SIMULASI K
+done[643] &gt; ANALISIS P
+done[644] &gt; Pemilihan 
+done[645] &gt; AUGMENTED 
+done[646] &gt; EKSTRAKSI 
+done[647] &gt; Perancanga
+done[648] &gt; COMPUTERIZ
+done[649] &gt; Sistem Pen
+done[650] &gt; Sistem Rek
+done[651] &gt; SISTEM INF
+done[652] &gt; Rancang Ba
+done[653] &gt; Penerapan 
+done[654] &gt; Perbanding
+done[655] &gt; PEMETAAN P
+done[656] &gt; Analisis P
+done[657] &gt; Analisis S
+done[658] &gt; PEMODELAN 
+done[659] &gt; PEMODELAN 
+done[660] &gt; Diagnosis 
+done[661] &gt; IDENTIFIKA
+done[662] &gt; Implementa
+done[663] &gt; PENAMBAHAN
+done[664] &gt; ESTIMASI B
+done[665] &gt; SISTEM REK
+done[666] &gt; PENCARIAN 
+done[667] &gt; Penerapan 
+done[668] &gt; Aplikasi M
+done[669] &gt; IMPLEMENTA
+done[670] &gt; Sistem Inf
+done[671] &gt; DIAGNOSIS 
+done[672] &gt; PENERAPAN 
+done[673] &gt; IDENTIFIKA
+done[674] &gt; PENENTUAN 
+done[675] &gt; KLASIFIKAS
+done[676] &gt; Penerapan 
+done[677] &gt; ESTIMASI B
+done[678] &gt; KOMBINASI 
+done[679] &gt; PERBANDING
+done[680] &gt; Penerapan 
+done[681] &gt; Segmentasi
+done[682] &gt; PENERAPAN 
+done[683] &gt; Segmentasi
+done[684] &gt; Sistem Rek
+done[685] &gt; PENERAPAN 
+done[686] &gt; Sistem Pen
+done[687] &gt; PENERAPAN 
+done[688] &gt; Sistem Pen
+done[689] &gt; PENERAPAN 
+done[690] &gt; Penentuan 
+done[691] &gt; IDENTIFIKA
+done[692] &gt; PENERAPAN 
+done[693] &gt; Aplikasi S
+done[694] &gt; APLIKASI K
+done[695] &gt; RANCANG BA
+done[696] &gt; SISTEM PEN
+done[697] &gt; PENERAPAN 
+done[698] &gt; IMPLEMENTA
+done[699] &gt; PENDETEKSI
+done[700] &gt; APLIKASI A
+done[701] &gt; PERBANDING
+done[702] &gt; Sistem Inf
+done[703] &gt; PERAMALAN 
+done[704] &gt; PENGGUNAAN
+done[705] &gt; PERTANIAN 
+done[706] &gt; SISTEM REK
+done[707] &gt; SISTEM PAK
+done[708] &gt; DETEKSI TE
+done[709] &gt; SISTEM REK
+done[710] &gt; Sistem Rek
+done[711] &gt; Lokalisasi
+done[712] &gt; Penerapan 
+done[713] &gt; SISTEM REK
+done[714] &gt; KLASIFIKAS
+done[715] &gt; KLASTERISA
+done[716] &gt; PENERAPAN 
+done[717] &gt; PENGENALAN
+done[718] &gt; SISTEM REK
+done[719] &gt; DIAGNOSA P
+done[720] &gt; Implementa
+done[721] &gt; Pengaruh S
+done[722] &gt; Aplikasi T
+done[723] &gt; Perbanding
+done[724] &gt; PENERAPAN 
+done[725] &gt; PENERAPAN 
+done[726] &gt; SISTEM PEN
+done[727] &gt; IMPLEMENTA
+done[728] &gt; PENERAPAN 
+done[729] &gt; DETEKSI LE
+done[730] &gt; PENERAPAN 
+done[731] &gt; RANCANG BA
+done[732] &gt; SISTEM PEN
+done[733] &gt; SISTEM PEN
+done[734] &gt; IMPLEMENTA
+done[735] &gt; PENERAPAN 
+done[736] &gt; SISTEM PEN
+done[737] &gt; IMPLEMENTA
+done[738] &gt; PENERAPAN 
+done[739] &gt; IMPLEMENTA
+done[740] &gt; SISTEM INF
+done[741] &gt; APLIKASI M
+done[742] &gt; Sistem Pak
+done[743] &gt; RANCANG BA
+done[744] &gt; CONVOLUTIO
+done[745] &gt; IDENTIFIKA
+done[746] &gt; IMPLEMENTA
+done[747] &gt; KOMBINASI 
+done[748] &gt; METODE BER
+done[749] &gt; GAME FLAPP
+done[750] &gt; REGION PRO
+done[751] &gt; SISTEM REK
+done[752] &gt; KOMBINASI 
+done[753] &gt; DETEKSI MA
+done[754] &gt; KLASIFIKAS
+done[755] &gt; IDENTIFIKA
+done[756] &gt; Multi-Labe
+done[757] &gt; IDENTIFIKA
+done[758] &gt; IDENTIFIKA
+done[759] &gt; SISTEM PEN
+done[760] &gt; PENGARUH S
+done[761] &gt; SEGMENTASI
+done[762] &gt; APLIKASI M
+done[763] &gt; MONITORING
+done[764] &gt; APLIKASI D
+done[765] &gt; PEMETAAN I
+done[766] &gt; PENERAPAN 
+done[767] &gt; Implementa
+done[768] &gt; Sistem Pak
+done[769] &gt; PERBANDING
+done[770] &gt; Pengenalan
+done[771] &gt; SISTEM REK
+done[772] &gt; SISTEM REK
+done[773] &gt; PEMILIHAN 
+done[774] &gt; IMPLEMENTA
+done[775] &gt; Seleksi Fi
+done[776] &gt; Sistem Inf
+done[777] &gt; IMPLEMENTA
+done[778] &gt; Perbanding
+done[779] &gt; Sistem Mon
+done[780] &gt; PENENTUAN 
+done[781] &gt; Metode Bac
+done[782] &gt; PENERAPAN 
+done[783] &gt; RANCANGAN 
+done[784] &gt; PENERAPAN 
+done[785] &gt; SISTEM PAK
+done[786] &gt; Penerapan 
+done[787] &gt; Sistem Pen
+done[788] &gt; ANNULAR CO
+done[789] &gt; APLIKASI P
+done[790] &gt; Implementa
+done[791] &gt; Implementa
+done[792] &gt; PENERAPAN 
+done[793] &gt; Penerapan 
+done[794] &gt; Metode Ana
+done[795] &gt; Diagnosis 
+done[796] &gt; Query Expa
+done[797] &gt; PENERAPAN 
+done[798] &gt; Pemilihan 
+done[799] &gt; Algoritma 
+done[800] &gt; IMPLEMENTA
+done[801] &gt; IMPLEMENTA
+done[802] &gt; Implementa
+done[803] &gt; KOMBINASI 
+done[804] &gt; Cosine Sim
+done[805] &gt; SISTEM PAK
+done[806] &gt; Sistem Ide
+done[807] &gt; PENERAPAN 
+done[808] &gt; DETEKSI PE
+done[809] &gt; Pengenalan
+done[810] &gt; Pengenalan
+done[811] &gt; Pengenalan
+done[812] &gt; Penerapan 
+done[813] &gt; Sistem Pen
+done[814] &gt; MULTI CRIT
+done[815] &gt; Rancang Ba
+done[816] &gt; Sistem Pen
+done[817] &gt; PENERAPAN 
+done[818] &gt; Aplikasi E
+done[819] &gt; Sistem Tan
+done[820] &gt; Metode For
+done[821] &gt; Sistem Rek
+done[822] &gt; SISTEM PEN
+done[823] &gt; SISTEM PAK
+done[824] &gt; Implementa
+done[825] &gt; METODE TEC
+done[826] &gt; Multi-clas
+done[827] &gt; SISTEM PEN
+done[828] &gt; RANCANG BA
+done[829] &gt; Rancang Ba
+done[830] &gt; Sistem Pen
+done[831] &gt; ANALISIS P
+done[832] &gt; PENERAPAN 
+done[833] &gt; PENERAPAN 
+done[834] &gt; PENERAPAN 
+done[835] &gt; SISTEM PEN
+done[836] &gt; Penghilang
+done[837] &gt; Peningkata
+done[838] &gt; OPTIMASI K
+done[839] &gt; Klasifikas
+done[840] &gt; PENERAPAN 
+done[841] &gt; PENERAPAN 
+done[842] &gt; PEMANFAATA
+done[843] &gt; ANALISIS M
+done[844] &gt; Sistem Pen
+done[845] &gt; Sistem Pen
+done[846] &gt; Penerapan 
+done[847] &gt; TEMU KEMBA
+done[848] &gt; SISTEM PEN
+done[849] &gt; Implementa
+done[850] &gt; Sistem Per
+done[851] &gt; Sistem Rek
+done[852] &gt; MULTI CRIT
+done[853] &gt; PENERAPAN 
+done[854] &gt; SISTEM PEN
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/prosaindata/tugas/Tugas_PSD/crawling_pta.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-ff1a9b58-75c4-4d7f-8dca-50503a408cec">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NPM</th>
+      <th>Judul</th>
+      <th>Abstrak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>40411100468</th>
+      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE T...</td>
+      <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
+      <td>Teknik Informatika</td>
+    </tr>
+    <tr>
+      <th>40411100476</th>
+      <td>APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...</td>
+      <td>Berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>Teknik Informatika</td>
+    </tr>
+    <tr>
+      <th>40411100480</th>
+      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUKENKR...</td>
+      <td>Web server adalah sebuah perangkat lunak serve...</td>
+      <td>Teknik Informatika</td>
+    </tr>
+    <tr>
+      <th>70411100070</th>
+      <td>SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...</td>
+      <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
+      <td>Teknik Informatika</td>
+    </tr>
+    <tr>
+      <th>80411100115</th>
+      <td>SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...</td>
+      <td>Seiring perkembangan teknologi yang ada diduni...</td>
+      <td>Teknik Informatika</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>130411100057</th>
+      <td>Sistem Peramalan Stok Barang dengan menggunaka...</td>
+      <td>Toko tas Deeolshop menjual berbagai macam tas ...</td>
+      <td>Teknik Informatika</td>
+    </tr>
+    <tr>
+      <th>150411100053</th>
+      <td>Sistem Rekomendasi Dalam Menentukan Posisi Dep...</td>
+      <td>Sepak bola adalah salah satu olahraga yang saa...</td>
+      <td>Teknik Informatika</td>
+    </tr>
+    <tr>
+      <th>150411100038</th>
+      <td>MULTI CRITERIA DECISION MAKING UNTUK MENENTUKA...</td>
+      <td>Perguruan Tinggi merupakan salah satu jenjang ...</td>
+      <td>Teknik Informatika</td>
+    </tr>
+    <tr>
+      <th>160411100032</th>
+      <td>PENERAPAN ALGORITMA LONG-SHORT TERM MEMORY UNT...</td>
+      <td>Investasi saham selama ini memiliki resiko ker...</td>
+      <td>Teknik Informatika</td>
+    </tr>
+    <tr>
+      <th>160411100182</th>
+      <td>SISTEM PENCARIAN TEKS AL-QURAN TERJEMAHAN BERB...</td>
+      <td>Information Retrieval (IR) merupakan pengambil...</td>
+      <td>Teknik Informatika</td>
+    </tr>
+  </tbody>
+</table>
+<p>855 rows × 3 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ff1a9b58-75c4-4d7f-8dca-50503a408cec')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-ff1a9b58-75c4-4d7f-8dca-50503a408cec button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-ff1a9b58-75c4-4d7f-8dca-50503a408cec');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
