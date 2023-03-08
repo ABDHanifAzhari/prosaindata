@@ -1,47 +1,58 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crawling Twitter &#8212; ABD. Hanif Azhari</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -49,60 +60,93 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas_PSD/Crawling';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pipeline" href="Pipelines.html" />
     <link rel="prev" title="Welcome to your Jupyter Book" href="../intro.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">ABD. Hanif Azhari</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -111,488 +155,489 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Crawling Twitter
-  </a>
- </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Crawling Twitter</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Pipelines.html">Pipeline</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/ABDHanifAzhari/prosaindata/gh-pages?urlpath=tree/_sources/Tugas_PSD/Crawling.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
   
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
+  <div id="rtd-footer-container"></div>
 
-      </li>
+
+      </div>
       
-      <li>
-        <a href="https://colab.research.google.com/github/ABDHanifAzhari/prosaindata/blob/gh-pages/_sources/Tugas_PSD/Crawling.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/ABDHanifAzhari/prosaindata/blob/gh-pages/_sources/Tugas_PSD/Crawling.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ABDHanifAzhari/prosaindata" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ABDHanifAzhari/prosaindata/issues/new?title=Issue%20on%20page%20%2FTugas_PSD/Crawling.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Tugas_PSD/Crawling.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/ABDHanifAzhari/prosaindata"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/ABDHanifAzhari/prosaindata/issues/new?title=Issue%20on%20page%20%2FTugas_PSD/Crawling.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/Tugas_PSD/Crawling.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Crawling Twitter
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#crawling-pta">
-   Crawling PTA
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#crawling-berita">
-   Crawling Berita
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Crawling Twitter</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Crawling Twitter
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#crawling-pta">
-   Crawling PTA
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#crawling-berita">
-   Crawling Berita
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Crawling Twitter</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Crawling Twitter</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-pta">Crawling PTA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-berita">Crawling Berita</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <div class="tex2jax_ignore mathjax_ignore section" id="crawling-twitter">
-<h1>Crawling Twitter<a class="headerlink" href="#crawling-twitter" title="Permalink to this headline">#</a></h1>
+<h1>Crawling Twitter<a class="headerlink" href="#crawling-twitter" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip uninstall twint
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>uninstall<span class="w"> </span>twint
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found existing installation: twint 2.1.21
-Uninstalling twint-2.1.21:
-  Would remove:
-    /root/.local/bin/twint
-    /root/.local/lib/python3.8/site-packages/twint-2.1.21.dist-info/*
-    /root/.local/lib/python3.8/site-packages/twint/*
-Proceed (Y/n)? 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 167, in exc_logging_wrapper
-    status = run_func(*args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/commands/uninstall.py&quot;, line 97, in run
-    uninstall_pathset = req.uninstall(
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/req/req_install.py&quot;, line 638, in uninstall
-    uninstalled_pathset.remove(auto_confirm, verbose)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/req/req_uninstall.py&quot;, line 363, in remove
-    if auto_confirm or self._allowed_to_proceed(verbose):
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/req/req_uninstall.py&quot;, line 403, in _allowed_to_proceed
-    return ask(&quot;Proceed (Y/n)? &quot;, (&quot;y&quot;, &quot;n&quot;, &quot;&quot;)) != &quot;n&quot;
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/misc.py&quot;, line 186, in ask
-    response = input(message)
-KeyboardInterrupt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Skipping twint as it is not installed.</span>
 
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
-    sys.exit(main())
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/main.py&quot;, line 70, in main
-    return command.main(cmd_args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
-    return self._main(args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 221, in _main
-    return run(options, args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 204, in exc_logging_wrapper
-    logger.critical(&quot;Operation cancelled by user&quot;)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1493, in critical
-    self._log(CRITICAL, msg, args, **kwargs)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1589, in _log
-    self.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1599, in handle
-    self.callHandlers(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1661, in callHandlers
-    hdlr.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 954, in handle
-    self.emit(record)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 172, in emit
-    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1601, in print
-    render_options = self.options.update(
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 944, in options
-    is_terminal=self.is_terminal,
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 915, in is_terminal
-    return False if isatty is None else isatty()
-KeyboardInterrupt
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install twint
-<span class="o">!</span>pip install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg<span class="o">=</span>twint
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>twint
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--upgrade<span class="w"> </span>git+https://github.com/twintproject/twint.git@origin/master#egg<span class="o">=</span>twint
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: twint in /usr/local/lib/python3.8/dist-packages (2.1.20)
-Requirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from twint) (1.7.1)
-Requirement already satisfied: fake-useragent in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.1)
-Requirement already satisfied: elasticsearch in /usr/local/lib/python3.8/dist-packages (from twint) (8.6.2)
-Requirement already satisfied: googletransx in /usr/local/lib/python3.8/dist-packages (from twint) (2.4.2)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from twint) (4.6.3)
-Requirement already satisfied: aiohttp-socks in /usr/local/lib/python3.8/dist-packages (from twint) (0.8.0)
-Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from twint) (1.17.0)
-Requirement already satisfied: aiodns in /usr/local/lib/python3.8/dist-packages (from twint) (3.0.0)
-Requirement already satisfied: cchardet in /usr/local/lib/python3.8/dist-packages (from twint) (2.1.7)
-Requirement already satisfied: schedule in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.0)
-Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from twint) (3.8.4)
-Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (from twint) (1.3.5)
-Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.8/dist-packages (from aiodns-&gt;twint) (4.3.0)
-Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (22.2.0)
-Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
-Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
-Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
-Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
-Requirement already satisfied: python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-socks-&gt;twint) (2.1.1)
-Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.8/dist-packages (from elasticsearch-&gt;twint) (8.4.0)
-Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;twint) (5.10.2)
-Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;twint) (1.52)
-Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;twint) (2.25.1)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
-Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2022.7.1)
-Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (1.21.6)
-Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
-Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
-Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.13.0)
-Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
-Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
-Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
-Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
-Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting twint
+  Downloading twint-2.1.20.tar.gz (31 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiohttp
+  Downloading aiohttp-3.8.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/1.0 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">1.0/1.0 MB</span> <span class=" -Color -Color-Red">43.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.0/1.0 MB</span> <span class=" -Color -Color-Red">27.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting aiodns
+  Downloading aiodns-3.0.0-py3-none-any.whl (5.0 kB)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from twint) (4.6.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting cchardet
+  Downloading cchardet-2.1.7-cp39-cp39-manylinux2010_x86_64.whl (265 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/265.4 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">265.4/265.4 KB</span> <span class=" -Color -Color-Red">22.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting elasticsearch
+  Downloading elasticsearch-8.6.2-py3-none-any.whl (385 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/385.4 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">385.4/385.4 KB</span> <span class=" -Color -Color-Red">31.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: pysocks in /usr/local/lib/python3.9/dist-packages (from twint) (1.7.1)
+Requirement already satisfied: pandas in /usr/local/lib/python3.9/dist-packages (from twint) (1.3.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiohttp_socks
+  Downloading aiohttp_socks-0.8.0-py3-none-any.whl (9.4 kB)
+Collecting schedule
+  Downloading schedule-1.1.0-py2.py3-none-any.whl (10 kB)
+Requirement already satisfied: geopy in /usr/local/lib/python3.9/dist-packages (from twint) (1.17.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting fake-useragent
+  Downloading fake_useragent-1.1.1-py3-none-any.whl (50 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/50.4 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">50.4/50.4 KB</span> <span class=" -Color -Color-Red">5.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting googletransx
+  Downloading googletransx-2.4.2.tar.gz (13 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pycares&gt;=4.0.0
+  Downloading pycares-4.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/288.7 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">288.7/288.7 KB</span> <span class=" -Color -Color-Red">23.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting yarl&lt;2.0,&gt;=1.0
+  Downloading yarl-1.8.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (264 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/264.6 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">264.6/264.6 KB</span> <span class=" -Color -Color-Red">23.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting charset-normalizer&lt;4.0,&gt;=2.0
+  Downloading charset_normalizer-3.1.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (199 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/199.2 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">199.2/199.2 KB</span> <span class=" -Color -Color-Red">12.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting frozenlist&gt;=1.1.1
+  Downloading frozenlist-1.3.3-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (158 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/158.8 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">158.8/158.8 KB</span> <span class=" -Color -Color-Red">12.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting async-timeout&lt;5.0,&gt;=4.0.0a3
+  Downloading async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (22.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting multidict&lt;7.0,&gt;=4.5
+  Downloading multidict-6.0.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (114 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/114.2 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">114.2/114.2 KB</span> <span class=" -Color -Color-Red">12.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting aiosignal&gt;=1.1.2
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading python_socks-2.1.1-py3-none-any.whl (49 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/49.7 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">49.7/49.7 KB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting elastic-transport&lt;9,&gt;=8
+  Downloading elastic_transport-8.4.0-py3-none-any.whl (59 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/59.5 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">59.5/59.5 KB</span> <span class=" -Color -Color-Red">7.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.9/dist-packages (from fake-useragent-&gt;twint) (5.12.0)
+Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.9/dist-packages (from geopy-&gt;twint) (1.52)
+Requirement already satisfied: requests in /usr/local/lib/python3.9/dist-packages (from googletransx-&gt;twint) (2.25.1)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (2022.7.1)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (2.8.2)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (1.22.4)
+Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.9/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
+Requirement already satisfied: certifi in /usr/local/lib/python3.9/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.9/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.15.0)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.9/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.9/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
+Building wheels for collected packages: twint, googletransx
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for twint (setup.py) ... ?25l?25hdone
+  Created wheel for twint: filename=twint-2.1.20-py3-none-any.whl size=33929 sha256=eed244b555b839a01ac116dfa6c5ac370f690316ecdc070ea56c1ac92c0c88ea
+  Stored in directory: /root/.cache/pip/wheels/12/2c/16/fded468865c08c82d4e82535f33c50462a3e6e042d8f93df13
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for googletransx (setup.py) ... ?25l?25hdone
+  Created wheel for googletransx: filename=googletransx-2.4.2-py3-none-any.whl size=15968 sha256=3dc92332593167ebb6662a4a846ca733ae7cc2d4241aee6aa9d85042eb559691
+  Stored in directory: /root/.cache/pip/wheels/b5/28/37/a905af06d6f6c934042babb4748f01b2f9039d2d96f05a4496
+Successfully built twint googletransx
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: python-socks, cchardet, schedule, multidict, frozenlist, elastic-transport, charset-normalizer, async-timeout, yarl, pycares, googletransx, fake-useragent, elasticsearch, aiosignal, aiohttp, aiodns, aiohttp_socks, twint
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed aiodns-3.0.0 aiohttp-3.8.4 aiohttp_socks-0.8.0 aiosignal-1.3.1 async-timeout-4.0.2 cchardet-2.1.7 charset-normalizer-3.1.0 elastic-transport-8.4.0 elasticsearch-8.6.2 fake-useragent-1.1.1 frozenlist-1.3.3 googletransx-2.4.2 multidict-6.0.4 pycares-4.3.0 python-socks-2.1.1 schedule-1.1.0 twint-2.1.20 yarl-1.8.2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Collecting twint
-  Cloning https://github.com/twintproject/twint.git (to revision origin/master) to /tmp/pip-install-f43n965n/twint_c5392b7168484257bf4cac4e6dc72bba
-  Running command git clone --filter=blob:none --quiet https://github.com/twintproject/twint.git /tmp/pip-install-f43n965n/twint_c5392b7168484257bf4cac4e6dc72bba
-<span class=" -Color -Color-Yellow">  WARNING: Did not find branch or tag &#39;origin/master&#39;, assuming revision or ref.</span>
+  Cloning https://github.com/twintproject/twint.git (to revision origin/master) to /tmp/pip-install-cgkpzjsv/twint_3c706cad3a444378899a528a18a8c7d4
+  Running command git clone --filter=blob:none --quiet https://github.com/twintproject/twint.git /tmp/pip-install-cgkpzjsv/twint_3c706cad3a444378899a528a18a8c7d4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">  WARNING: Did not find branch or tag &#39;origin/master&#39;, assuming revision or ref.</span>
   Running command git checkout -q origin/master
   Resolved https://github.com/twintproject/twint.git to commit origin/master
-  Preparing metadata (setup.py) ... ?25l?25hdone
-Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from twint) (3.8.4)
-Requirement already satisfied: aiodns in /usr/local/lib/python3.8/dist-packages (from twint) (3.0.0)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from twint) (4.6.3)
-Requirement already satisfied: cchardet in /usr/local/lib/python3.8/dist-packages (from twint) (2.1.7)
-Requirement already satisfied: dataclasses in /root/.local/lib/python3.8/site-packages (from twint) (0.6)
-Requirement already satisfied: elasticsearch in /usr/local/lib/python3.8/dist-packages (from twint) (8.6.2)
-Requirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from twint) (1.7.1)
-Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (from twint) (1.3.5)
-Requirement already satisfied: aiohttp_socks in /usr/local/lib/python3.8/dist-packages (from twint) (0.8.0)
-Requirement already satisfied: schedule in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.0)
-Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from twint) (1.17.0)
-Requirement already satisfied: fake-useragent in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.1)
-Requirement already satisfied: googletransx in /usr/local/lib/python3.8/dist-packages (from twint) (2.4.2)
-Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.8/dist-packages (from aiodns-&gt;twint) (4.3.0)
-Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
-Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
-Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
-Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (22.2.0)
-Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
-Requirement already satisfied: python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp_socks-&gt;twint) (2.1.1)
-Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.8/dist-packages (from elasticsearch-&gt;twint) (8.4.0)
-Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;twint) (5.10.2)
-Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;twint) (1.52)
-Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;twint) (2.25.1)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
-Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (1.21.6)
-Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2022.7.1)
-Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
-Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
-Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.13.0)
-Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
-Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
-Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
-Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.9/dist-packages (from twint) (3.8.4)
+Requirement already satisfied: aiodns in /usr/local/lib/python3.9/dist-packages (from twint) (3.0.0)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from twint) (4.6.3)
+Requirement already satisfied: cchardet in /usr/local/lib/python3.9/dist-packages (from twint) (2.1.7)
+Collecting dataclasses
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading dataclasses-0.6-py3-none-any.whl (14 kB)
+Requirement already satisfied: elasticsearch in /usr/local/lib/python3.9/dist-packages (from twint) (8.6.2)
+Requirement already satisfied: pysocks in /usr/local/lib/python3.9/dist-packages (from twint) (1.7.1)
+Requirement already satisfied: pandas in /usr/local/lib/python3.9/dist-packages (from twint) (1.3.5)
+Requirement already satisfied: aiohttp_socks in /usr/local/lib/python3.9/dist-packages (from twint) (0.8.0)
+Requirement already satisfied: schedule in /usr/local/lib/python3.9/dist-packages (from twint) (1.1.0)
+Requirement already satisfied: geopy in /usr/local/lib/python3.9/dist-packages (from twint) (1.17.0)
+Requirement already satisfied: fake-useragent in /usr/local/lib/python3.9/dist-packages (from twint) (1.1.1)
+Requirement already satisfied: googletransx in /usr/local/lib/python3.9/dist-packages (from twint) (2.4.2)
+Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.9/dist-packages (from aiodns-&gt;twint) (4.3.0)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (6.0.4)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (1.3.1)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (22.2.0)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (1.8.2)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (4.0.2)
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (3.1.0)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.9/dist-packages (from aiohttp-&gt;twint) (1.3.3)
+Requirement already satisfied: python-socks[asyncio]&lt;3.0.0,&gt;=2.0.0 in /usr/local/lib/python3.9/dist-packages (from aiohttp_socks-&gt;twint) (2.1.1)
+Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.9/dist-packages (from elasticsearch-&gt;twint) (8.4.0)
+Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.9/dist-packages (from fake-useragent-&gt;twint) (5.12.0)
+Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.9/dist-packages (from geopy-&gt;twint) (1.52)
+Requirement already satisfied: requests in /usr/local/lib/python3.9/dist-packages (from googletransx-&gt;twint) (2.25.1)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (2.8.2)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (1.22.4)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.9/dist-packages (from pandas-&gt;twint) (2022.7.1)
+Requirement already satisfied: certifi in /usr/local/lib/python3.9/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
+Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.9/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.9/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.15.0)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.9/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.9/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
 Building wheels for collected packages: twint
-  Building wheel for twint (setup.py) ... ?25l?25hdone
-  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38870 sha256=0379f84f60f9255906f2e140a39ae6a69dd4273b97a814c97f82b5c2c2afb501
-  Stored in directory: /tmp/pip-ephem-wheel-cache-w89qmtt5/wheels/82/67/14/5495652787d3c55288164de4234c0712a1f785a64f61f1ea70
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for twint (setup.py) ... ?25l?25hdone
+  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38870 sha256=c7c5d07944ed7584cab06e524ea2bbb47bc1933c85e6257f8d75b864574c101f
+  Stored in directory: /tmp/pip-ephem-wheel-cache-prx_sbrj/wheels/d8/d2/0f/7a146624472827e7ae5427bb9df38249a490ef724626ad56ba
 Successfully built twint
-Installing collected packages: twint
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: dataclasses, twint
 <span class=" -Color -Color-Yellow">  WARNING: The script twint is installed in &#39;/root/.local/bin&#39; which is not on PATH.</span>
 <span class=" -Color -Color-Yellow">  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.</span>
-Successfully installed twint-2.1.21
+Successfully installed dataclasses-0.6 twint-2.1.21
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install nest_asyncio
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>nest_asyncio
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting nest_asyncio
-  Downloading nest_asyncio-1.5.6-py3-none-any.whl (5.2 kB)
-Installing collected packages: nest_asyncio
-Successfully installed nest_asyncio-1.5.6
+Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.9/dist-packages (1.5.6)
 </pre></div>
 </div>
 </div>
@@ -616,469 +661,131 @@ Successfully installed nest_asyncio-1.5.6
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1628308085050863616 2023-02-22 08:17:54 +0000 &lt;murianewscom&gt; Surya Paloh Sebut AHY Lebih Pantas Jadi Cawapres Anies   Selengkapnya Klik Tautan Berikut  #Jakarta #Suryapaloh #AHY #Cawapres #AniesBaswedan   https://t.co/b9qwnoz5xf
-1628306132010934274 2023-02-22 08:10:08 +0000 &lt;tvOneNews&gt; Surya Paloh angkat bicara soal sosok cawapres Anies Baswedan. Surya Paloh mengatakan Agus Harimurti Yudhoyono (AHY) sangat pantas menjadi cawapres Anies.   Simak berita selengkapnya di  https://t.co/GgtZcy4bbs #HardNews_Politik #NewsOne #CariBeritaditvOne #AniesBaswedan  https://t.co/ettPp8wduS
-1628304857114501120 2023-02-22 08:05:05 +0000 &lt;jpnncom&gt; Soal Cawapres Pendamping Anies Baswedan, Surya Paloh Langsung Sebut Nama, Mengejutkan #AniesBaswedan  https://t.co/Zb5aVkLdOu
-1628303211143766016 2023-02-22 07:58:32 +0000 &lt;larrylary12345&gt; Anies menipu rakyat Jakarta, sekarang jakarta telah hancur  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/kEPLSoaYJq
-1628302902896005122 2023-02-22 07:57:19 +0000 &lt;larrylary12345&gt; Waspada anies pembuat HOAX  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/5txk7JXuDf
-1628302729570394114 2023-02-22 07:56:37 +0000 &lt;larrylary12345&gt; Manusia munafik, cara kotor di manfaatkan untuk kekuasaannya  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/JDcYkZfFGy
-1628302604647419904 2023-02-22 07:56:08 +0000 &lt;larrylary12345&gt; Program dari anies yang cuma bisa menipu rakyat  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/tUk5n5fAdT
-1628302316892995586 2023-02-22 07:54:59 +0000 &lt;larrylary12345&gt; Jangan mau pilih anies si manusia penipu  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/swWFs32roW
-1628301895986196480 2023-02-22 07:53:19 +0000 &lt;Anies_Relawan&gt; Relawan Aliansi Nasional Indonesia Sejahtera (Anies) berkomitmen mendongkrak popularitas bakal calon presiden (bacapres) Anies Baswedan. Popularitas Anies akan digaungkan hingga akar rumput. #AniesBaswedan   https://t.co/scWMPXPHGG
-1628296506590777344 2023-02-22 07:31:54 +0000 &lt;MajalahLogika&gt;  https://t.co/mHFRHw6usp  Untuk mengingatkan Hari Rabu adalah Hari Pencoblosan, Kader PKS Ini Membuat Program Rabu Indra Berbagi. Dengan kegiatan ini masyarakat akan terbiasa ketika ingat Hari Rabu, Maka Ingat Nama Kang Indra.  KEREEEEEN.  #PKSPelayanRakyat #AniesBaswedan #Pilpres
-1628292863258955778 2023-02-22 07:17:25 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/YJmX4cSPOO
-1628292830748884992 2023-02-22 07:17:17 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/PYibJwXbTw
-1628292803649474561 2023-02-22 07:17:11 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/9pkPGFFfCu
-1628292778798231554 2023-02-22 07:17:05 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/BTSTovKqb1
-1628292753863098368 2023-02-22 07:16:59 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/pk7t1sUZgf
-1628289847600496641 2023-02-22 07:05:26 +0000 &lt;bonank771&gt; alhamdulillah sah..DPC relawan @aniesbaswedan Jagakarsa -Pasar Minggu @bos_sir  @PKSejahtera @PKSJaksel  @pkspasarminggu @Relawananies @relawan_abw @JarnasABW  @JarnasABWBpn @sobataher_ #AniesBaswedan #AniesPresiden2024  #jatipadang  #pasarminggu #jagakarsa  https://t.co/6iSqje0TSR
-1628287070396645378 2023-02-22 06:54:24 +0000 &lt;kerjabarengGP&gt; Dukungan @ganjarpranowo terus meningkat diantara kandidat capres lainnya  #GanjarPranowo #AniesBaswedan #prabowosubianto  https://t.co/B8CNONYipM
-1628275579492663298 2023-02-22 06:08:44 +0000 &lt;tabascopepsauce&gt; @aniesbaswedan bud abud, dibikinin lagu tuch. #aniesPendukungKhilafah #aniesDidukungKoruptor #aniesNasdemOut #aniesDidukungKHILAFAH #aniesMelacurKAHMI #aniesGabenerPembohong #aniesPendukungFPI #aniesBaswedan #anies #bapakpolitikidentitas #aniesHalu #aniesNgibul #aniesGabener  https://t.co/05bey1CnIC
-1628269197263523840 2023-02-22 05:43:23 +0000 &lt;JarnasABWBpn&gt; Survey Capres Favorit Kaltim, yuk yg domisili Kaltim pilih Capres Favorit kamu    https://t.co/biprM1WQFX  #Prabowo #ganjarpranowo #AniesBaswedan #puanmaharani
-1628269042711818240 2023-02-22 05:42:46 +0000 &lt;fajaronline&gt; Viral Video Anies Ingatkan Utang Pasti Ditagih, Netizen: Keren Meroasting Diri Sendiri  https://t.co/XttpyszcFH #AniesBaswedan #PandjiPragiwaksono #Utang #VideoAnies
-1628266859006160896 2023-02-22 05:34:05 +0000 &lt;vivagorontalo&gt; Anies dan Sandi Diprediksi Mendulang Sukses di Pilkada DKI Jika Rujuk di Pilpres 2024 #AniesBaswedan #SandiagaUno #Pilpres2024 #PilkadaDKI   https://t.co/oiD6ALJRCD
-1628265760614420482 2023-02-22 05:29:43 +0000 &lt;_independen&gt; Nyatakan Rindu Nasdem, Nafa Urbach Diomelin Buzzer Ganjar Pranowo: Tidak Suka Anies Baswedan!    https://t.co/4l1u0bxZnr  #buzzer #ganjarpranowo #AniesBaswedan #nasdem
-1628258124099616770 2023-02-22 04:59:23 +0000 &lt;alrafaelrama&gt; #AniesBaswedan #JarnasAbw #JarnasAbwBlora ❤️🇮🇩   https://t.co/4yt0IGkLIB
-1628255754594693121 2023-02-22 04:49:58 +0000 &lt;JatengTV&gt; (12) PT Perorangan memiliki kepastian hukum dan terdaftar resmi di Kemenkumham. Kedudukannya sama seperti PT biasa. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaBangkit #Jokowi  https://t.co/HRqCfZUnue
-1628251294166286337 2023-02-22 04:32:14 +0000 &lt;irfanwahidi60&gt; @as_siglie Pak #AniesBaswedan  berwawasan keadilan yg luas,,
-1628249177024262145 2023-02-22 04:23:49 +0000 &lt;kunci__biru&gt; Si Anies emang bisa apasih gaes?  #AniesBaswedan  https://t.co/7yzhAnsinh
-1628248204038000640 2023-02-22 04:19:57 +0000 &lt;JatengTV&gt; (13) Masih belum banyak peraturan yang mengatur perusahaan PT perorangan ini sehingga pemilik perusahaan bebas melakukan aktivitas usahanya. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1628238962916753408 2023-02-22 03:43:14 +0000 &lt;BrunoRobles872&gt; Anies biadab!! bajak masjid demi kampanye!!  #AniesBaswedan #Anies #Jokowi #GanjarPranowo  https://t.co/xL0OHH31rd
-1628237730659586048 2023-02-22 03:38:20 +0000 &lt;anandadeann&gt; Ini dia kelebihan #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor #Anies  https://t.co/dInFnYL2Q4
-1628236347831111681 2023-02-22 03:32:51 +0000 &lt;fajaronline&gt; Mangkarak Lama, Jokowi Ingin Normalisasi Ciliwung Beres Tahun Depan, Anies Kena Sindir Lagi?  https://t.co/b4bSMlx5ax #AniesBaswedan #Ciliwung #Jokowi #NormalisasiCiliwung
-1628232491625746432 2023-02-22 03:17:31 +0000 &lt;mediadigitalcpp&gt; Jajak pendapat Litbang Kompas Januari 2023 menunjukkan elektabilitas calon presiden tertinggi masih diduduki Ganjar Pranowo, disusul Prabowo Subianto, dan Anies Baswedan.  https://t.co/BQBmdh2TB2 #mediadigitalcpp #indotvlive #prabowo #aniesbaswedan #ganjarpranowo #pemilu #capres  https://t.co/NIl43MsdbE
-1628230578524000259 2023-02-22 03:09:55 +0000 &lt;Michele09679818&gt; Mampukah KPK, mengungkap?????? #Anies #AniesBaswedan #KPK #UsutTuntas #Koruptor #Korupsi  https://t.co/05su5tsJtX
-1628230574824636416 2023-02-22 03:09:54 +0000 &lt;Michele09679818&gt; KPK Harus Tegas! #Anies #AniesBaswedan #KPK #UsutTuntas #Koruptor #Korupsi  https://t.co/lkbmkCNOVS
-1628230571720855564 2023-02-22 03:09:54 +0000 &lt;Michele09679818&gt; Dasar Maling Nyolong terus #Anies #AniesBaswedan #KPK #UsutTuntas #Koruptor #Korupsi  https://t.co/BOQCJs6EY0
-1628230568151511040 2023-02-22 03:09:53 +0000 &lt;Michele09679818&gt; Tangkap tuh &quot;Pejabat saat itu&quot; dalam kasus Formula E #Anies #AniesBaswedan #KPK #UsutTuntas #Koruptor #Korupsi  https://t.co/Auag3vFLG5
-1628230563709739008 2023-02-22 03:09:52 +0000 &lt;Michele09679818&gt; Desak KPK usut kerugian negara #Anies #AniesBaswedan #KPK #UsutTuntas #Koruptor #Korupsi  https://t.co/JP7p01J1Hc
-1628230055225851905 2023-02-22 03:07:50 +0000 &lt;Adam03072022&gt; Ente siapa? kok HARUS SEHAT???????  #AniesBaswedan  #AniesBaswedan
-1628226187473608704 2023-02-22 02:52:28 +0000 &lt;rahmadhdyt709&gt; Selama menjabat sebagai gubernur hasil kerjanya apa?gimana mau jadi pemimpin!! #AniesBaswedan #aniesgagal #bapakidentitaspolitik #gagal #BreakingNews #captikus #politikus #DKIJakarta  https://t.co/yyJFb3LrfF
-1628223845726556160 2023-02-22 02:43:10 +0000 &lt;fajaronline&gt; Prabowo Minta Izin Presiden Maju di Pilpres 2024, Musni Umar: yang Bukan Menteri dan Gubernur Minta Dukungan Ulama dan Rakyat  https://t.co/sYFdjzRcCM #AniesBaswedan #MusniUmar #PrabowoSubianto #PresidenJokowi
-1628223406390013953 2023-02-22 02:41:25 +0000 &lt;Adam03072022&gt; Kita percaya dg kemampuan &amp;amp; kejujuran mas Anies problem politik tsb bisa diatasi.  Lihat rekam jejaknya di Jakarta.  #AniesBaswedan  #AniesBaswedan
-1628222850393083906 2023-02-22 02:39:13 +0000 &lt;Noni33697740&gt; @keuangannews_id #AniesBaswedan...Keren👍😎🙏  https://t.co/4y41GYUr4h
-1628222828217790467 2023-02-22 02:39:07 +0000 &lt;andrikingo77&gt; Waduhhhh Kok bisa-bisanya sih mau gagalin proyek yang sudah dilaksanakan dengan rancangan besar, ada masalah apa sih Pak Anies? #aniesgagal #aniesbaswedan #aniescaper #ikn #gubernurjakarta #jakarta #banjir #macet #hutang  https://t.co/vOfgFXOIg6
-1628222511589761024 2023-02-22 02:37:52 +0000 &lt;portalmediaid&gt; Survei Litbang Kompas: Elektabilitas Ganjar dan Prabowo Naik, Anies Turun Signifikan  Baca Selengkapnya:  https://t.co/6CIPwoFpbv  #BeritaTerkini #media #Online #news #BreakingNews #survei #litbang #kompas #elektabilitas #GanjarPranowo #prabowo #AniesBaswedan #Politik #Indonesia
-1628217136647913473 2023-02-22 02:16:30 +0000 &lt;phunglie1&gt; Saya Anak Muda Indonesia🇮🇩 Coblos Pak #AniesBaswedan ,CAPRES -RI ,dari #PartaiNasdem . Pak Anies Anak Muda Berprestasi , Akademisi Pintar yg Berpikiran Maju . 👉Perubahan Itu :Tidak Pakai Orang Korupsi , Perubahan itu : Bikin Aturan Yg Pro Rakyat ,Yang Tidak Pro Rakyat Dihapus .
-1628216957064613888 2023-02-22 02:15:48 +0000 &lt;AsepSeptiyana_&gt; Waduuuhh... jangan sampai deh ya kaya gitu 😌😌😌 #aniesbaswedan #anies #AniesNasdemOut #dkijakarta #wonderfulindonesia #wonderfulindonesia #IndonesiaMaju  https://t.co/414vpYx9fc
-1628214908063186944 2023-02-22 02:07:39 +0000 &lt;Cahyokt4&gt; Gak Gak Gak..  Yang begini nantinya bakal ngancurin apa yang sudah di bangun Pak Jokowi..  Hentikan....   #Ikn #Jokowi #Hambalang #Anies #aniesbaswedan #aniesgagal #aniesgakbisakerja #DkiJakarta #aniesnasdem #aniesdki  https://t.co/Hvj22lKbbA
-1628213500266057728 2023-02-22 02:02:03 +0000 &lt;PutraAlamsyahJ1&gt; Waduh bahaya sekali...!!! #AniesBaswedan #AniesNgibul #aniesgabener #AniesDidukungKoruptor #AniesPresidenku #AniesDidukungKHILAFAH #AniesPresidenRI2024  https://t.co/ftsmrIOrov
-1628200221451616260 2023-02-22 01:09:17 +0000 &lt;FariziStevani&gt; Published on YouTube: WARGA KORBAN GUSURAN JIS GUGAT PEMPROV JAKARTA | #aniesbaswedan #jakartainternationalstadium  https://t.co/ixlS7IRKr2
-1628198278268596226 2023-02-22 01:01:34 +0000 &lt;Alfakton_i&gt; Anies dan narasi rekam jejaknya yang penuh tipu daya dan menyesatkan!!  #AniesBaswedan #Anies #Jokowi #GanjarPranowo   Morningg | Naughty | Pak Prabowo | Dari 2-0 | Pagii | Rubicon | Madrid | Wak Haji | Christy | #ChampionsLeague |  https://t.co/pN6bqLl32N
-1628198163923501056 2023-02-22 01:01:07 +0000 &lt;Alfakton_i&gt; masih mau bantah?!! bukti nyata Anies boneka AS!!  #AniesBaswedan #Anies #Jokowi #GanjarPranowo   Morningg | Naughty | Pak Prabowo | Dari 2-0 | Pagii | Rubicon | Madrid | Wak Haji | Christy | #ChampionsLeague |  https://t.co/1Lc0ZluCJ4
-1628198070319218688 2023-02-22 01:00:45 +0000 &lt;Alfakton_i&gt; Anies keliling Indonesia hanya menawarkan perubahan Indonesia menjadi khilafah!!  #AniesBaswedan #Anies #Jokowi #GanjarPranowo   Morningg | Naughty | Pak Prabowo | Dari 2-0 | Pagii | Rubicon | Madrid | Wak Haji | Christy | #ChampionsLeague |  https://t.co/VGzyRvPlbz
-1628197886034079744 2023-02-22 01:00:01 +0000 &lt;Alfakton_i&gt; ternyata doorprize di acara anies cuma tipu tipu!!  #AniesBaswedan #Anies #Jokowi #GanjarPranowo   Morningg | Naughty | Pak Prabowo | Dari 2-0 | Pagii | Rubicon | Madrid | Wak Haji | Christy | #ChampionsLeague |  https://t.co/YbDj2k8DRs
-1628197676528594944 2023-02-22 00:59:11 +0000 &lt;Alfakton_i&gt; Kemarin kritik IKN!! sekarang mau pura pura dukung IKN!! Anies plinplan tukang ngibul!!  #AniesBaswedan #Anies #Jokowi #GanjarPranowo   Morningg | Naughty | Pak Prabowo | Dari 2-0 | Pagii | Rubicon | Madrid | Wak Haji | Christy | #ChampionsLeague |  https://t.co/sXgDFmqeX2
-1628197325515657217 2023-02-22 00:57:47 +0000 &lt;Alfakton_i&gt; negara tetangga saja mengakui anies ahli politik penunggang agama!!  #AniesBaswedan #Anies #Jokowi #GanjarPranowo   Morningg | Naughty | Pak Prabowo | Dari 2-0 | Pagii | Rubicon | Madrid | Wak Haji | Christy | #ChampionsLeague |  https://t.co/cb8YwOkp1C
-1628197083495960577 2023-02-22 00:56:49 +0000 &lt;Alfakton_i&gt; menjijikan!! Anies peluk dan nempel cewek bukan muhrimnya!!  #AniesBaswedan #Anies #Jokowi #GanjarPranowo   Morningg | Naughty | Pak Prabowo | Dari 2-0 | Pagii | Rubicon | Madrid | Wak Haji | Christy | #ChampionsLeague |  https://t.co/O7FPHXKUNX
-1628196956853129217 2023-02-22 00:56:19 +0000 &lt;Alfakton_i&gt; Jejak politik identitas anies tidak bisa dihilangkan!!  #AniesBaswedan #Anies #Jokowi #GanjarPranowo   Morningg | Naughty | Pak Prabowo | Dari 2-0 | Pagii | Rubicon | Madrid | Wak Haji | Christy | #ChampionsLeague |  https://t.co/pbpDcurSZW
-1628196703210962947 2023-02-22 00:55:19 +0000 &lt;Alfakton_i&gt; Anies biadab!! bajak masjid demi kampanye!!  #AniesBaswedan #Anies #Jokowi #GanjarPranowo   Morningg | Naughty | Pak Prabowo | Dari 2-0 | Pagii | Rubicon | Madrid | Wak Haji | Christy | #ChampionsLeague |  https://t.co/GUWziaKStE
-1628196083670323201 2023-02-22 00:52:51 +0000 &lt;Alfakton_i&gt; Anies memang tak punya visi misi kedepan!!  #AniesBaswedan #Anies #Jokowi #GanjarPranowo   Morningg | Naughty | Pak Prabowo | Dari 2-0 | Pagii | Rubicon | Madrid | Wak Haji | Christy | #ChampionsLeague |  https://t.co/0fl4dzLcsf
-1628195902153424897 2023-02-22 00:52:08 +0000 &lt;Alfakton_i&gt; Anies sangat jelas gunakan masjid untuk kampanye politik!!  #AniesBaswedan #Anies #Jokowi #GanjarPranowo   Morningg | Naughty | Pak Prabowo | Dari 2-0 | Pagii | Rubicon | Madrid | Wak Haji | Christy | #ChampionsLeague |  https://t.co/IaNd0gJMWL
-1628191495466663936 2023-02-22 00:34:37 +0000 &lt;bonank771&gt; In syaa Alloh pagi ini 08.00 pengkukuhan DPC relawan @aniesbaswedan  Jagakarsa -pasar minggu @bos_sir @PKSejahtera @PKSejahtera  @sobat_anies @LANGKAHANIES @relawan_abw @JarnasABW @JarnasABWBpn @aheryawan @SahabatAnies #AniesBaswedan #Jagakarsa #Jatipadang #pasarminggu  https://t.co/id5qfpcOzF
-1628183804442738688 2023-02-22 00:04:03 +0000 &lt;lingga_susilo&gt; Terlalu Bahaya Jika anies baswedan Jadi Presiden Indonesia, bisa Ancur ni Negara Republik Indonesia. #AniesBaswedan #AniesDidukungKoruptor #Anies50m #50M #Indonesia #Penghinatan #Negara #Bangsat #trending2023 #TrendingNow #Trending  https://t.co/bciM4ZF4Dt
-1628176457750163456 2023-02-21 23:34:52 +0000 &lt;fajaronline&gt; Demokrat dan Nasdem Tembus 5 Besar Survei Terbaru, Loyalis Anies: Kelihatan Luar Biasa  https://t.co/naTWmPtWiP #AndiSinulingga #AniesBaswedan #demokrat #LitbangKompas
-1628172801973813249 2023-02-21 23:20:20 +0000 &lt;fajaronline&gt; Momen Pertemuan Anies dengan Sandiaga Uno di Milad ke-42 BKMT, Pertama Kali Usai Isu Utang di Pilgub DKI Terbongkar  https://t.co/XulnBiCpl7 #AniesBaswedan #bkmt #SandiagaUno #UtangRp50M
-1628169721454661633 2023-02-21 23:08:06 +0000 &lt;Sabi16094449&gt; Saat mas @aniesbaswedan dan mas @AgusYudhoyono bersama &quot;Ras Terkuat di Bumi&quot;  *) Tasyakur Milad ke-42 Tahun Badan Kontak Majelis Taklim (BKMT) di Istora Senayan, Jakarta pagi ini (21/2).  #AniesBaswedan #ahy #agusyudhoyono #aniesforpresidenri2024  https://t.co/o8eC9pvN38
-1628157608044662784 2023-02-21 22:19:58 +0000 &lt;JatengTV&gt; (11) Pemilik PT Perorangan bisa melakukan pemisahan kekayaan pribadi dan bisnis secara formal karena memiliki NPWP yang terpisah. #ptperorangan #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaHebat #Jokowi  https://t.co/HRqCfZUnue
-1628150054791032834 2023-02-21 21:49:57 +0000 &lt;JatengTV&gt; (12) PT Perorangan memiliki kepastian hukum dan terdaftar resmi di Kemenkumham. Kedudukannya sama seperti PT biasa. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaBangkit #Jokowi  https://t.co/HRqCfZUnue
-1628112310798786560 2023-02-21 19:19:58 +0000 &lt;JatengTV&gt; (03) Pemilik PT Perorangan menjadi pemeran utama dalam mengatur kebijakan perusahaannya, termasuk dalam hal pengolahan data dan keuangan. #ptperorangan #sange #ciptakerja #indonesia #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1628104757494833152 2023-02-21 18:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1628073015434178560 2023-02-21 16:43:49 +0000 &lt;putuagenggribig&gt; JURUS PEMERINTAH ATASI INFLASI #GolkarIndonesia  #AirlanggaHartarto #UUCiptaKerja #Sambo #bharadaE #kerjanyata #aniesbaswedan #pemilu #jokowi #PSI #Gerindra #prabowo #ganjar #politikidentitas #puanmaharani #ridwankamil #pdip #nasdem #ekonomi #kpk #koalisi #pks #demokrat  https://t.co/RX5mntg9Qh
-1628066165741461504 2023-02-21 16:16:36 +0000 &lt;langkah_nyata&gt; Pak Airlangga Hartarto Menemani Presiden jokowi di IIMS #iims2023 #javedakhtar #kerjauntukindonesia #airlanggahartarto #golkarindonesia #AniesBaswedan #presidenjokowi  https://t.co/1DO2OwzXc8
-1628056549309714434 2023-02-21 15:38:23 +0000 &lt;dwi_nantoo&gt;  https://t.co/QxlspPYPra @bos_sir @LANGKAHANIES @Relawananies #rakyatmemilih #AniesBaswedan #sambutpemilu_dengangembira #aliansinasionalindonesiasejahtera
-1628049655375486983 2023-02-21 15:11:00 +0000 &lt;newsmerahputih&gt; Pengamat politik menilai peluang Gibran Rakabuming menduduki kursi Gubernur DKI Jakarta sangat berat, jika nantinya Anies Baswedan terpilih menjadi presiden 2024.  #merahputihcom #gibran #gubernurdki #aniesbaswedan    https://t.co/LaCN7BS7Un
-1628047146909065219 2023-02-21 15:01:02 +0000 &lt;Bolo_Airlangga&gt; #AirlanggaHartarto #GolkarIndonesia #Jokowi #GanjarPranowo #AniesBaswedan #capres #pilpres  https://t.co/E1ty0YDi2p
-1628036815407161345 2023-02-21 14:19:58 +0000 &lt;JatengTV&gt; (13) Masih belum banyak peraturan yang mengatur perusahaan PT perorangan ini sehingga pemilik perusahaan bebas melakukan aktivitas usahanya. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1628031797794848768 2023-02-21 14:00:02 +0000 &lt;pinterpolitik&gt; Mungkin, ini nih yang disebut sebagai “balas dengan karya”…  #AniesBaswedan #Jokowi #ekonomi #keadilansosial #ekonomikerakyatan #pinterpolitik #beritapolitik #infografis #politik #politikIndonesia  https://t.co/SCNisSJ0ZE
-1628028039539077120 2023-02-21 13:45:06 +0000 &lt;Noni33697740&gt; @AmMuliadi @FirzaHusain @pertamina Pemimpin paling demokratis dinegri ini kyaknya cuma #AniesBaswedan ,ora anti kritik,klo slah negarawan hrus legowo mminta maaf kpda rakyat,iya sya slah Esemka dlu ktanya produk nasional yg udah dipesan 6000 unit,tpi knytaannya ..impor 😇😇  https://t.co/aPN7tLwj1Z
-1628024667263967233 2023-02-21 13:31:42 +0000 &lt;KoncoAirlangga&gt; #AirlanggaHartarto #GolkarIndonesia #Jokowi #GanjarPranowo #AniesBaswedan #capres #pilpres Liverpool walmart  https://t.co/iNwcGLFt8a
-1628019394172575744 2023-02-21 13:10:45 +0000 &lt;Edymaull&gt; inilah tingkah laku anies  #aniesbaswedan #aniesgabenerpembohong #waspadacapresradikal #bapakpolitikidentitas #aniesdidukungkhilafah #anies  https://t.co/AiJhOVbbXN
-1628018655098466312 2023-02-21 13:07:49 +0000 &lt;AlfathMelfas&gt; Insya Allah seluruh rakyat Indonesia dukung Pak Anies jadi Presiden ❤️🇮🇩  #AniesBaswedan  https://t.co/c2s5AyHxVX
-1628018451381125120 2023-02-21 13:07:00 +0000 &lt;AlfathMelfas&gt; Di bidang pencegahan korupsi pun Ia berprestasi, jadi aneh kalau sekarang ada begal politik yang memaksakan kasus untuk menjegal Pak Anies‼️  #AniesBaswedan  https://t.co/zFGIE8Zzcv
-1628018256102703108 2023-02-21 13:06:14 +0000 &lt;AlfathMelfas&gt; Mari satukan tekad untuk perubahan dan perbaikan Indonesia! Dukung Pak Anies jadi Presiden ❤️🇮🇩  #AniesBaswedan  https://t.co/K8KDSOKIvO
-1628016692529086468 2023-02-21 13:00:01 +0000 &lt;cerAH2024&gt; Suara Pendukung Anies pindah dukung Ketum GOLKAR. #AniesBaswedan #AirlanggaHartarto #golkarindonesia #noah_ghc #PegununganPapua #PakistanBankrupt #warisover #Putin #poupettekenza #วาดไว้NuNew #GFvip  https://t.co/1AtBWIjf62
-1628016250407501829 2023-02-21 12:58:15 +0000 &lt;AlfathMelfas&gt; Penolakan palsu dari orang-orang palsu 😀  #AniesBaswedan  https://t.co/7JMC9uprrG
-1628015479695769603 2023-02-21 12:55:12 +0000 &lt;fajaronline&gt; Seolah Balas Pernyataan Megawati, Anies Baswedan: BKMT Jadi Bukti Pengajian Menghasilkan Ibu-ibu yang Lebih Berpengetahuan  https://t.co/CmJW43eR9H #AniesBaswedan #bkmt #IbuPengajian
-1628014107017515010 2023-02-21 12:49:44 +0000 &lt;Noni33697740&gt; #AniesBaswedan.. Keren 👍😎🇮🇩
-1627999062854074370 2023-02-21 11:49:58 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZTPEG
-1627996853634760704 2023-02-21 11:41:11 +0000 &lt;SERATUS_P&gt; Survei Rp: Begini Cara Mainnya Part 2 #SeratusPersen #GanjarPranowo #lembagasurvei  #Pilpres2024 #pemilu2024 #jokowi #aniesbaswedan  https://t.co/35OoWsMqvy
-1627996848131833856 2023-02-21 11:41:09 +0000 &lt;SERATUS_P&gt; Survei Rp: Begini Cara Mainnya  Part 1 #SeratusPersen #GanjarPranowo #lembagasurvei  #Pilpres2024 #pemilu2024 #jokowi #aniesbaswedan  https://t.co/m6fBqcex6m
-1627976418025172992 2023-02-21 10:19:59 +0000 &lt;JatengTV&gt; (07) Kelebihan lainnya dari PT Peroangan adalah mendapatkan prioritas dalam mengakses berbagai program pemerintah yang dikhususkan untuk UMKM. #ptperorangan #badanhukum #badanusaha #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627974557780025345 2023-02-21 10:12:35 +0000 &lt;corongnusantara&gt; Anies Jadi Cawapres Di 2024, Cak Imin: Belum Terpikirkan Sama Sekali  https://t.co/7IVLhWKLcP #AniesBaswedan #CakImin #MuhaiminIskandar #Pilpres2024  https://t.co/7j9eQe6raV
-1627974132041392129 2023-02-21 10:10:54 +0000 &lt;fajaronline&gt; Hasil Survei Terbaru Litbang Kompas, Elektabilitas NasDem Naik Setelah Usung Anies Baswedan  https://t.co/R5NSzxdx1P #AniesBaswedan #headline #LibangKompas #Parpol
-1627960432865710080 2023-02-21 09:16:27 +0000 &lt;AniesBaswedanRI&gt; Anies berdialog sambil sesekali melempar senyum hangat kepada masyarakat dan Acil Jukung (Pedagang Pasar Terapung) yang didominasi kaum ibu.  #AniesBaswedan #kalsel #nasdem  https://t.co/jOuu8hoWsV
-1627956385332994049 2023-02-21 09:00:22 +0000 &lt;panggung2024&gt; Tambahan dukungan ini menambah amunisi Anies dan Koalisi Perubahan yang diisi Partai Nasdem,  PKS dan Demokrat menjelang Pemilu 2024  berita lainnya ⬇️  https://t.co/rFg4Sjtka1  #aniesbaswedan #bawaslu #PemiluSerentak2024  https://t.co/1Ae0ZL1s4U
-1627953761997189121 2023-02-21 08:49:57 +0000 &lt;JatengTV&gt; (10) Dalam PT Perorangan, modal pendirian badan hukum bersifat bebas, mulai dari Rp0 hingga maksimal Rp5 Miliar. Menarik bukan? #Indonesiamaju #jokowi #ptperorangan #badanhukum #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627950669050286088 2023-02-21 08:37:40 +0000 &lt;jpnncom&gt; #BeritaTerpopuler   Jokowi Tinjau Proyek Mangkrak era Anies @jokowi @aniesbaswedan  #jokowi #aniesbaswedan #herubudihartono #jakarta  #dkijakarta   https://t.co/UI1tWqXwWu
-1627949248561160193 2023-02-21 08:32:01 +0000 &lt;Noni33697740&gt; @BejoBack @Muhamma18573609 @keuangannews_id Yg ngomong kli babi,dihina difitnah dicaci maki,seorng #AniesBaswedan tetap klem dn santun,karena begitulah hrusnya seorang pemimpin tebal kuping,bukn pemimpin yg anti kritik,dikritik emng slah ngamuk, baperan lpor polisi,trus cerdasnya berdemokrasi dimna 😎  https://t.co/J6VwyQeKpE
-1627946218952458242 2023-02-21 08:19:59 +0000 &lt;JatengTV&gt; (11) Pemilik PT Perorangan bisa melakukan pemisahan kekayaan pribadi dan bisnis secara formal karena memiliki NPWP yang terpisah. #ptperorangan #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaHebat #Jokowi  https://t.co/HRqCfZUnue
-1627940797986529280 2023-02-21 07:58:26 +0000 &lt;tvOneNews&gt; Partai Ummat sudah mendeklaraikan akan mendukung Anies Baswedan pada Pilpres 2024 mendatang. Hal ini dimaknai oleh Anies Baswedan sebagai bentuk kepercayaan.   Simak berita selengkapnya di  https://t.co/GgtZcy4bbs #HardNews_Politik #NewsOne #CariBeritaditvOne #AniesBaswedan  https://t.co/bKJHxw0eBE
-1627939855123509248 2023-02-21 07:54:41 +0000 &lt;Sabi16094449&gt; Hmm... Gimana mau kapok kalo yang buat hoaks gini dilindungi 🙄  #AniesBaswedan #abujanda #antihoax #aniesforpresidenri2024  https://t.co/yJM3SvZzUe
-1627938663756894208 2023-02-21 07:49:57 +0000 &lt;JatengTV&gt; (12) PT Perorangan memiliki kepastian hukum dan terdaftar resmi di Kemenkumham. Kedudukannya sama seperti PT biasa. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaBangkit #Jokowi  https://t.co/HRqCfZUnue
-1627931439475093504 2023-02-21 07:21:15 +0000 &lt;racin6_&gt; Gak heran kebanyakan orang hobi cari sensasi dan membodohi masyarakat. Sprti Refly Harun dibayar untuk menipu dengan menyebarkan kabar hoax demi menjatuhkan pemerintah.  #KaumTukangNyinyirRusakRI lamaran #loveisland #aniesbaswedan #indonesia sabrina  https://t.co/n1Gcy8HJ46
-1627931035391635457 2023-02-21 07:19:38 +0000 &lt;TaliesinAhab&gt; Anies menghianati janjinya sendiri #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/kBvjPmKdog
-1627931031881023490 2023-02-21 07:19:38 +0000 &lt;TaliesinAhab&gt; Anies manusia pendusta  #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/MoOA2Ss1N2
-1627931028039036928 2023-02-21 07:19:37 +0000 &lt;TaliesinAhab&gt; Bukti Anies tidak berkualitas #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/LLdQK7C0U4
-1627930867443326976 2023-02-21 07:18:58 +0000 &lt;suara_perjuanga&gt; Anies menghianati janjinya sendiri #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/n8dLqpO0pG
-1627930863366471680 2023-02-21 07:18:57 +0000 &lt;suara_perjuanga&gt; Anies manusia pendusta  #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/AnUFCyGe7h
-1627930859046309889 2023-02-21 07:18:56 +0000 &lt;suara_perjuanga&gt; Bukti Anies tidak berkualitas #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/KsX8eYeIsF
-1627930794269474816 2023-02-21 07:18:41 +0000 &lt;senandupertiwi&gt; Kita juga kaget pak #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/Er4ggvRsQs
-1627930734211256321 2023-02-21 07:18:27 +0000 &lt;senandupertiwi&gt; Katanya bersih, tapi banyak koruptor #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/gSZbGUSn6m
-1627930663470133249 2023-02-21 07:18:10 +0000 &lt;senandupertiwi&gt; Inilah Anies Wan Yaman #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/zQYTXUCism
-1627930646353149954 2023-02-21 07:18:06 +0000 &lt;NoNoval3&gt; Anies menghianati janjinya sendiri #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/DIFPsmXOAn
-1627930640820887552 2023-02-21 07:18:04 +0000 &lt;NoNoval3&gt; Anies manusia pendusta  #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/ytcmYYZk9i
-1627930636593012741 2023-02-21 07:18:03 +0000 &lt;NoNoval3&gt; Bukti Anies tidak berkualitas #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/EM0oHCiXAZ
-1627930603176996867 2023-02-21 07:17:55 +0000 &lt;senandupertiwi&gt; Gimana gak anjlok #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/v4k4zNBRzQ
-1627930524571537409 2023-02-21 07:17:37 +0000 &lt;racin6_&gt; Agama jangan dibenturkan dengan politik. Agama itu urusan Akhirat, politik itu dunia. Klo belajar agama jgn ngawur, jatohnya menyesatkan umat.  #politikidentitas #aniesbaswedan #partaiummat #pks #islam Indonesia  https://t.co/dZwtcr2Gag
-1627921383857741824 2023-02-21 06:41:17 +0000 &lt;fajaronline&gt; Pengamat Sebut Dukungan Partai Ummat Hanya Rugikan Anies Baswedan, Ini Sebabnya  https://t.co/tTA7dgE0KZ #AniesBaswedan #PartaiUmmat #PolitikIdentitas
-1627919122846867457 2023-02-21 06:32:18 +0000 &lt;larrylary12345&gt; Inilah hasil kerja anies yang menjadi musibah buat warga Jakarta  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/Ud0AdrGaMJ
-1627918927547478018 2023-02-21 06:31:32 +0000 &lt;larrylary12345&gt; Selama 5 tahun jakarta di bawah anies, hasilnya adalah jakarta semakin amburadul  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/2vUSnGgp4g
-1627918776548352001 2023-02-21 06:30:56 +0000 &lt;larrylary12345&gt; Hasil kerja yang menjadi beban warga jakarta hingga menjadi masalah baru  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/EQY4tn4xXY
-1627918670512160768 2023-02-21 06:30:30 +0000 &lt;larrylary12345&gt; Tolak anies yang jelas ingin menghancurkan Indonesia  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/tbbbuMEEPC
-1627918296925474816 2023-02-21 06:29:01 +0000 &lt;larrylary12345&gt; Inilah kebodohan pendukung Anies  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/DpPDh1UaGO
-1627916330161819650 2023-02-21 06:21:12 +0000 &lt;fajaronline&gt; Ferinand Hutahean Sebut Anies Baswedan Bukan Pribumi, Andi Sinulingga: Mantan Napi Ini Kalau Ngomong Memang Suka Ngasal  https://t.co/iAV8SdM5Ib #AndiSinulingga #AniesBaswedan #AniesBaswedanPribumi #FerdinandHutahaean
-1627914970997600257 2023-02-21 06:15:48 +0000 &lt;RimaOrgania&gt; ANIES KADRUN GAGAL #AniesBaswedan  https://t.co/D1jEcHzwrl
-1627914965696012289 2023-02-21 06:15:47 +0000 &lt;RimaOrgania&gt; ANIES JADI PENGHIANAT ATAS JANJINYA SENDIRI #AniesBaswedan  https://t.co/mrC4wp6XDa
-1627914958460833793 2023-02-21 06:15:45 +0000 &lt;RimaOrgania&gt; BUKTI ANIES TIDAK BERKUALITAS #AniesBaswedan  https://t.co/Nqk1mQdWkp
-1627914787421290496 2023-02-21 06:15:05 +0000 &lt;RimaOrgania&gt; ANIES MANUSIA PENDUSTA #AniesBaswedan  https://t.co/zI5Jl4aEi8
-1627914619170979841 2023-02-21 06:14:25 +0000 &lt;IrmianHollanda&gt; ANIES KADRUN GAGAL #AniesBaswedan  https://t.co/lv1u33gTsQ
-1627914614163009537 2023-02-21 06:14:23 +0000 &lt;IrmianHollanda&gt; ANIES JADI PENGHIANAT ATAS JANJINYA SENDIRI #AniesBaswedan  https://t.co/voZTF8hACs
-1627914609159213056 2023-02-21 06:14:22 +0000 &lt;IrmianHollanda&gt; BUKTI ANIES TIDAK BERKUALITAS #AniesBaswedan  https://t.co/BJDDwq1MW2
-1627914604092465158 2023-02-21 06:14:21 +0000 &lt;IrmianHollanda&gt; ANIES MANUSIA PENDUSTA #AniesBaswedan  https://t.co/1g6toLYFWR
-1627914476367523840 2023-02-21 06:13:51 +0000 &lt;NiraIdhina&gt; ANIES KADRUN GAGAL #AniesBaswedan  https://t.co/RfshzQbHWW
-1627914471598600192 2023-02-21 06:13:49 +0000 &lt;NiraIdhina&gt; ANIES JADI PENGHIANAT ATAS JANJINYA SENDIRI #AniesBaswedan  https://t.co/hlTnbYjScj
-1627914466976493569 2023-02-21 06:13:48 +0000 &lt;NiraIdhina&gt; BUKTI ANIES TIDAK BERKUALITAS #AniesBaswedan  https://t.co/WOYOJEE7Sc
-1627914443601612803 2023-02-21 06:13:43 +0000 &lt;NiraIdhina&gt; ANIES MANUSIA PENDUSTA #AniesBaswedan  https://t.co/RgbHNykzuD
-1627909065635688448 2023-02-21 05:52:20 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/ZGsjMCkyKF
-1627909037399633920 2023-02-21 05:52:14 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/Txi5iz8vR1
-1627909010799341571 2023-02-21 05:52:07 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/wNw4HLmm96
-1627908978587103233 2023-02-21 05:52:00 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/zP8Osl3FSh
-1627908948484567042 2023-02-21 05:51:53 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/oU65rsd5yA
-1627908094406828037 2023-02-21 05:48:29 +0000 &lt;kotakkuning989&gt; ANIES DIDUKUNG KHILAFAH 😡👎🏼  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/k804TwnBNb
-1627908017214865408 2023-02-21 05:48:11 +0000 &lt;kotakkuning989&gt; ANIES MAU MELANGKAHI KUASA TUHAN? 😡👎🏼  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/KqnodErk4D
-1627907904820109312 2023-02-21 05:47:44 +0000 &lt;kotakkuning989&gt; ANIES HALU 😡👎🏼  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/HZj6rWU1zJ
-1627907763614683136 2023-02-21 05:47:10 +0000 &lt;kotakkuning989&gt; ANIES BAHAYAKAN MASYARAKAT 😡👎🏼  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/VhjSScVyVP
-1627907663257534466 2023-02-21 05:46:46 +0000 &lt;kotakkuning989&gt; ANIES GAK BISA KERJA 😡👎🏼  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/T2X0DhsRhF
-1627905891151548417 2023-02-21 05:39:44 +0000 &lt;JokMeta&gt; Anies Baswedan raja Utang ingkar janji, Prestasi kagak ada #AniesBaswedan  https://t.co/Jey7liPecg
-1627905650729828352 2023-02-21 05:38:46 +0000 &lt;JokMeta&gt; Anies Baswedan banyak gagalnya Janji dong, proyeknya pada mangkrak bikin abis anggaran aja haadeh. #AniesBaswedan  https://t.co/doOqL6ONOg
-1627904717522337792 2023-02-21 05:35:04 +0000 &lt;fajaronline&gt; Khofifah Jadi Rebutan Anies dan Prabowo, PKB Klaim Tak Khawatir Cak Imin Tergusur  https://t.co/ww1au7CZqR #AniesBaswedan #MuhaiminIskandar #Pilpres2024 #PKB
-1627900924730691584 2023-02-21 05:20:00 +0000 &lt;JatengTV&gt; (03) Pemilik PT Perorangan menjadi pemeran utama dalam mengatur kebijakan perusahaannya, termasuk dalam hal pengolahan data dan keuangan. #ptperorangan #sange #ciptakerja #indonesia #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627894645312348161 2023-02-21 04:55:02 +0000 &lt;tvOneNews&gt; Wakil Ketua Umum PKB Jazilul Fawaid berharap agar Ketua Umum PKB Cak Imin terpilih menjadi presiden di Pilpres 2024  Simak berita selengkapnya di  https://t.co/GgtZcy4bbs #HardNews_Politik #NewsOne #CariBeritaditvOne #CakImin #AniesBaswedan #Prabowo  https://t.co/USfurbJLkH
-1627894469688463361 2023-02-21 04:54:21 +0000 &lt;PutraAlamsyahJ1&gt; Camera Roll Action.... 🤭🤭🤭🤭 #AniesBaswedan #AniesPresiden2024 #DKIJakarta  https://t.co/2mPcAqrRnv
-1627893364757778433 2023-02-21 04:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627893188362113027 2023-02-21 04:49:15 +0000 &lt;long74new&gt; @keuangannews_id #AniesBaswedan  #AniesPresiden2024  https://t.co/NOjl3TnOn0
-1627888419123888129 2023-02-21 04:30:18 +0000 &lt;Cahyokt4&gt; Jadi selama ini....  hahahaha  #SyutingSinetron #Sinetron #Nasdem #aniespresiden2024 #DkiJakarta #aniesgagal #aniesbaswedan #Chuakz #Chuaks #KIB  https://t.co/YwcOpgdxQ5
-1627887112782741505 2023-02-21 04:25:07 +0000 &lt;AhmadNa88154269&gt; @AhmadNa88154269  Waduh pak Anies terpntau ..lg lihat apa pak lihat sisa kerjanya dulu ny pak...??? #AniesBaswedan #trending2023  #AniesDidukungKoruptor #aniesgagalkerja #waspadacapresradikal #bapakpolitikidentitas  https://t.co/3QYX15NPWO
-1627886922172596225 2023-02-21 04:24:21 +0000 &lt;AdeFauzyAhmad&gt; Goyang Terus Maszeeeh...🤭🤭🤭 #aniesbaswedan #AniesDidukungKoruptor #AniesDidukungKHILAFAH #AniesPresidenRI2024  https://t.co/8ASnJ3dAvL
-1627884498988978176 2023-02-21 04:14:43 +0000 &lt;netrayID&gt; Gimana menurut kalian nih guys? Posisi lima besar semakin kesini semakin terlihat saling menggeser ya. Bagikan opini kalian di kolom komentar yuk!   #Membaca2024 #netrayid #mediamonitoring #bigdata #pemilu2024 #ahy #erickthohir #prabowo #ridwankamil #aniesbaswedan
-1627883600350957568 2023-02-21 04:11:09 +0000 &lt;Noni33697740&gt; @Mdy_Asmara1701 #AniesBaswedan mmbngun bngsa demi kesejahteraan rakyat dn NKRI 👍😎🇮🇩  https://t.co/PHSJaDm5SC
-1627882817047900160 2023-02-21 04:08:02 +0000 &lt;fajaronline&gt; Anies Bilang Akan Fokus Bangun SDM di IKN, Guntur Romli Ungkit Angka Putus Sekolah SD di Jakarta Tertinggi Nasional  https://t.co/AVb3UVjtoL #AniesBaswedan #GunturRomli #IKN #PSI
-1627882543856107523 2023-02-21 04:06:57 +0000 &lt;PutraAlamsyahJ1&gt; Lagunya ko bisa pas gitu yaaa... 🤭🤭🤭 #AniesBaswedan #AniesPresiden2024 #anies #AniesDidukungKoruptor #AniesDidukungKHILAFAH #aniessapajawabarat  https://t.co/QVESsan5Fz
-1627882522259636224 2023-02-21 04:06:52 +0000 &lt;Noni33697740&gt; Semua akn #AniesBaswedan pda waktunya,jika pemilik langit dn bumi AllahSWT mnghndakiNYA.. Aamiin yarobbalallamiin
-1627880495030882307 2023-02-21 03:58:49 +0000 &lt;rahmadhdyt709&gt; Mumpung ada kamera nih!!gaya dulu ahh.. #AniesBaswedan #aniesbanyakhutang #rumahdp0 #bapakidentitaspolitik #politikus #sandiwarasandi  https://t.co/eKKdHR40VS
-1627877851314941952 2023-02-21 03:48:18 +0000 &lt;Noni33697740&gt; @keuangannews_id #AniesBaswedan sosok putra terbaik bngsa, yg mmpu mngharumkan nma bngsa Indonesia dikncah dunia 👍😎🇮🇩  https://t.co/JiOHuZcNJ5
-1627876656315764736 2023-02-21 03:43:34 +0000 &lt;fajaronline&gt; Adu Kuat Anies Vs Prabowo di Sulsel, Pengamat Singgung Hasil Pilpres 2010  https://t.co/miE1x7THox #AniesBaswedan #Gerindra #headline #KoalisiPerubahan
-1627876099366727680 2023-02-21 03:41:21 +0000 &lt;AmyraArnas&gt; Habis diresmikan gak ada yang mau nempatin. kira-kira kenapaa dan apa penyebabnya yaa??   #Rusun #AniesBaswedan #AniesPresiden2024   https://t.co/38xViH8YWw
-1627875448981164032 2023-02-21 03:38:46 +0000 &lt;BobyTrihandoyo&gt; Oooohhh.. ini ternyata BTS nyaaa  Dadah dadah setingan hahaha  #Anies #AniesBaswedan #AniesAhy #Demokrat #Nasdem #Pks #KIB #Gubernur  https://t.co/4O7nyU9rUv
-1627873981889138688 2023-02-21 03:32:56 +0000 &lt;lingga_susilo&gt; Hahah, Waduh mau ngapain lagi bapak 1 ini hahah.. Sedang mantau. #AniesBaswedan #AniesPresiden2024 #Aniesgagal #Anies #AniesDidukungKoruptor #TrendingNow #trending2023  https://t.co/5huiBrTIHi
-1627873718134525953 2023-02-21 03:31:53 +0000 &lt;AlumRombia&gt; Bobroknya #aniesbaswedan. Mengandalkan kecakapan bicara, tapi lemah dalam kerja.  https://t.co/DBhWS1Nhi6
-1627873596541669376 2023-02-21 03:31:24 +0000 &lt;Cahyokt4&gt; goyaaaaaang terooooossss...  hahaha eeeh eeh.. Tapi kok lagunya bisa pas yaaa??  #Chuaks #Chuakz #aniesnasdem #aniesbaswedan #aniesgagal #DkiJakarta #Nasdem #aniespresiden2024  https://t.co/lHJxGTs3ws
-1627873550374965249 2023-02-21 03:31:13 +0000 &lt;AlumRombia&gt; Joget dulu pak #aniesbaswedan, Hutang belakangan.   https://t.co/Jz1Y1Aai23
-1627873448579170304 2023-02-21 03:30:49 +0000 &lt;AlumRombia&gt; Bobroknya #aniesbaswedan , Pinter ngomong doang busett..!!  https://t.co/msIXDkYa1q via @YouTube
-1627873086933729280 2023-02-21 03:29:23 +0000 &lt;AlumRombia&gt; Joget dulu pak #aniesbaswedan, Hutang belakangan.  https://t.co/ukYOGc6VsW
-1627871661893767168 2023-02-21 03:23:43 +0000 &lt;AsepSeptiyana_&gt; Ini sinetron apa ya guys klo boleh tau? 🤔🤔 #aniesbaswedan #anies #AniesNasdemOut #dkijakarta #wonderfulindonesia #IndonesiaJuara #indonesiamaju  https://t.co/vnFnevdVcD
-1627871548517531648 2023-02-21 03:23:16 +0000 &lt;AsepSeptiyana_&gt; Nahh kan bisa pas bgt begini lagunya 😅😅😅 #aniesbaswedan #anies #AniesNasdemOut #dkijakarta #wonderfulindonesia #IndonesiaJuara #indonesiamaju  https://t.co/W3ZQtvUED3
-1627867723261964288 2023-02-21 03:08:04 +0000 &lt;KATALOGIKAcom&gt; #Pilpres2024 #AniesBaswedan #Pesan #MuslimTwitter  @aniesbaswedan @Relawananies @Mdy_Asmara1701 @ekowboy2 @NasDem @PKSejahtera @PDemokrat  Link :  https://t.co/4jRosO27Md  https://t.co/ipanDqplkE
-1627862159005999107 2023-02-21 02:45:57 +0000 &lt;AmaluddinSSili1&gt; @siagiansulben Orang² setengah waras lagi pada panik memikirkan bagaimana cara menjatuhkan nama baik #AniesBaswedan
-1627857337460604928 2023-02-21 02:26:48 +0000 &lt;phunglie1&gt; Saya Anak Muda Indonesia 🇮🇩 Coblos Pak #AniesBaswedan CAPRES  Dari #PartaiNasdem . 👉Pak Anies ,dia itu Akademisi Pintar,Berpikiran Maju. Perubahan itu; Kedepan Tidak Peke orang Korupsi,Perubahan itu; Bikin Aturan yg Pro Rakyat . Perubahan itu; Yang tidak Pro Rakyat di hapus .
-1627854767988019200 2023-02-21 02:16:35 +0000 &lt;Noni33697740&gt; @Muhamma18573609 @keuangannews_id Apapun bisa terjdi jika pemilik langit dn bumi AllahSWT mnghndaki #AniesBaswedan cucu  Pahlawan nasional sbgai Presiden RI berikutnya ..Aamiin yarobbalallamiin  https://t.co/VkWNq3p0Kt
-1627853111657127937 2023-02-21 02:10:00 +0000 &lt;IndonesiaPintas&gt; Bayangkan saja, saking tegasnya Ganjar para ASN Pemprov Jateng bahkan harus menandatangani Pakta Integritas yang isinya merupakan janji untuk setia kepada Negara Kesatuan Republik Indonesia (NKRI) #TheLastOfUs  dosen uii  #ganjarpranowo #aniesbaswedan  https://t.co/p8OS8HB1sy
-1627853110436659201 2023-02-21 02:10:00 +0000 &lt;liputpedia&gt; Bayangkan saja, saking tegasnya Ganjar para ASN Pemprov Jateng bahkan harus menandatangani Pakta Integritas yang isinya merupakan janji untuk setia kepada Negara Kesatuan Republik Indonesia (NKRI) #TheLastOfUs  dosen uii  #ganjarpranowo #aniesbaswedan  https://t.co/LkPHtov3a1
-1627853110122254336 2023-02-21 02:10:00 +0000 &lt;RakyatAsupan&gt; Bayangkan saja, saking tegasnya Ganjar para ASN Pemprov Jateng bahkan harus menandatangani Pakta Integritas yang isinya merupakan janji untuk setia kepada Negara Kesatuan Republik Indonesia (NKRI) #TheLastOfUs  dosen uii  #ganjarpranowo #aniesbaswedan  https://t.co/7vF6yElk9y
-1627853017163653121 2023-02-21 02:09:37 +0000 &lt;FariziStevani&gt; Published on YouTube: TERBONGKAR ! Ternyata setiap kegiatan yang di hadiri anies sudah di SETTING | #aniesbaswedan #shorts  https://t.co/G958vKkaix
-1627853013279727620 2023-02-21 02:09:37 +0000 &lt;FariziStevani&gt; Published on YouTube: ANIES BASWEDAN &#39;KOTORI&#39; MASJID MASYARAKAT PONTIANAK | #aniesbaswedan #pontianak #kalbar  https://t.co/wQMaj9n7rQ
-1627849126183571456 2023-02-21 01:54:10 +0000 &lt;Alfakton_i&gt; bentar lagi Anies pasti merosot ke sumur resapan!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Thoriq | Size L | Gitasav | Cikini | Lamaran | Morningg | Subuh | JISOO SOLO IS COMING | Christy | Nanon | #Primiily19thBirthday |  https://t.co/1q2IPNwbgM
-1627849032566738945 2023-02-21 01:53:47 +0000 &lt;Alfakton_i&gt; Pendukungnya anies dan amien rais isinya penjahat semua!! tukang copet!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Thoriq | Size L | Gitasav | Cikini | Lamaran | Morningg | Subuh | JISOO SOLO IS COMING | Christy | Nanon | #Primiily19thBirthday |  https://t.co/kgzFQb2jeU
-1627848901561847808 2023-02-21 01:53:16 +0000 &lt;Alfakton_i&gt; Anies bakal jadi budak dan boneka amerika setelah SBY!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Thoriq | Size L | Gitasav | Cikini | Lamaran | Morningg | Subuh | JISOO SOLO IS COMING | Christy | Nanon | #Primiily19thBirthday |  https://t.co/r62OVXpqKY
-1627848805004771328 2023-02-21 01:52:53 +0000 &lt;Alfakton_i&gt; Capres riba anies boroknya udah kebongkar!! Bawaslu harus tindak!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Thoriq | Size L | Gitasav | Cikini | Lamaran | Morningg | Subuh | JISOO SOLO IS COMING | Christy | Nanon | #Primiily19thBirthday |  https://t.co/nnPrFzsHyJ
-1627848685341270016 2023-02-21 01:52:25 +0000 &lt;Alfakton_i&gt; Jangan pilih presiden yang dipilih amin rais karena sudah pasti berseberangan dengan NKRI!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Thoriq | Size L | Gitasav | Cikini | Lamaran | Morningg | Subuh | JISOO SOLO IS COMING | Christy | Nanon | #Primiily19thBirthday |  https://t.co/KD4Ph2XKwh
-1627848435289444352 2023-02-21 01:51:25 +0000 &lt;Alfakton_i&gt; otak anies hanya ingin bebas dari hutang dan gugatan korupsi!! caranya busuk semua!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Thoriq | Size L | Gitasav | Cikini | Lamaran | Morningg | Subuh | JISOO SOLO IS COMING | Christy | Nanon | #Primiily19thBirthday |  https://t.co/bebv51Lspz
-1627848307828740096 2023-02-21 01:50:55 +0000 &lt;Alfakton_i&gt; Kelakuan otak cabul Anies wan toa mulai terlihat!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Thoriq | Size L | Gitasav | Cikini | Lamaran | Morningg | Subuh | JISOO SOLO IS COMING | Christy | Nanon | #Primiily19thBirthday |  https://t.co/B6K207KyNN
-1627848197522726912 2023-02-21 01:50:28 +0000 &lt;Alfakton_i&gt; Kelakuan Anies jualan agama, ayat dan mayat demi meraup keuntungan!! pantas Jakarta amburadul!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Thoriq | Size L | Gitasav | Cikini | Lamaran | Morningg | Subuh | JISOO SOLO IS COMING | Christy | Nanon | #Primiily19thBirthday |  https://t.co/UhIjNqtTc3
-1627845759570935809 2023-02-21 01:40:47 +0000 &lt;tentaralangit99&gt; @MARQUEZ__93 #AniesBaswedan Is the best
-1627838387679027209 2023-02-21 01:11:30 +0000 &lt;AhmadNa88154269&gt; @AhmadNa88154269  Waduh pas bangat lagunya  buat pak anies baswedan sendirian terkait utang....???? #AniesBaswedan #AniesDidukungKoruptor  #aniesgagalkerja #waspadacapresradikal #bapakpolitikidentitas  #AniesNasdemOut  https://t.co/AKR2OgPCHd
-1627830835448799232 2023-02-21 00:41:29 +0000 &lt;andrikingo77&gt; Emang deh masalah akting Pak Anies jagonya hihihi #akting #aniesbaswedan #aniesgagal #gubernurjakarta #jakarta #banjir #jagoakting #macet  https://t.co/snca0ZmYPS
-1627829772503117824 2023-02-21 00:37:16 +0000 &lt;ariefalay66&gt; Cieeeee emang paling jago sih aktingnya Pak Anies, sampe lupa tuh belum bayar hutang hihiiii #aniesgagal #aniesbaswedan #akting #hutang #nasdem #gubernurjakarta #jakarta #macet #banjir  https://t.co/0r2fiOeD3z
-1627829533272571904 2023-02-21 00:36:18 +0000 &lt;andrikingo77&gt; Wkkwkw gatau malu emang dah si pak Anies ini, berhutang tapi masih bisa asik joget #aniesgagal #aniesbaswedan #aniesberhutang #hutang #gubernurjakarta #jakarta #banjir #kacanglupakulit #kasbon  https://t.co/aKlHhgRqc0
-1627829530818908161 2023-02-21 00:36:18 +0000 &lt;rahmadhdyt709&gt; Bukannya mikirin lunasin hutangnya ini malah joget&quot;!! #AniesBaswedan #aniesgagaltotal #aniesbanyakhutang #politikus #captikus #bapakidentitaspolitik  https://t.co/gjVltO4BQM
-1627825015529021440 2023-02-21 00:18:21 +0000 &lt;lingga_susilo&gt; Waduh Masa Calon Presiden kayak gini, Inilah Biar Suara nya Banyakkan. Haha #AniesBaswedan #Aniesforpresdien #Pilpres2024 #Lagicarisuara #haha #Trending #Memalukan #Aniesgagal #trending2023  https://t.co/YzwF6XUfMN
-1627821153199996928 2023-02-21 00:03:01 +0000 &lt;fajaronline&gt; Hasto Bilang PDIP Tak Cocok Berkoalisi dengan Parpol yang Suka Impor, Kader Gerindra: Impor Capres Maksudnya?  https://t.co/TUfyCU8H6j #AniesBaswedan #CapresImpor #FerdinandHutahaean #Gerindra
-1627811249940762624 2023-02-20 23:23:39 +0000 &lt;PalopoJurnal&gt; Anies Baswedan wajib disingkirkan di Pilpres 2024 untuk mengamankan jalur karir politik Gibran Rakabuming di Pilkada DKI Jakarta #gibranrakakabuming #aniesbaswedan #pemilu2024 #pilpres #dkijakarta  https://t.co/sCkctilNjA
-1627811152955846656 2023-02-20 23:23:16 +0000 &lt;palopoleaks&gt; Anies Baswedan wajib disingkirkan di Pilpres 2024 untuk mengamankan jalur karir politik Gibran Rakabuming di Pilkada DKI Jakarta #gibranrakakabuming #aniesbaswedan #pemilu2024 #pilpres #dkijakarta   https://t.co/5h6lSISWkR
-1627805869382717440 2023-02-20 23:02:17 +0000 &lt;irfanwahidi60&gt; Pak #AniesBaswedan terlalu polos orangnya, saya haqul yakin bahwa beliau tidak tau dan tidak sedang membidik seseorang, tapi apa boleh buat ada yang merasa rupanya,,😎
-1627805725698437121 2023-02-20 23:01:42 +0000 &lt;irfanwahidi60&gt; @Quvvatt @dd9966 Pak #AniesBaswedan terlalu polos orangnya, saya haqul yakin bahwa beliau tidak tau dan tidak sedang membidik seseorang, tapi apa boleh buat ada yang merasa rupanya,,😎
-1627790690846474240 2023-02-20 22:01:58 +0000 &lt;Sabi16094449&gt; Anies Effect! Pengurus-Kader partai lain ramai-ramai gabung Nasdem Riau   #nasdem #riau #masanies #AniesBaswedan  https://t.co/IWtgYk3MGK
-1627788085399281665 2023-02-20 21:51:37 +0000 &lt;Sabi16094449&gt; Begitu antusiasnya rakyat untuk bertemu dengan Anies Baswedan  #AniesBaswedan #anieskeren #rakyatpilihanies #aniesuntukindonesia  https://t.co/GhTNYTazz7
-1627742368802951170 2023-02-20 18:49:57 +0000 &lt;JatengTV&gt; (10) Dalam PT Perorangan, modal pendirian badan hukum bersifat bebas, mulai dari Rp0 hingga maksimal Rp5 Miliar. Menarik bukan? #Indonesiamaju #jokowi #ptperorangan #badanhukum #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627734821077389312 2023-02-20 18:19:57 +0000 &lt;JatengTV&gt; (11) Pemilik PT Perorangan bisa melakukan pemisahan kekayaan pribadi dan bisnis secara formal karena memiliki NPWP yang terpisah. #ptperorangan #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaHebat #Jokowi  https://t.co/HRqCfZUnue
-1627726375250714624 2023-02-20 17:46:24 +0000 &lt;RelawanAci&gt; Saat kunjungan ABW di ALUN-ALUN KAPUAS Pontianak #aniesbaswedan #relawananiesaniesbaswedan #relawananies #relawananiescenterindonesia #relawananiescenter #relawanaci #aniescenterindonesia #aniescenter #amanahcerdasberintegritas #relawanamanahcerdasdanberintegritas  https://t.co/k9rhvhEZvg
-1627683044667666433 2023-02-20 14:54:13 +0000 &lt;FacebookPetani&gt; @ruhutsitompul #AniesBaswedan #AniesPresiden2024  https://t.co/1Hmn8oPqi7
-1627681973237092353 2023-02-20 14:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627656381577986048 2023-02-20 13:08:16 +0000 &lt;abdi_sutomo&gt; Voltcyber juga mengunggah sebuah tangkapan layar yang diklaim dokumen milik CIA serta keterlibatannya menjadi Anies Baswedan sebagai Presiden RI.  https://t.co/BWmkkuQ6RV  #AniesBaswedan  #PresidenRI
-1627650577269415938 2023-02-20 12:45:12 +0000 &lt;aniesbaswedan&gt; 100 anak muda dari 34 provinsi se-Indonesia, bawa 100 ide untuk Indonesia.  #AniesBaswedan #BawaIde #BawaIdemu #anakmuda #gerakan #ide #gagasan #UntukIndonesia   https://t.co/emxbHNu2Wx
-1627645603311394817 2023-02-20 12:25:26 +0000 &lt;KoncoAirlangga&gt; #AirlanggaHartarto #GolkarIndonesia #Jokowi #GanjarPranowo #AniesBaswedan #capres #pilpres #Midnightmuseum  Esemka Rini Tatum  https://t.co/I0PE9zWnVG
-1627636824524070913 2023-02-20 11:50:33 +0000 &lt;monitorindo&gt; NasDem Tanggapi Hasto PDIP: Perbedaan Capres Keniscayaan, Jangan Jadi Pengahalang Silaturrahmi   https://t.co/oQehwS3zFN #SuryaPaloh #Megawati #NasDem #PDIP #HastoKristiyanto #HermawiTaslim #Capres #AniesBaswedan
-1627635305967927297 2023-02-20 11:44:31 +0000 &lt;corongnusantara&gt; Pengamat Minta #Bawaslu Periksa Anies Baswedan Terkait Sering Safari Politik Pakai Jet Pribadi  https://t.co/WNS9u96cDa #AniesBaswedan #JetPribadi #Kampanye #Pilpres2024 #RayRangkuti #SafariPolitik  https://t.co/snIQUDwPQ7
-1627598779208843264 2023-02-20 09:19:22 +0000 &lt;Bolo_Airlangga&gt; #AirlanggaHartarto #GolkarIndonesia #Jokowi #GanjarPranowo #AniesBaswedan #capres #pilpres  https://t.co/cDNX60FmyE
-1627596051808145410 2023-02-20 09:08:32 +0000 &lt;AniesBaswedanRI&gt; Temu Relawan di Balikpapan   #aniesbaswedan #viraltwitter  https://t.co/6X9NsewhW9
-1627593757855207424 2023-02-20 08:59:25 +0000 &lt;netrayID&gt; Ketua Majelis Syuro Partai Ummat @DPP_PartaiUmmat, @realAmienRais sudah mendeklarasikan dukungannya @aniesbaswedan untuk maju pada kontestasi Pemilu 2024 mendatang #PartaiUmmat #AmienRais #AniesBaswedan #PartaiPolitik #Pemilu2024 #bigdata #mediamonitoring   https://t.co/rjY83lndnG
-1627578418127831040 2023-02-20 07:58:28 +0000 &lt;cokro_tv&gt; KELOMPOK 212 BINGUNG, MEREKA TIDAK DILIRIK PRABOWO, JUGA DICUEKIN ANIES  @syafiqhasyim_de  #cokrotv #GakPakeBaper #aniesbaswedan #prabowo   Full Video Youtube:  https://t.co/VwSefl56Sq  https://t.co/Ino5jg7KmB
-1627574666075439104 2023-02-20 07:43:33 +0000 &lt;cokro_tv&gt; ANIES GAK KUAT JADI ANTITESIS JOKOWI, DIA JILAT LUDAH SENDIRI  #cokrotv #GakPakeBaper #aniesbaswedan #Jokowi   Full Video Youtube:  https://t.co/j9tMBf0WNd  https://t.co/bdxrRyAOlo
-1627562814566191105 2023-02-20 06:56:28 +0000 &lt;cokro_tv&gt; BAHAYA! PARTAI UMMAT JUALAN AGAMA DEMI ANIES @iwanchan_  #CokroTv #GakPakeBaper #PartaiUmmat #AniesBaswedan   Full Video Youtube:  https://t.co/9boa0LBKT2  https://t.co/sOxtVdbjUq
-1627558630064283649 2023-02-20 06:39:50 +0000 &lt;suara_perjuanga&gt; Omong kosong apalagi yang dilontarkan Anies #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/CSRxDDCz9h
-1627558626851434497 2023-02-20 06:39:49 +0000 &lt;suara_perjuanga&gt; Kebobrokan Anies terbongkar lagi #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/PiLIH3La3c
-1627558623365992448 2023-02-20 06:39:49 +0000 &lt;suara_perjuanga&gt; Anies timbun Bansos #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/aVp1Hxc5DI
-1627558620148948992 2023-02-20 06:39:48 +0000 &lt;suara_perjuanga&gt; Tidak ada pantas pantasnya Anies jadi Presiden #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/QgwhSotquX
-1627558616550219776 2023-02-20 06:39:47 +0000 &lt;suara_perjuanga&gt; Anies dengan segala upaya ingin menghancurkan Pribumi #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/bvORmr8qqy
-1627558382373838848 2023-02-20 06:38:51 +0000 &lt;TaliesinAhab&gt; Omong kosong apalagi yang dilontarkan Anies #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/k9506oXuDp
-1627558379089694721 2023-02-20 06:38:50 +0000 &lt;TaliesinAhab&gt; Kebobrokan Anies terbongkar lagi #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/it2Cq9Q7Dm
-1627558376166281216 2023-02-20 06:38:50 +0000 &lt;TaliesinAhab&gt; Anies timbun Bansos #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/UuhVuyY2Y5
-1627558372970221569 2023-02-20 06:38:49 +0000 &lt;TaliesinAhab&gt; Tidak ada pantas pantasnya Anies jadi Presiden #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/0TchvhiBCO
-1627558369866420224 2023-02-20 06:38:48 +0000 &lt;TaliesinAhab&gt; Anies dengan segala upaya ingin menghancurkan Pribumi #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/sJruVO2Hyb
-1627558082795671553 2023-02-20 06:37:40 +0000 &lt;NoNoval3&gt; Omong kosong apalagi yang dilontarkan Anies #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/O8wk5urLay
-1627558079213731840 2023-02-20 06:37:39 +0000 &lt;NoNoval3&gt; Kebobrokan Anies terbongkar lagi #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/5gDmZX01bG
-1627558075275304960 2023-02-20 06:37:38 +0000 &lt;NoNoval3&gt; Anies timbun Bansos #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/EGjmvILWsl
-1627558071143927809 2023-02-20 06:37:37 +0000 &lt;NoNoval3&gt; Tidak ada pantas pantasnya Anies jadi Presiden #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/T6TZpIRkId
-1627558066844737537 2023-02-20 06:37:36 +0000 &lt;NoNoval3&gt; Anies dengan segala upaya ingin menghancurkan Pribumi #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/BMe5eDPtZT
-1627557284976164865 2023-02-20 06:34:29 +0000 &lt;negeripamansa20&gt; Anies Pemimpin yang Gagal Total  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/n0gebkIqYe
-1627557205577977856 2023-02-20 06:34:11 +0000 &lt;negeripamansa20&gt; Anies seperti Bunglon  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/xIHtaC7vT0
-1627557112426696707 2023-02-20 06:33:48 +0000 &lt;negeripamansa20&gt; Wan Abud cuma pemimpi bukan pemimpin  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/qY91sDd5lz
-1627556995040706560 2023-02-20 06:33:20 +0000 &lt;negeripamansa20&gt; Sumur resapan proyek gagal dari Gubernur Gagal  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/n7c5A4yDca
-1627556893932789761 2023-02-20 06:32:56 +0000 &lt;negeripamansa20&gt; Awas gerombolan radikal pendukung khilafah  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/amuaDUM4nE
-1627556317627056129 2023-02-20 06:30:39 +0000 &lt;HayyGatin&gt; #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan
-1627556265974190080 2023-02-20 06:30:26 +0000 &lt;HayyGatin&gt; #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan
-1627556215118233601 2023-02-20 06:30:14 +0000 &lt;HayyGatin&gt; #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan
-1627554835523588097 2023-02-20 06:24:45 +0000 &lt;Gerindra_KRA&gt; Sebuah ucapan berbau janji adalah hutang,,,, bagaimana menurut pemirsaaa????  #mendingprabowo #janjianiespadaprabowo #prabowoberjiwabesar #aniesbaswedan #janjianiesbaswedan #bronies #broniesjakarta #aniesbaswedanmania #gerindramenang  https://t.co/gmOJoTZYrO
-1627553628188991489 2023-02-20 06:19:58 +0000 &lt;JatengTV&gt; (07) Kelebihan lainnya dari PT Peroangan adalah mendapatkan prioritas dalam mengakses berbagai program pemerintah yang dikhususkan untuk UMKM. #ptperorangan #badanhukum #badanusaha #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627553594345164802 2023-02-20 06:19:50 +0000 &lt;fajaronline&gt; Isu Amerika Serikat Dukung Anies, Politisi Gerindra Beri Bantahan Begini  https://t.co/NvmFPUiEji #AmerikaSerikat #AniesBaswedan #AriefPoyuono #DubesAS
-1627551458853031937 2023-02-20 06:11:20 +0000 &lt;fajaronline&gt; Sebut IKN Kepentingan Oligarki, Dokter Tifa Tantang Anies Keluarkan Pernyataan Ini  https://t.co/bUlMkKEi5O #AniesBaswedan #DokterTifa #IKNNusantara #oligarki
-1627549541535981570 2023-02-20 06:03:43 +0000 &lt;larrylary12345&gt; Kebodohan anies ya begini, hasil kerjanya menghancurkan jakarta  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/TP8XrVhZBO
-1627549500440207360 2023-02-20 06:03:33 +0000 &lt;tribunjambiku&gt; Relawan Anies Dialog Menakar Peluang dan Tantangan Kemenangan Anies di Jambi Bersama Wasekjen PKS    https://t.co/WfIF9VYS37 via @tribunjambiku   #AniesBaswedan #jambi #PKS
-1627549434786770946 2023-02-20 06:03:18 +0000 &lt;larrylary12345&gt; Sumur resapan anies menelan korban jiwa, hasil kerja kok bawa petaka  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/TbkugPXCWF
-1627549323868389377 2023-02-20 06:02:51 +0000 &lt;larrylary12345&gt; Hasil kerja anies hanya bisa membawa petakan untuk warga jakarta  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/teuOQC5Zah
-1627549228384808960 2023-02-20 06:02:29 +0000 &lt;larrylary12345&gt; Wan Abud penipu, anies hanya bisa membohongi rakyat demi kekuasaan  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/vDLQkV5x5w
-1627549103201865730 2023-02-20 06:01:59 +0000 &lt;larrylary12345&gt; Manusia penipu, membohongi rakyat demi keuntungan politik  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/JDdqh1qQJc
-1627542439631417344 2023-02-20 05:35:30 +0000 &lt;ErminElvianiEvi&gt; Siapa kemarin yang ikut ke sini?  Angkat jempolnya.....  #DemokratS14P #PemimpinPerubahan #DemokratProPerubahan #Evi #ErminElviani #EnergikVisionerInovatif #AHY #SBY #pdemokrat #kalbar #pontianak #kuburaya #singkawang #mempawah #ketapang #kapuashulu #AniesBaswedan #AniesAHY  https://t.co/e3sWkKfQyg
-1627534996490838016 2023-02-20 05:05:55 +0000 &lt;AhmadNa88154269&gt; anies baswedan bagaikan kacang lupa kulitnya..lupa sama janji????? #aniespolitikidentitas #gerindra  #aniesbaswedan #aniesgagal #aniesgabenerpembohong #waspadacapresradikal #waspadaparpolproteroris #bapakpolitikidentitas  #hutang  https://t.co/LkmvwzIx06
-1627534583163150337 2023-02-20 05:04:17 +0000 &lt;rahmadhdyt709&gt; waduh pak!!belum selesai dengan masalah yg lama kini ada masalah yang baru ?? #aniesbaswedan #sekolahbanyakmasalah #aniesbanyakhutang #aniesforpresidenri2024  #rumahdp0 #politikus #captikus #bapakidentitaspolitik  https://t.co/gDP1gRyXwV
-1627530976472756224 2023-02-20 04:49:57 +0000 &lt;JatengTV&gt; (10) Dalam PT Perorangan, modal pendirian badan hukum bersifat bebas, mulai dari Rp0 hingga maksimal Rp5 Miliar. Menarik bukan? #Indonesiamaju #jokowi #ptperorangan #badanhukum #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627530475505070080 2023-02-20 04:47:58 +0000 &lt;fajaronline&gt; Jokowi Masih Cueki Anies, Reaksi Relawan Mengejutkan  https://t.co/6kCANENPns #AniesBaswedan #Capres2024 #JokowiCuekiAnies #mileanies
-1627530209963687937 2023-02-20 04:46:54 +0000 &lt;BrianPra25&gt; Mari kita restorasi indonesia bersama 💙 #AniesBaswedan #nasdem #pks #demokrat  https://t.co/LcsbJTq4kL
-1627525955827777537 2023-02-20 04:30:00 +0000 &lt;ThePhraseID&gt; Anies Baswedan, figur bakal calon Presiden yang memiliki hobi membaca buku dan merawat hewan peliharaannya di kala senggang. #ThePhraseID #AniesBaswedan #capres2024 #PemiluSerentak2024 #Politik #membaca @aniesbaswedan   https://t.co/rxa4WUAqbd
-1627522970397868034 2023-02-20 04:18:08 +0000 &lt;sohibbone&gt; @Fahrihamzah Harapan kami untuk #IndonesiaSuperpowerDunia sangat besar tapi, jika melalui orang² yg tidak suka dg keberhasilan orang lain seperti anda rasa²nya berat. Bagi kami #AniesBaswedan next The President
-1627522752902225920 2023-02-20 04:17:16 +0000 &lt;RimaOrgania&gt; JEJAK ANIES TERBONGKAR #AniesBaswedan  https://t.co/a3pzZOPfqb
-1627522747986493440 2023-02-20 04:17:15 +0000 &lt;RimaOrgania&gt; OMONG KOSONG MEMBUMIKAN PANCASILA #AniesBaswedan  https://t.co/ynVR3YwXcO
-1627522743892852736 2023-02-20 04:17:14 +0000 &lt;RimaOrgania&gt; ANIES KORUPSI DANA BANSOS #AniesBaswedan  https://t.co/mWtAhzGAf6
-1627522739912450049 2023-02-20 04:17:13 +0000 &lt;RimaOrgania&gt; ANIES KETURUNAN YAMAN #AniesBaswedan  https://t.co/OE49bHIsw0
-1627522732517888000 2023-02-20 04:17:11 +0000 &lt;RimaOrgania&gt; POLITIK IDENTITAS ADALAH SAMPAH DARI ANIES #AniesBaswedan  https://t.co/enxPRq0c4B
-1627522727149182982 2023-02-20 04:17:10 +0000 &lt;RimaOrgania&gt; ANIES ENGGAK PANTAS JADI PRESIDEN #AniesBaswedan  https://t.co/Qbff03KK4u
-1627522588368056320 2023-02-20 04:16:37 +0000 &lt;IrmianHollanda&gt; JEJAK ANIES TERBONGKAR #AniesBaswedan  https://t.co/aidECyRG4k
-1627522582345023489 2023-02-20 04:16:36 +0000 &lt;IrmianHollanda&gt; OMONG KOSONG MEMBUMIKAN PANCASILA #AniesBaswedan  https://t.co/KPwvJ01GM2
-1627522573738344449 2023-02-20 04:16:34 +0000 &lt;IrmianHollanda&gt; ANIES KORUPSI DANA BANSOS #AniesBaswedan  https://t.co/cUQCcuPSuA
-1627522567744679936 2023-02-20 04:16:32 +0000 &lt;IrmianHollanda&gt; ANIES KETURUNAN YAMAN #AniesBaswedan  https://t.co/7YOVroaqHa
-1627522555878973441 2023-02-20 04:16:29 +0000 &lt;IrmianHollanda&gt; POLITIK IDENTITAS ADALAH SAMPAH DARI ANIES #AniesBaswedan  https://t.co/m5lyZ9oVVV
-1627522551131017216 2023-02-20 04:16:28 +0000 &lt;IrmianHollanda&gt; ANIES ENGGAK PANTAS JADI PRESIDEN #AniesBaswedan  https://t.co/79hcXTzJzw
-1627522376941584387 2023-02-20 04:15:47 +0000 &lt;NiraIdhina&gt; JEJAK ANIES TERBONGKAR #AniesBaswedan  https://t.co/mBCnaVfY4i
-1627522371694514176 2023-02-20 04:15:45 +0000 &lt;NiraIdhina&gt; OMONG KOSONG MEMBUMIKAN PANCASILA #AniesBaswedan  https://t.co/7fCHxmN0pd
-1627522366317424640 2023-02-20 04:15:44 +0000 &lt;NiraIdhina&gt; ANIES KORUPSI DANA BANSOS #AniesBaswedan  https://t.co/p7Rdu1zQLa
-1627522357916241920 2023-02-20 04:15:42 +0000 &lt;NiraIdhina&gt; ANIES KETURUNAN YAMAN #AniesBaswedan  https://t.co/dao5aJTBKn
-1627522352518172672 2023-02-20 04:15:41 +0000 &lt;NiraIdhina&gt; POLITIK IDENTITAS ADALAH SAMPAH DARI ANIES #AniesBaswedan  https://t.co/w7p8mkTgSi
-1627522347937976320 2023-02-20 04:15:40 +0000 &lt;NiraIdhina&gt; ANIES ENGGAK PANTAS JADI PRESIDEN #AniesBaswedan  https://t.co/JOrHe3XEUm
-1627520300270354432 2023-02-20 04:07:32 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/rz0ffA8GSz
-1627520264392278016 2023-02-20 04:07:23 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/sKLgahVLfG
-1627520239390056448 2023-02-20 04:07:17 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/QeepdBOVn5
-1627520215205691392 2023-02-20 04:07:11 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/3pBvh7w9GI
-1627520191465951232 2023-02-20 04:07:06 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/Uo4FufWxxf
-1627514521182158853 2023-02-20 03:44:34 +0000 &lt;PutraHunian&gt; #AniesBaswedan diyakini boneka mamarika.  https://t.co/9HZI6XDuj9
-1627514022840107008 2023-02-20 03:42:35 +0000 &lt;PutraHunian&gt; biarpun 50 M sudah dianggap lunas, tapi aturan tetap dilanggar pak #aniesbaswedan, gimana nih masa nyapres juga gitu?  https://t.co/ZzwdjVy4Xn
-1627511744141856768 2023-02-20 03:33:32 +0000 &lt;Cahyokt4&gt; Kok bisa yaaa..  Eh tp sama yang ngusung aja lupa apa lagi cuma rakyaat hahahaha  #Capres #AniesBaswedan #Nasdem #Pks #Demokrat #KIB #DkiJakarta #aniesnasdem #aniesgagal #aniesbaswedan  https://t.co/NxkHVkSESn
-1627510325397577730 2023-02-20 03:27:53 +0000 &lt;vivagorontalo&gt; Elektabilitas Nasdem Hanya Sekuku, Efek Anies Baswedan Masih Tumpul #AniesBaswedan #SPIN #Nasdem #PDIP #Pilpres2024   https://t.co/VS4ZCbmxaL
-1627508334726369282 2023-02-20 03:19:59 +0000 &lt;JatengTV&gt; (13) Masih belum banyak peraturan yang mengatur perusahaan PT perorangan ini sehingga pemilik perusahaan bebas melakukan aktivitas usahanya. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627507058747768832 2023-02-20 03:14:55 +0000 &lt;fajaronline&gt; Meski Lolos dari Jerat KPK, Rocky Gerung Beber Ancaman Berikut yang Menanti Anies di Pilpres 2024  https://t.co/BWAkmmbrHI #AniesBaswedan #KPK #Pilpres2024 #RockyGerung
-1627505888226582528 2023-02-20 03:10:16 +0000 &lt;tribunkaltim&gt; Soroti Kasus Formula E, Rocky Gerung: Kaki Anies Baswedan di Sandra oleh Sprindik  #AniesBaswedan #FormulaE #KPK #Dewas #RockyGerung    https://t.co/yu2VZJAur4 lewat @tribunkaltim
-1627502865827901440 2023-02-20 02:58:15 +0000 &lt;Alfakton_i&gt; Anies pakai cara busuk lagi seperti Pilkada 2017!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Jerome SMCU #KitaSATUIndonesia Kapolda Jambi #PotterOut #TheLastOfUs Maudy Ahyundai Esemka Wang Tao Zi Confess #TaxiDriver2  https://t.co/E10o6cMY6m
-1627502708461805568 2023-02-20 02:57:37 +0000 &lt;Alfakton_i&gt; Yohanies dan Partai Ummat akan halalkan segala cara demi jadi penguasa!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Jerome SMCU #KitaSATUIndonesia Kapolda Jambi #PotterOut #TheLastOfUs Maudy Ahyundai Esemka Wang Tao Zi Confess #TaxiDriver2  https://t.co/WQwq8aE7aU
-1627502457445314560 2023-02-20 02:56:38 +0000 &lt;Alfakton_i&gt; Anies si raja hutang demi ambisi nafsunya!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Jerome SMCU #KitaSATUIndonesia Kapolda Jambi #PotterOut #TheLastOfUs Maudy Ahyundai Esemka Wang Tao Zi Confess #TaxiDriver2  https://t.co/Ce3fyDLc7j
-1627502349509095425 2023-02-20 02:56:12 +0000 &lt;Alfakton_i&gt; Partai Ummat dan Anies hancurkan Indonesia!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Jerome SMCU #KitaSATUIndonesia Kapolda Jambi #PotterOut #TheLastOfUs Maudy Ahyundai Esemka Wang Tao Zi Confess #TaxiDriver2  https://t.co/b0E2tEio78
-1627502198853865474 2023-02-20 02:55:36 +0000 &lt;Alfakton_i&gt; Bukti nyata anies adalah boneka dan akan disetir asing!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Jerome SMCU #KitaSATUIndonesia Kapolda Jambi #PotterOut #TheLastOfUs Maudy Ahyundai Esemka Wang Tao Zi Confess #TaxiDriver2  https://t.co/DK9NvRRMGT
-1627501962341285888 2023-02-20 02:54:40 +0000 &lt;Alfakton_i&gt; Anies dan partai Ummat terbukti usung politik identitas!!  #AniesBaswedan #GanjarPranowo #Jokowi #Anies   Jerome SMCU #KitaSATUIndonesia Kapolda Jambi #PotterOut #TheLastOfUs Maudy Ahyundai Esemka Wang Tao Zi Confess #TaxiDriver2  https://t.co/pubsACQL4d
-1627501567233626113 2023-02-20 02:53:05 +0000 &lt;fajaronline&gt; Kembali Ungkit Pemecatan Anies Sebagai Mendikbud, Ruhut Sitompul: Kerjanya Hanya Merangkai Kata, Hasilnya Nol Besar  https://t.co/A6P2OYzdOH #AniesBaswedan #Capres #mendibud #PresidenJokowi
-1627500684571738112 2023-02-20 02:49:35 +0000 &lt;Cahyokt4&gt; Kali ini KIB yang kena Drama dari beliau..  Udah kayak sinetron fix.. Ga beres beressssss hahahaha  #KIB #Demokrat #Pks #Nasdem #AniesBaswedan #Capres  https://t.co/VBoyVcuY2Z
-1627499034675118081 2023-02-20 02:43:01 +0000 &lt;BobyTrihandoyo&gt; Ini namanya Etika berpolitik , tapi bukan hanya di politik  Etika penting sebagai pedoman hidup apa lagi sebagai pemimpin.. Hmm ...   #AniesAhy #DkiJakarta #Gubernur #Demokrat #PolitikIdentitas #AniesBaswedan #SusahMoveOn  #Anies #DkiJakarta  https://t.co/2SO55dmgKL
-1627494533754937345 2023-02-20 02:25:08 +0000 &lt;Agamsyah1998&gt; Koalisi perubahan tukang ngutang PKS larikan 30 miliar duit fahri hamzah. #sandiagAuno #AniesBaswedan  https://t.co/tN3MNmFZEd
-1627494387184996352 2023-02-20 02:24:33 +0000 &lt;phunglie1&gt; Saya Anak Muda Indonesia, Coblos Pak #AniesBaswedan CaLon Presiden RI dari #PartaiNasdem .Untuk Indonesia Jadi Lebih Baik 🇮🇩👍 Perubahan itu Jangan pake orang Korupsi. Perubahan itu  Bikin Program/Aturan yang Pro Rakyat. Perubahan itu yang salah di hapus . Salam Perubahan .
-1627490657202802693 2023-02-20 02:09:44 +0000 &lt;FariziStevani&gt; Published on YouTube: ANIES NEKAT KAMPANYE DI ACARA MAULID NABI | #aniesbaswedan #shorts #maulidnabi  https://t.co/d0EI46ey5h
-1627490654442909696 2023-02-20 02:09:43 +0000 &lt;FariziStevani&gt; Published on YouTube: MASYARAKAT PONTIANAK TIDAK ADA YANG DATANG KE ACARA SENAM SEHAT ANIES BASWEDAN | #aniesbaswedan  https://t.co/aMqUeoB0ND
-1627480648205365248 2023-02-20 01:29:58 +0000 &lt;web_bogorkita&gt; PKS Kabupaten Bogor Siap Menangkan Anies Baswedan Di Ajang Pilpres 2024 -  https://t.co/SfzMv4zXjO #anies #AniesBaswedan
-1627479015819972608 2023-02-20 01:23:29 +0000 &lt;siregar_najeges&gt; @SitiSolichah5 Yuuuk....kita ulang lagi masa2 2019 tp utk #AniesBaswedan ✊️✊️🤩
-1627478303740407808 2023-02-20 01:20:39 +0000 &lt;ArifinNaftalia&gt; @siregar_najeges Ibu keren banget … 👍👍👍👍 .. Bismillah dukung pak #AniesBaswedan menjadi Presiden RI untuk perubahan RI menjadi lebih baik dan bermartabat … 🥰🤲
-1627473125226201090 2023-02-20 01:00:04 +0000 &lt;siregar_najeges&gt; Dulu pernah dukung PS,swadana sampai kedesa², ..semata² asal jgn &quot;dia&quot; yg berkuasa,krn gada pilihan lain🤷‍♀️🤦‍♀️  Kini mendukung #AniesBaswedan krn mmg beliau pilihan yg diyakini mampu membawa perubahan RI lbh baik &amp;amp; bermartabat 👍✅️  https://t.co/8yqTzaGrXE
-1627470580453875712 2023-02-20 00:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627469892692905984 2023-02-20 00:47:14 +0000 &lt;siregar_najeges&gt; Jangan biarkan Indonesia semakin dikuasai oleh Korupsi, Kolusi dan Nepotisme. Dukung pemimpin yang punya konsep intelektual, menyegarkan dan solutif. Jujur, santun dan tidak gila akan kekayaan. Pemimpin yang memiliki niat tulus memperbaiki nasib rakyat. Dialah #AniesBaswedan 👇  https://t.co/yT2J5I3CLc
-1627469878973321216 2023-02-20 00:47:10 +0000 &lt;Uzatpraja&gt; Siapa Bakal Calon Presiden Pilihan anda??  A. PRABOWO SUBIANTO B. ANIES BASWEDAN C. GANJAR PRANOWO  #AniesBaswedan #prabowo #Ganjar
-1627468571248070661 2023-02-20 00:41:58 +0000 &lt;lingga_susilo&gt; waduhhhh Bapak Satu ini, Udah Pak Kalau Buat Janji Tu Jangan di Ingkarin, Mengerti Pak. #haha #aniesbaswedan #Pilpres2024 #janji #hutang #50M #TrendingNews #TrendingTopics #aniesgagal #Anies #carisuara  https://t.co/QnlX0oR2Fs
-1627467715870081024 2023-02-20 00:38:35 +0000 &lt;lingga_susilo&gt; Kemaren Anies Blm Bayar Hutang, sekarang ada lagi, Koalisi Perubahan Tukang Ngutang? PKS Larikan 30M uang Fahri Hamzah. #aniesbaswedan #50M #PKS #fahrihamza #30M  #AniesDidukungKoruptor #nasdem #demokrat #haha #TrendingTopics #TrendingNews #ngutang  https://t.co/ji7h7OP6Yx
-1627465929046257664 2023-02-20 00:31:28 +0000 &lt;andrikingo77&gt; Berarti bener nih gaada pamitnya banget Anies ke Prabowo yaa? Kok bisa sihh udah dibantuin loh padahal di Jakarta #aniesbaswedan #prabowo #gerindra #lupajanji #gubernurjakarta #jakarta #nasdem #macet #banjir #rumahdp0 #aniesgagal  https://t.co/lkBjyszIUn
-1627465375507156992 2023-02-20 00:29:17 +0000 &lt;andrikingo77&gt; Waduh itu partainya kok gamau sih bayar hutangnya? 30miliar besar sekali ituu, gimana nih pendukungnya Anies? #fahrihamzah #pks #nasdem #demokrat #aniesbaswedan #hutang #30miliar #koalisiperubahan #politikidentitas #politik  https://t.co/voCsw4tXi0
-1627464927643586560 2023-02-20 00:27:30 +0000 &lt;AsepSeptiyana_&gt; Waduhh gawat nih guys Koalisi perubahan di terpa isu Hutang yang belum di bayarkan 🤔🤔🤔 #aniesbaswedan #AniesNasdemOut #anies #dkijakarta #wonderfulindonesia #IndonesiaJuara #IndonesiaMaju  https://t.co/uzvHYLWiGm
-1627464695581130752 2023-02-20 00:26:34 +0000 &lt;AsepSeptiyana_&gt; Duh gimana sii bapak masa lupa sama janjinya sendri 😌😌😌 #aniesbaswedan #anies #AniesNasdemOut #dkijakarta #wonderfulindonesia #IndonesiaJuara #IndonesiaMaju  https://t.co/PpgXNzBU7u
-1627464539100037121 2023-02-20 00:25:57 +0000 &lt;ariefalay66&gt; Kacang lupa kulit ya begini jadinya, udah dibantu di Jakarta loh padahal Anies sama Prabowo malah gaada pamitnya ketika mau nyapres.. kacauuuu #gerindra #nasdem #aniesbaswedan #prabowosubianto #lupajanji #aniesgagal #gubernurjakarta #macet #rumahdp0 #banjir  https://t.co/cIshKoB3Fr
-1627462825328390144 2023-02-20 00:19:09 +0000 &lt;rahmadhdyt709&gt; anies baswedan Lupa dengan janji&quot;nya, lagi&quot;prabowo di khianati. #aniesgagal #aniesbaswedan #penghianat #kacanglupakulit #politikus #aniesforpresiden2024 #bapakidentitaspolitik #rumahdp0  https://t.co/g5mLbYhAzA
-1627447940246814720 2023-02-19 23:20:00 +0000 &lt;JatengTV&gt; (07) Kelebihan lainnya dari PT Peroangan adalah mendapatkan prioritas dalam mengakses berbagai program pemerintah yang dikhususkan untuk UMKM. #ptperorangan #badanhukum #badanusaha #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627438702678151169 2023-02-19 22:43:17 +0000 &lt;fajaronline&gt; Demi Gagalkan Pencapresan Anies, Nasdem Diancam Pakai Cara Halus dan Kasar  https://t.co/qZWHl5sldJ #AniesBaswedan #NasDem #Pilpres2024 #ReflyHarun
-1627433804141932545 2023-02-19 22:23:49 +0000 &lt;Sabi16094449&gt; &quot;Masalah ketimpangan tidak boleh sekadar diselesaikan lewat jaring pengaman sosial, harus lewat instrumen ekonomi&quot; - @aniesbaswedan   #aniesuntukindonesia #anieskeren #AniesBaswedan  https://t.co/l4mstnO739
-1627431844731039744 2023-02-19 22:16:02 +0000 &lt;jpnncom&gt; Hasil Survei Terbaru Menyenggol Efek Pencapresan Anies Baswedan, Alamak! #AniesBaswedan  https://t.co/lSS63L0PcC
-1627404880888619009 2023-02-19 20:28:53 +0000 &lt;Sabi16094449&gt; Pak Heru yang benar saja?  #AniesBaswedan #aniesuntukindonesia #aniesforpresidenri2024  https://t.co/YY2mT2WDvc
-1627364882319560707 2023-02-19 17:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627348149114408960 2023-02-19 16:43:28 +0000 &lt;knmaneges&gt; Rocky Gerung // Pengamat Politik : &quot;Kawin Paksa Anies-Ganjar Itu Ngaco!!&quot; 👇  https://t.co/5Qdnkk7KhJ  #RockyGerung #PengamatPolitik #AniesBaswedan #GanjarPranowo #Politik  #KNmaneges #KnmComunity #SaudaraJiwa #PemersatuBangsa #NkriHargaMati  https://t.co/AEQtBLumyq
-1627342265764155393 2023-02-19 16:20:05 +0000 &lt;jpnncom&gt; Anies Baswedan: Dari Kaltim, Kita Kirimkan Pesan Perubahan untuk Seluruh Rakyat Indonesia #AniesBaswedan  https://t.co/auwya0nEGN
-1627321480450310145 2023-02-19 14:57:29 +0000 &lt;Lambe_Nggambleh&gt; DAGELAN POLITIK ANiES, NOEL VS CAKNUN #AniesBaswedan  #Noel  #CakNun  #GanjarPranowo  #relawanganjar #nkrihargamati    https://t.co/VwJNK3ywWz  https://t.co/csp4RhIL0b
-1627312040149942280 2023-02-19 14:19:59 +0000 &lt;JatengTV&gt; (11) Pemilik PT Perorangan bisa melakukan pemisahan kekayaan pribadi dan bisnis secara formal karena memiliki NPWP yang terpisah. #ptperorangan #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaHebat #Jokowi  https://t.co/HRqCfZUnue
-1627307321880907776 2023-02-19 14:01:14 +0000 &lt;Noni33697740&gt; @kang_cipoi @keuangannews_id Smua orang tau siapa #AniesBaswedan,cuma lo doang yg koplak, #AniesBaswedan putra terbaik bngsa Indonesia 😎  https://t.co/XrkXomRT72
-1627304486434934784 2023-02-19 13:49:58 +0000 &lt;JatengTV&gt; (12) PT Perorangan memiliki kepastian hukum dan terdaftar resmi di Kemenkumham. Kedudukannya sama seperti PT biasa. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaBangkit #Jokowi  https://t.co/HRqCfZUnue
-1627266745831686147 2023-02-19 11:20:00 +0000 &lt;JatengTV&gt; (03) Pemilik PT Perorangan menjadi pemeran utama dalam mengatur kebijakan perusahaannya, termasuk dalam hal pengolahan data dan keuangan. #ptperorangan #sange #ciptakerja #indonesia #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627262319976935424 2023-02-19 11:02:24 +0000 &lt;tribunnewswiki&gt; Disinggung soal Cawapres Pendamping Anies Baswedan, Nasdem: Koalisi Resmi aja Belum Dibentuk #aniesbaswedan #partainasdem  https://t.co/1vvpTNzj3o
-1627249779293171712 2023-02-19 10:12:34 +0000 &lt;Agamsyah1998&gt; Suatu saat akan terungkap. #aniesbaswedan #anies #aniesgagal #AniesGaBener  https://t.co/8gWc9ibRFY
-1627246282183163907 2023-02-19 09:58:41 +0000 &lt;dwi_nantoo&gt; Saatnya generasi milenial turut ambil bagian dalam menentukan arah bangsa Indonesia bersama mas @aniesbaswedan mewujudkan Indonesia yang berkeadilan bagi seluruh rakyat Indonesia @bos_sir @LANGKAHANIES @Relawananies #RakyatMemilih #aniesbaswedan #sambutpemilu_dengangembira  https://t.co/caITMqVEer
-1627241372930682880 2023-02-19 09:39:10 +0000 &lt;tabascopepsauce&gt; @aniesbaswedan Bayar hutang dulu abud #aniesPendukungKhilafah #aniesDidukungKoruptor #aniesNasdemOut #aniesDidukungKHILAFAH #aniesMelacurKAHMI #aniesGabenerPembohong #aniesPendukungFPI #aniesBaswedan #anies #bapakpolitikidentitas #anieshalu #aniesgabener #jalansehat #Samarinda #KalimantanTimur  https://t.co/BY8RlOKtR5
-1627239812477632513 2023-02-19 09:32:58 +0000 &lt;aniesbaswedan&gt; Sebuah hari yang berbahagia, karena bisa menghadiri Jalan Sehat Pemuda Pancasila (PP) Kalimantan Timur di Stadion Kadrie Oening, Samarinda, Kaltim, Minggu (19/2).  #AniesBaswedan #JalanSehat #PemudaPancasila #MPWPPKaltim #Samarinda #KalimantanTimur #UntukIndonesia  https://t.co/62KjD6CKiw
-1627236545781706755 2023-02-19 09:19:59 +0000 &lt;JatengTV&gt; (07) Kelebihan lainnya dari PT Peroangan adalah mendapatkan prioritas dalam mengakses berbagai program pemerintah yang dikhususkan untuk UMKM. #ptperorangan #badanhukum #badanusaha #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627219045396385792 2023-02-19 08:10:27 +0000 &lt;Edymaull&gt; DUGAAN KASUS KORUPSI BANSOS DI ERA ANIES  BASWEDAN MULAI DISELEDIKI!!!!  #anies #AniesBaswedan #aniesdidukungkhilafah #AniesDidukungKoruptor #waspadaparpolproteroris #waspadacapresradikal #bapakpolitikidentitas #aniesgabenerjakarta #aniesbaswedanreport #Pilpres2024  https://t.co/EJWvF7eBk6
-1627213626858954752 2023-02-19 07:48:55 +0000 &lt;larrylary12345&gt; Koalisi jahat bersama anies ingin menghancurkan Indonesia  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/esCgVWQUYN
-1627213273497231361 2023-02-19 07:47:31 +0000 &lt;larrylary12345&gt; Waspada dibelakang anies ada gerombolan kelompok radikal yang ingin menghancurkan Indonesia  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/o4t4yUdhUb
-1627213061009608704 2023-02-19 07:46:40 +0000 &lt;larrylary12345&gt; Anies hanya bisa berjanji tanpa aksi, manusia penipu laknat  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/RUMujMu57k
-1627212934463074305 2023-02-19 07:46:10 +0000 &lt;larrylary12345&gt; Sampai PPKM selesaipun, tempat swab test anies ga pernah ada, alias kena tipu 🤣🤣  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/ukYV8oaLYH
-1627212667692941314 2023-02-19 07:45:06 +0000 &lt;larrylary12345&gt; Mahakarya anies yang malah menghancurkan jakarta  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/JgzKRhcRHS
-1627208827878936576 2023-02-19 07:29:51 +0000 &lt;fajaronline&gt; Sentil Erwin Aksa dan Sandiaga Uno, Andi Sinulingga: Orang yang Ngomong Utang Kampanye Kekanak-kanakan  https://t.co/D0bESog4kn #50M #AndiSinulingga #AniesBaswedan #Pemilu2024
-1627204947099156481 2023-02-19 07:14:26 +0000 &lt;kotakkuning989&gt; ANIES PEMBOHONG 😡👎🏼  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/dUWxQWgZuV
-1627204877645672453 2023-02-19 07:14:09 +0000 &lt;kotakkuning989&gt; ANIES DIDUKUNG KELOMPOK RADIKAL 😡👎🏼  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/wr8S14v9hZ
-1627204802253062144 2023-02-19 07:13:51 +0000 &lt;kotakkuning989&gt; ANIES GAK BISA KERJA 😡👎🏼  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/W6ZXhDdMHD
-1627204760549097474 2023-02-19 07:13:41 +0000 &lt;kotakkuning989&gt; ANIES DIDUKUNG KOALISI JAHAT 😡👎🏼  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/CeTn0HrXXV
-1627204692710420481 2023-02-19 07:13:25 +0000 &lt;kotakkuning989&gt; ANIES KANG BOONG 😡👎🏼  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/af5V718DYi
-1627201095822082048 2023-02-19 06:59:07 +0000 &lt;Lia_CiaCia&gt; Anies Boneka Amerika #AniesNasdemOut  #AniesBaswedan  https://t.co/DXHg5PjjKb
-1627199886461657089 2023-02-19 06:54:19 +0000 &lt;negeripamansa20&gt; Waspada dibelakang Anies Baswedan  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/5yGebjoGwQ
-1627199819742871552 2023-02-19 06:54:03 +0000 &lt;negeripamansa20&gt; Koalisi jahat dukung Anies  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/yiO1pRNJdk
-1627199764461928450 2023-02-19 06:53:50 +0000 &lt;negeripamansa20&gt; Dikibulin Anies terus  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/GFxI7HAskf
-1627199708295995394 2023-02-19 06:53:37 +0000 &lt;negeripamansa20&gt; Anies cuma janji  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/tumT6PF1za
-1627199646627139589 2023-02-19 06:53:22 +0000 &lt;negeripamansa20&gt; Mahakarya Anies nih  #AniesBaswedan #AniesDidukungKHILAFAH #AniesDidukungKoruptor  https://t.co/zBVQGvTlXh
-1627198134266003456 2023-02-19 06:47:21 +0000 &lt;MasBudiman_&gt; Gagal Menjabat Gagal Memimpin Itulah Anies Baswedan  #AniesBaswedan  https://t.co/HOReLX4yB9
-1627198009816809474 2023-02-19 06:46:52 +0000 &lt;MasBudiman_&gt; Anies Kaum Kadrun Biadab #AniesBaswedan  https://t.co/ifSKvkivuN
-1627197946898051072 2023-02-19 06:46:37 +0000 &lt;MasBudiman_&gt; Waspada Para Penghianat Bangsa Mendukung Anies Baswedan #AniesBaswedan  https://t.co/cjuUuhtnD4
-1627197824583729152 2023-02-19 06:46:07 +0000 &lt;MasBudiman_&gt; Biadab Negara Digadai Ke Kelompok Intoleran #AniesBaswedan  https://t.co/foxmErV8fS
-1627197702265266177 2023-02-19 06:45:38 +0000 &lt;MasBudiman_&gt; Anies Kaum Penghianat Seperti HTI dan FPI #AniesBaswedan  https://t.co/A4u94T4TM8
-1627197570337636352 2023-02-19 06:45:07 +0000 &lt;MasBudiman_&gt; Anies Baswedan Gubernur Gagal   #AniesBaswedan  https://t.co/tCl2onJMie
-1627197477924503552 2023-02-19 06:44:45 +0000 &lt;MasBudiman_&gt; Wapada Anies Baswedan Kaum Kadrum Biadab  #AniesBaswedan  https://t.co/EuKcjewsJ4
-1627196488756649984 2023-02-19 06:40:49 +0000 &lt;fajaronline&gt; Anies Umumkan akan Salat di Pontianak, Islah Bahrawi: Berkampanye Politik di Masjid Adalah Politisasi Agama  https://t.co/djY2XDVHvT #AniesBaswedan #headline #IslahBahrawi #kampanye
-1627189911605624833 2023-02-19 06:14:41 +0000 &lt;fajaronline&gt; Survei SPIN: Prabowo Capres Pilihan Rakyat, Ganjar dan Anies Makin Ketinggalan  https://t.co/fQpYGHZ7q7 #AniesBaswedan #Capres2024 #ganjar #prabowo
-1627186258161147904 2023-02-19 06:00:10 +0000 &lt;Cahyokt4&gt; Panik gaaaa,, Panik gaa..  Masa engga hahahaha  #aniesbaswedan #aniesingksrjanji #aniespresiden2024 #opini #aniesahymantap #aniesgagal #aniesdki #aniesnasdem #DkiJakarta #Pks #Demokrat  https://t.co/V8TrKDWo9y
-1627185044128428032 2023-02-19 05:55:20 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/VcalqOvghs
-1627185020246032384 2023-02-19 05:55:15 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/Sj1oqpMU21
-1627184997278027777 2023-02-19 05:55:09 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/viv2sWuiYv
-1627184964705079296 2023-02-19 05:55:01 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/ZKHC0O1S3A
-1627184943993606146 2023-02-19 05:54:56 +0000 &lt;AgamRena&gt; #aniesbaswedan #anies #AniesDidukungKHILAFAH #AniesDidukungKoruptor #gabener #fpi #radikal  https://t.co/ROFk5ovqHr
-1627182479240237056 2023-02-19 05:45:09 +0000 &lt;aniesbaswedan&gt; Pontianak dikenal sebagai kota seribu warung kopi. Ke Pontianak belum lengkap rasanya apabila tak menikmati secangkir kopi tarik di Warung Kopi Asiang.  #AniesBaswedan #WarungKopiAsiang #Pontianak #KalimantanBarat #UntukIndonesia  https://t.co/DGMTyHgPVB
-1627179931368296448 2023-02-19 05:35:01 +0000 &lt;lingga_susilo&gt; Waduhh... Jujur aja pak, bahwa bapak korupsi, Biar negara ga terlalu pusing Cari Kasus yang belum terungkap. #aniesbaswedan #AniesDidukungKoruptor #aniexty #Korupsi #DkiJakarta #TrendingTopics #TrendingNews #Trending  https://t.co/SOyLXenKJG
-1627170046555586560 2023-02-19 04:55:45 +0000 &lt;long74new&gt; @OposisiCerdas Identitas: saya muslim, saya pilih #aniesbaswedan  #AniesPresiden2024  https://t.co/oUsQ9LsYnM
-1627169662768386048 2023-02-19 04:54:13 +0000 &lt;AsepSeptiyana_&gt; Nah kaann... gimana ini guys 🤔🤔🤔 #aniesbaswedan #dkijakarta #AniesNasdemOut #anies #wonderfulindonesia #IndonesiaJuara #IndonesiaMaju  https://t.co/wz9KaqSmsy
-1627165277313191936 2023-02-19 04:36:48 +0000 &lt;Alfakton_i&gt; track record anies tak akan luput dari ormas terlarang dan kelompok radikal!!  #AniesBaswedan #Anies  #GanjarPranowo #Jokowi   #GISELLE | Pasar Wonokromo | Ribka | Baju Kembaran | Magelang | Malming | Sidratul Muntaha | Brunei | Pagii | Rasulullah SAW  https://t.co/uPaZNauWNy
-1627165174934433792 2023-02-19 04:36:23 +0000 &lt;Alfakton_i&gt; Mulai framing busuk!! warga datang cari doorprize bukan cari anies!!  #AniesBaswedan #Anies  #GanjarPranowo #Jokowi   #GISELLE | Pasar Wonokromo | Ribka | Baju Kembaran | Magelang | Malming | Sidratul Muntaha | Brunei | Pagii | Rasulullah SAW  https://t.co/bAwB8voCX7
-1627165016494571520 2023-02-19 04:35:45 +0000 &lt;Alfakton_i&gt; Anies halalkan segala cara busuk dan tidak taat aturan demi meloloskan nafsunya!!  #AniesBaswedan #Anies  #GanjarPranowo #Jokowi   #GISELLE | Pasar Wonokromo | Ribka | Baju Kembaran | Magelang | Malming | Sidratul Muntaha | Brunei | Pagii | Rasulullah SAW  https://t.co/ne6JxsnhVZ
-1627164891491733505 2023-02-19 04:35:16 +0000 &lt;Alfakton_i&gt; Anies sosok penipu dan licik!! kerjanya hanya membuat perpecahan!!  #AniesBaswedan #Anies  #GanjarPranowo #Jokowi   #GISELLE | Pasar Wonokromo | Ribka | Baju Kembaran | Magelang | Malming | Sidratul Muntaha | Brunei | Pagii | Rasulullah SAW  https://t.co/1LwHYHdorQ
-1627164784079822848 2023-02-19 04:34:50 +0000 &lt;Alfakton_i&gt; Pola pikir barisan anies sama dengan yang didukung sangat tidak beretika!!  #AniesBaswedan #Anies  #GanjarPranowo #Jokowi   #GISELLE | Pasar Wonokromo | Ribka | Baju Kembaran | Magelang | Malming | Sidratul Muntaha | Brunei | Pagii | Rasulullah SAW  https://t.co/6uEH1Aa9jS
-1627164621365972993 2023-02-19 04:34:11 +0000 &lt;Alfakton_i&gt; Semakin jelas dan lantang anies didukung barisan intoleran dan akan terapkan politik identitas!!  #AniesBaswedan #Anies  #GanjarPranowo #Jokowi   #GISELLE | Pasar Wonokromo | Ribka | Baju Kembaran | Magelang | Malming | Sidratul Muntaha | Brunei | Pagii | Rasulullah SAW  https://t.co/Dz3IDVkEVJ
-1627164505129259008 2023-02-19 04:33:43 +0000 &lt;Alfakton_i&gt; Koalisi amien rais dan anies memperjelas politik identitas mereka!!  #AniesBaswedan #Anies  #GanjarPranowo #Jokowi   #GISELLE | Pasar Wonokromo | Ribka | Baju Kembaran | Magelang | Malming | Sidratul Muntaha | Brunei | Pagii | Rasulullah SAW  https://t.co/dVCMDaBgLK
-1627164288594112513 2023-02-19 04:32:52 +0000 &lt;Alfakton_i&gt; Menolak lupa!! Anies ketika baru menjabat sudah bikin ulah!!  #AniesBaswedan #Anies  #GanjarPranowo #Jokowi   #GISELLE | Pasar Wonokromo | Ribka | Baju Kembaran | Magelang | Malming | Sidratul Muntaha | Brunei | Pagii | Rasulullah SAW  https://t.co/jRv7HmNMxx
-1627153489716740096 2023-02-19 03:49:57 +0000 &lt;JatengTV&gt; (04) Pada PT Perorangan seluruh kendala dan resiko kerugian serta keuntungan akan dihadapi dan ditanggung oleh pemilik usaha itu sendiri. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1627140961980788736 2023-02-19 03:00:10 +0000 &lt;AlumRombia&gt; Joget dulu #aniesbaswedan , utang gak usah dipikirin.  https://t.co/2Rjl840SGd
-1627140956779847680 2023-02-19 03:00:09 +0000 &lt;AlumRombia&gt; #aniesbaswedan mengeruk uang untuk nyapres biar gak ngutang lagi...  https://t.co/pgoTnu68ns
-1627140943999803392 2023-02-19 03:00:06 +0000 &lt;AlumRombia&gt; Pendukung #aniesbaswedan memang mentok sampe situ.  https://t.co/rKquEPyJ5F
-1627140939742609409 2023-02-19 03:00:05 +0000 &lt;AlumRombia&gt; Terlihat bahwa #aniesbaswedan akan jadi boneka mamarika.  https://t.co/wfWo8faqiq
-1627140936030629890 2023-02-19 03:00:04 +0000 &lt;AlumRombia&gt; #aniesbaswedan tak perlu malu, karena tak punya muka.  https://t.co/BG3L2g5FFM
-1627130007020802048 2023-02-19 02:16:38 +0000 &lt;suara_perjuanga&gt; Jakarta era Anies banyak masalah dan gaberesnya #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/BpIv3qKT0i
-1627129805249601536 2023-02-19 02:15:50 +0000 &lt;siregar_najeges&gt; Simbol keadilan dan persatuan...  He is #aniesbaswedan ✅️👍  https://t.co/dfxJga2vOn
-1627129272627499009 2023-02-19 02:13:43 +0000 &lt;TaliesinAhab&gt; Anies masih bingung kenapa Jakaerta banjir #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/THBrHVRJZE
-1627128953222860800 2023-02-19 02:12:27 +0000 &lt;NoNoval3&gt; Jakarta era Anies banyak masalah dan gaberesnya #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/THIOWdLn75
-1627128950614028289 2023-02-19 02:12:27 +0000 &lt;NoNoval3&gt; Anies masih bingung kenapa Jakaerta banjir #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/qMPpcAK2BS
-1627128946939822081 2023-02-19 02:12:26 +0000 &lt;NoNoval3&gt; Anies melanggar aturan dana kampanye #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/bobfhh6ncc
-1627128943135592448 2023-02-19 02:12:25 +0000 &lt;NoNoval3&gt; Bukti Anies sosok yang oportunis #AniesBaswedan #Aniesgagal #Aniesutang  https://t.co/ajZ25zljWV
-1627128205671907328 2023-02-19 02:09:29 +0000 &lt;FariziStevani&gt; Published on YouTube: NIKMATNYA BERPELUKAN DENGAN WANITA YANG BUKAN MUHRIM | #shorts #aniesbaswedan  https://t.co/bHYg7zEdml
-1627128202173857796 2023-02-19 02:09:28 +0000 &lt;FariziStevani&gt; Published on YouTube: KATANYA BAKAL DISAMBUT 30 RIBU NYATANYA ANIES BASWEDAN CUMA DISAMBUT PULUHAN ORANG #aniesbaswedan  https://t.co/Dbc8KGJp90
-1627127879799824385 2023-02-19 02:08:11 +0000 &lt;lampungpost_&gt; Wakil Sekjen Dewan Pimpinan Pusat (DPP) Partai NasDem, Dedy Ramanta, mengatakan siapa pun presiden yang terpilih terikat pada undang-undang (UU) dan konstitusi yang telah diputuskan.  #aniesbaswedan #dppnasdem #basdem #capres #lampostco  https://t.co/SRpX4BZGEc
-1627124799070945280 2023-02-19 01:55:57 +0000 &lt;RimaOrgania&gt; ANIES CAPRES YANG ENGGAK JELAS #AniesBaswedan  https://t.co/D72eMGBwlN
-1627124795107323904 2023-02-19 01:55:56 +0000 &lt;RimaOrgania&gt; ANIES DISINDIR RUHUT SITOMPUL #AniesBaswedan  https://t.co/H0uQQxcM4w
-1627124790967570432 2023-02-19 01:55:55 +0000 &lt;RimaOrgania&gt; ANIES BINGUN MENGAPA JAKARTA BANJIR #AniesBaswedan  https://t.co/vsr66gSYP1
-1627124785972150278 2023-02-19 01:55:54 +0000 &lt;RimaOrgania&gt; BUKTI ANIES SEORANG OPERTUNIS #AniesBaswedan  https://t.co/y8WEkoYje1
-1627124780255281152 2023-02-19 01:55:52 +0000 &lt;RimaOrgania&gt; TEMUAN BARU SOAL UTANG ANIES #AniesBaswedan  https://t.co/yTDFKFPVgb
-1627124624504029185 2023-02-19 01:55:15 +0000 &lt;IrmianHollanda&gt; ANIES CAPRES YANG ENGGAK JELAS #AniesBaswedan  https://t.co/LL0cvVTUuE
-1627124618938175488 2023-02-19 01:55:14 +0000 &lt;IrmianHollanda&gt; ANIES DISINDIR RUHUT SITOMPUL #AniesBaswedan  https://t.co/9Qmn6wlFWh
-1627124614978736128 2023-02-19 01:55:13 +0000 &lt;IrmianHollanda&gt; ANIES BINGUN MENGAPA JAKARTA BANJIR #AniesBaswedan  https://t.co/yEsnVAb92R
-1627124610683789312 2023-02-19 01:55:12 +0000 &lt;IrmianHollanda&gt; BUKTI ANIES SEORANG OPERTUNIS #AniesBaswedan  https://t.co/lJ8DadfBGW
-1627124607580012548 2023-02-19 01:55:11 +0000 &lt;IrmianHollanda&gt; TEMUAN BARU SOAL UTANG ANIES #AniesBaswedan  https://t.co/0IX787tGs2
-1627124487983616004 2023-02-19 01:54:43 +0000 &lt;Noni33697740&gt; @Ryugie_Nufus_82 @keuangannews_id Yg jngji ngga akn ngutang siapa,yg disalahin siapa, #aniesbaswedan emng keren 😎💪🇮🇩  https://t.co/x4X8wh5h2b
-1627124433268916224 2023-02-19 01:54:30 +0000 &lt;NiraIdhina&gt; ANIES CAPRES YANG ENGGAK JELAS #AniesBaswedan  https://t.co/LeyK4OqJNp
-1627124429095587840 2023-02-19 01:54:29 +0000 &lt;NiraIdhina&gt; ANIES DISINDIR RUHUT SITOMPUL #AniesBaswedan  https://t.co/w9uNGOJxb7
-1627124425769512960 2023-02-19 01:54:28 +0000 &lt;NiraIdhina&gt; ANIES BINGUN MENGAPA JAKARTA BANJIR #AniesBaswedan  https://t.co/tPqL6cEWq5
-1627124420144922627 2023-02-19 01:54:26 +0000 &lt;NiraIdhina&gt; BUKTI ANIES SEORANG OPERTUNIS #AniesBaswedan  https://t.co/nVptHYJfg0
-1627124413970907137 2023-02-19 01:54:25 +0000 &lt;NiraIdhina&gt; TEMUAN BARU SOAL UTANG ANIES #AniesBaswedan  https://t.co/bqW9PkB4EZ
-1627119623115280389 2023-02-19 01:35:23 +0000 &lt;fajaronline&gt; Fahri Terus Nyinyir Soal Utang Anies, Musni Umar: Fokus Saja Cari Dukungan Publik Agar Partainya Lolos PT 4 Persen  https://t.co/SDEwK1j5Mz #AniesBaswedan #FahriHamzah #MusniUma #MusniUmar
-1627110220563623937 2023-02-19 00:58:01 +0000 &lt;rahmadhdyt709&gt; Dugaan korupsi bansos dan waduk mangkrak di era anies baswedan.. #aniesbaswedan #anieskorupsi #BreakingNews #korupsi #AniesDidukungKHILAFAH #bapakidentitaspolitik #captikus #politikus  https://t.co/sn5qR8SF5f
-1627108963564265472 2023-02-19 00:53:01 +0000 &lt;masiswara&gt; @DanilBangke @musniumar #aniesbaswedan  #AniesPresidenRI2024  https://t.co/SfoPzGfAed
-1627108500307607553 2023-02-19 00:51:11 +0000 &lt;bos_sir&gt; Kalimantan Timur persiapan menyambut kedatangan Bpk @aniesbaswedan Kita titipkan harapan utk Indonesia Sejahtera berkeadilan Ayo gabung bersama @Anies_Relawan @RikeSants @Relawananies @Reiza_Patters  #IndonesiaMemanggil #RakyatMemilih  #AniesBaswedan #SambutPemilu2024dgnGembira  https://t.co/Kn8ciLWnbM
-1627103758584008704 2023-02-19 00:32:20 +0000 &lt;ariefalay66&gt; Nahloh kan kalo ketauan korupsi sih yaudah tau lah yaa harus gimana pak Anies? #aniesbaswedan #korupsibansos #bansos #anieskurang #gubernurjakarta #nasdem #aniesgagal #jakarta #macet #pemilu2024 #rumahdp0  https://t.co/SXk2kmPEQd
-1627100086026260480 2023-02-19 00:17:45 +0000 &lt;andrikingo77&gt; Waduh korupsi bansos belum beres nih? Mulai ketar-ketir nih pasti Pak Anies #korupsibansos #aniesbaswedan #gubernurjakarta #aniesgagal #pencitraan #nasdem #banjir #jakarta #anieskurang #macet  https://t.co/E8PzI74ss8
-1627093090493431808 2023-02-18 23:49:57 +0000 &lt;JatengTV&gt; (12) PT Perorangan memiliki kepastian hukum dan terdaftar resmi di Kemenkumham. Kedudukannya sama seperti PT biasa. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaBangkit #Jokowi  https://t.co/HRqCfZUnue
-1627059157030567937 2023-02-18 21:35:06 +0000 &lt;Maefez23&gt; Biar Second, barang2 disini good quality. Pengen beli semuanya 😆. Mulai dari Tuppy sampai furnitur.   #AyTol  #AniesBaswedan  #Amsterdam  #Thrift #Maefez  https://t.co/X85HQRHQQi
-1627056714901229568 2023-02-18 21:25:24 +0000 &lt;monitorindo&gt; Jokowi Sebut Ada Capres Tidak Hadir di Acara Harlah PPP, Kode Dukungan untuk Ganjar?   https://t.co/uZtOPyGdPs #Jokowi #JokowiLemparKodeCapres #GanjarPranowo #AniesBaswedan #HarlahPPP
-1627049207487135745 2023-02-18 20:55:34 +0000 &lt;DataZakee&gt; @Muhammad_Saewad Pilih ini saja. #AniesBaswedan  https://t.co/ZotQqwTwHf
-1626979230168002560 2023-02-18 16:17:30 +0000 &lt;langkah_nyata&gt; Prakerja telah resmi dibuka #AntManAndTheWaspQuantumania #golkarindonesia #airlanggahartarto #kerjauntukindonesia #wakilrakyat #presidenjokowi #AniesBaswedan  https://t.co/8xQdPN5XB9
-1626976862437281792 2023-02-18 16:08:06 +0000 &lt;28Ahlun&gt; Survei charta politika vs survei ilc.. Kadang suka heran kok bisa yg blom jelas partai pengusungnya tapi elektabilitasnya tinggi terus, stelah melihat ini saya cukup senyum saja.  #AniesBaswedan  #AniesPresidenRI2024  https://t.co/rCPBgqKjUp
-1626974118154477570 2023-02-18 15:57:12 +0000 &lt;tribunkaltim&gt; Direktur Eksekutif Trias Politika Strategis Agung Baskoro menilai Anies Baswedan memiliki kemungkinan direstui Presiden Joko Widodo (Jokowi) untuk maju di Pilpres 2024.  #TribunKaltim #AniesBaswedan #SuryaPaloh #Jokowi #Pilpres2024    https://t.co/rOrRjBeifS lewat @tribunkaltim
-1626957234826809345 2023-02-18 14:50:06 +0000 &lt;Bolo_Airlangga&gt; #AirlanggaHartarto #GolkarIndonesia #Jokowi #GanjarPranowo #AniesBaswedan #capres #pilpres  https://t.co/4bdHC0zVqE
-1626954885848797184 2023-02-18 14:40:46 +0000 &lt;Bolo_Airlangga&gt; #AirlanggaHartarto #GolkarIndonesia #Jokowi #GanjarPranowo #AniesBaswedan #capres #pilpres  https://t.co/URkAofjJev
-1626952060716617730 2023-02-18 14:29:33 +0000 &lt;dwi_nantoo&gt;  https://t.co/givW5C9Cs8 @bos_sir @Relawananies @LANGKAHANIES @PDemokrat #RakyatMemilih #sambutpemilu_dengangembira #AniesBaswedan #aliansinasionalindonesiasejahtera
-1626951580250689536 2023-02-18 14:27:38 +0000 &lt;CEO_Ndeso&gt; @keuangannews_id Yang disebut itu yang baru mau belajar atau ber angan-angan jadi presiden kalau #AniesBaswedan sudah jadi presiden cuman pelantikan nya nanti 2024..masa ngg paham&quot;  #AniesPresidenKu kamu siapa ?
-1626949653156757505 2023-02-18 14:19:59 +0000 &lt;JatengTV&gt; (03) Pemilik PT Perorangan menjadi pemeran utama dalam mengatur kebijakan perusahaannya, termasuk dalam hal pengolahan data dan keuangan. #ptperorangan #sange #ciptakerja #indonesia #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024  https://t.co/HRqCfZUnue
-1626945616801853441 2023-02-18 14:03:56 +0000 &lt;KoncoAirlangga&gt; #AirlanggaHartarto #GolkarIndonesia #Jokowi #GanjarPranowo #AniesBaswedan #capres #pilpres Qatar Fiji Gisselle biduran  https://t.co/8VB3BL9Pyu
-1626945445435183104 2023-02-18 14:03:16 +0000 &lt;aniesbaswedan&gt; Terima kasih atas sambutan hangat dan kesempatan bersilaturahim dengan Sultan Syarif Mahmud Melvin Alqadrie bersama keluarga besar Kesultanan Pontianak di Istana Kadriah pagi tadi…  #AniesBaswedan #KesultananPontianak #IstanaKadriah #Pontianak #KalimantanBarat #UntukIndonesia  https://t.co/OJ0URKX3Sn
-1626921018886434817 2023-02-18 12:26:12 +0000 &lt;humaniesofficia&gt; Anies merasakan kopi legendaris dan memakaikan baju pada Ko Asiang #aniesbaswedan  https://t.co/hL1FQmijLI
-1626917348325330944 2023-02-18 12:11:37 +0000 &lt;fajaronline&gt; Tanggapi Sambutan Masyarakat Kalbar ke Anies, Musni Umar:  Saya Semakin Tidak Percaya Survei Bayaran  https://t.co/7S5UrvX1jT #AniesBaswedan #MusniUmar #Survei
-1626898609223667712 2023-02-18 10:57:09 +0000 &lt;atipsthahir&gt; Saking cintanya kepada calon pemimpin masa depan. Barakallah!  Kalo udah gini AB masih menghianati pendukungnya, itu artinya AB lebih kejam dari Timbul  #nasdem  #aniesbaswedan  #demokrat  #pks  https://t.co/uxUv9wu8iI
-1626889768742322178 2023-02-18 10:22:01 +0000 &lt;ceklissatucom&gt; Forkom Targetkan Anies Baswedan Menang Telak di Jabar pada Pilpres 2024 #AniesBaswedan #MusdaAkbar #RelawanAnies #KotaBogor #JawaBarat  https://t.co/0gRhHtbKMo
-1626889250275983362 2023-02-18 10:19:58 +0000 &lt;JatengTV&gt; (11) Pemilik PT Perorangan bisa melakukan pemisahan kekayaan pribadi dan bisnis secara formal karena memiliki NPWP yang terpisah. #ptperorangan #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaHebat #Jokowi  https://t.co/HRqCfZUnue
-1626881700906291200 2023-02-18 09:49:58 +0000 &lt;JatengTV&gt; (12) PT Perorangan memiliki kepastian hukum dan terdaftar resmi di Kemenkumham. Kedudukannya sama seperti PT biasa. #ptperorangan #badanhukum #badanusaha #umkm #ganjarpranowo #prabowo #aniesbaswedan #puanmaharani #pilpres2024 #IndonesiaBangkit #Jokowi  https://t.co/HRqCfZUnue
-1626876714193244160 2023-02-18 09:30:09 +0000 &lt;aniesbaswedan&gt; Malam di hutan amatlah panjang Jangan dekati binatang buas Datang ke Pontianak amatlah senang Lihat indahnya Sungai Kapuas  #AniesBaswedan #DialogKebangsaan #RumahAdatMelayu #Pontianak #KalimantanBarat #UntukIndonesia  https://t.co/2dV4J5w7Jg
-1626862066933067776 2023-02-18 08:31:57 +0000 &lt;fajaronline&gt; Soroti Jalan Berbayar di Jakarta, Anthony Budiawan: Tertunda Ketika Anies Baswedan Jadi Gubernur?  https://t.co/gBMgwC7rY9 #AniesBaswedan #AnthonyBudiawan #Jakarta #JalanBerbayar
-1626860066640130054 2023-02-18 08:24:00 +0000 &lt;roby_bakar3000&gt; Stop pembodohan publik Nies #AniesBaswedan #AniesHalu #AniesGaBener  https://t.co/ytGYjNInXP
-1626860025510768644 2023-02-18 08:23:50 +0000 &lt;roby_bakar3000&gt; Menolak dipimpin oleh si Anies Gabener #AniesBaswedan #AniesHalu #AniesGaBener  https://t.co/78CW1HuWgR
-1626859966903783425 2023-02-18 08:23:36 +0000 &lt;roby_bakar3000&gt; 100% gabener kerjanya si Anies ini #AniesBaswedan #AniesHalu #AniesGaBener  https://t.co/5i6FNKniCS
-1626859946297147394 2023-02-18 08:23:31 +0000 &lt;roby_bakar3000&gt; Mending kelaut ajah dah lo, Gabener #AniesBaswedan #AniesHalu #AniesGaBener  https://t.co/Ir6z332ekX
-1626859926005088258 2023-02-18 08:23:26 +0000 &lt;roby_bakar3000&gt; Kerjaannya cuman halu terus, dasar busuk #AniesBaswedan #AniesHalu #AniesGaBener  https://t.co/qR52qiTh4g
-1626859905046155264 2023-02-18 08:23:21 +0000 &lt;roby_bakar3000&gt; Masyarakat banyak menolak si Gabener ini #AniesBaswedan #AniesHalu #AniesGaBener  https://t.co/91gjokPtl3
-1626859883634229250 2023-02-18 08:23:16 +0000 &lt;roby_bakar3000&gt; Rusak semua yang dia kerjakan #AniesBaswedan #AniesHalu #AniesGaBener  https://t.co/pIYeCuEyqO
-1626859860372647936 2023-02-18 08:23:10 +0000 &lt;roby_bakar3000&gt; Busuk terus nih manusia kelakuannya #AniesBaswedan #AniesHalu #AniesGaBener  https://t.co/auHbUj72hg
-1626859833814302720 2023-02-18 08:23:04 +0000 &lt;roby_bakar3000&gt; Udh gk percaya lagi sama si busuk ini #AniesBaswedan #AniesHalu #AniesGaBener  https://t.co/hFFQsXIADi
-1626859227565404161 2023-02-18 08:20:40 +0000 &lt;larrylary12345&gt; Anies hanya bawa kehancuran  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/uSS64G1Oo1
-1626858940331102211 2023-02-18 08:19:31 +0000 &lt;larrylary12345&gt; Tolak bapak politik identitas  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/qutkpZ1f0T
-1626858750262001664 2023-02-18 08:18:46 +0000 &lt;Varnando0oo0&gt; Kerjaannya cuman halu terus, dasar busuk #AniesBaswedan #AniesHalu #AniesGaBener  https://t.co/ulvbSXqv1n
-1626858549359050752 2023-02-18 08:17:58 +0000 &lt;larrylary12345&gt; Jangan biarkan anies membohongi rakyat Indonesia  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/Wq0D9TXprN
-1626858041999233024 2023-02-18 08:15:57 +0000 &lt;larrylary12345&gt; Jangan percaya dengan anies baswedan #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/DVKj5zLfTU
-1626857605611270149 2023-02-18 08:14:13 +0000 &lt;larrylary12345&gt; Manusia tukang tipu ga ini anies baswedan  #AniesPendukungFPI #HTIFPIDukungAnies #AniesDidukungKoruptor #AniesGabenerPembohong #AniesPendukungOrmasRadikal #aniesbaswedan  https://t.co/ZhxNUAMbt5
-1626856880298659842 2023-02-18 08:11:20 +0000 &lt;fajaronline&gt; Anies Baswedan: Bumi Khatulistiwa Luar Biasa!  https://t.co/Cno1irgme6 #AniesBaswedan #BumiKhatulistiwa #KalimantanBarat
-1626855556324659202 2023-02-18 08:06:04 +0000 &lt;tabascopepsauce&gt; @aniesbaswedan @NasDem @PDemokrat @PKSejahtera Woooooiiii itu bini orang, maen peluk aja. Bukan muhrim, bud abud wkwkwkwk #aniesPendukungKhilafah #aniesDidukungKoruptor #aniesNasdemOut #aniesDidukungKHILAFAH #aniesMelacurKAHMI #aniesGabenerPembohong #aniesPendukungFPI #aniesBaswedan #anies #bapakpolitikidentitas  https://t.co/icxOIO3kHj
-1626850429186490368 2023-02-18 07:45:42 +0000 &lt;ChanelHixam&gt; Stop pembodohan publik Nies #AniesBaswedan #AniesHalu #AniesGaBener  https://t.co/nvMkAhsHlK
-[!] No more data! Scraping will stop now.
-found 0 deleted tweets in this search.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sleeping for 1.0 secs
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sleeping for 8.0 secs
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sleeping for 27.0 secs
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">JSONDecodeError</span>Traceback (most recent call last)
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">Feed</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span>                 <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">TwitterSearch</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">65</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">feed</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">init</span> <span class="o">=</span> <span class="n">feed</span><span class="o">.</span><span class="n">Json</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">66</span>                 <span class="k">break</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/feed.py</span> in <span class="ni">Json</span><span class="nt">(response)</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">logme</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="vm">__name__</span><span class="o">+</span><span class="s1">&#39;:Json&#39;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">42</span>     <span class="n">json_response</span> <span class="o">=</span> <span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="n">html</span> <span class="o">=</span> <span class="n">json_response</span><span class="p">[</span><span class="s2">&quot;items_html&quot;</span><span class="p">]</span>
+
+<span class="nn">/usr/lib/python3.9/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">345</span>             <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">346</span>         <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span>     <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">/usr/lib/python3.9/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
+<span class="g g-Whitespace">    </span><span class="mi">336</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">337</span><span class="s2">         obj, end = self.raw_decode(s, idx=_w(s, 0).end())</span>
+<span class="g g-Whitespace">    </span><span class="mi">338</span><span class="s2">         end = _w(s, end).end()</span>
+
+<span class="nn">/usr/lib/python3.9/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span><span class="s2">         except StopIteration as err:</span>
+<span class="ne">--&gt; </span><span class="mi">355</span><span class="s2">             raise JSONDecodeError(&quot;Expecting value&quot;, s, err.value) from None</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span><span class="s2">         return obj, end</span>
+
+<span class="ne">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)
+
+<span class="s2">During handling of the above exception, another exception occurred:</span>
+
+<span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="s2">&lt;ipython-input-4-14254325ac04&gt; in &lt;module&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span><span class="s2"> # c.Output = &quot;./content/drive/MyDrive/prosaindata/tugas/Tugas_PSD/dataAnis.csv&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span><span class="s2"> # twint.storage.panda.save</span>
+<span class="ne">---&gt; </span><span class="mi">13</span><span class="s2"> twint.run.Search(c)</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">Search</span><span class="nt">(config, callback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span><span class="s2">     config.Profile = False</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span><span class="s2">     config.Profile_full = False</span>
+<span class="ne">--&gt; </span><span class="mi">327</span><span class="s2">     run(config, callback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span><span class="s2">     if config.Pandas_au:</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span><span class="s2">         storage.panda._autoget(&quot;tweet&quot;)</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">run</span><span class="nt">(config, callback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="s2">         raise</span>
+<span class="g g-Whitespace">    </span><span class="mi">225</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">226</span><span class="s2">     get_event_loop().run_until_complete(Twint(config).main(callback))</span>
+<span class="g g-Whitespace">    </span><span class="mi">227</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">228</span><span class="s2"> def Favorites(config):</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/nest_asyncio.py</span> in <span class="ni">run_until_complete</span><span class="nt">(self, future)</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="s2">                 f._log_destroy_pending = False</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="s2">             while not f.done():</span>
+<span class="ne">---&gt; </span><span class="mi">84</span><span class="s2">                 self._run_once()</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="s2">                 if self._stopping:</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span><span class="s2">                     break</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/nest_asyncio.py</span> in <span class="ni">_run_once</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span><span class="s2">             handle = ready.popleft()</span>
+<span class="g g-Whitespace">    </span><span class="mi">119</span><span class="s2">             if not handle._cancelled:</span>
+<span class="ne">--&gt; </span><span class="mi">120</span><span class="s2">                 handle._run()</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span><span class="s2">         handle = None</span>
+<span class="g g-Whitespace">    </span><span class="mi">122</span><span class="s2"> </span>
+
+<span class="nn">/usr/lib/python3.9/asyncio/events.py</span> in <span class="ni">_run</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">78</span><span class="s2">     def _run(self):</span>
+<span class="g g-Whitespace">     </span><span class="mi">79</span><span class="s2">         try:</span>
+<span class="ne">---&gt; </span><span class="mi">80</span><span class="s2">             self._context.run(self._callback, *self._args)</span>
+<span class="g g-Whitespace">     </span><span class="mi">81</span><span class="s2">         except (SystemExit, KeyboardInterrupt):</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="s2">             raise</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/nest_asyncio.py</span> in <span class="ni">step</span><span class="nt">(task, exc)</span>
+<span class="g g-Whitespace">    </span><span class="mi">194</span><span class="s2">         curr_task = curr_tasks.get(task._loop)</span>
+<span class="g g-Whitespace">    </span><span class="mi">195</span><span class="s2">         try:</span>
+<span class="ne">--&gt; </span><span class="mi">196</span><span class="s2">             step_orig(task, exc)</span>
+<span class="g g-Whitespace">    </span><span class="mi">197</span><span class="s2">         finally:</span>
+<span class="g g-Whitespace">    </span><span class="mi">198</span><span class="s2">             if curr_task is None:</span>
+
+<span class="nn">/usr/lib/python3.9/asyncio/tasks.py</span> in <span class="ni">__step</span><span class="nt">(***failed resolving arguments***)</span>
+<span class="g g-Whitespace">    </span><span class="mi">254</span><span class="s2">                 # We use the `send` method directly, because coroutines</span>
+<span class="g g-Whitespace">    </span><span class="mi">255</span><span class="s2">                 # don&#39;t have `__iter__` and `__next__` methods.</span>
+<span class="ne">--&gt; </span><span class="mi">256</span><span class="s2">                 result = coro.send(None)</span>
+<span class="g g-Whitespace">    </span><span class="mi">257</span><span class="s2">             else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">258</span><span class="s2">                 result = coro.throw(exc)</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">run</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">197</span><span class="s2">                     elif self.config.TwitterSearch:</span>
+<span class="g g-Whitespace">    </span><span class="mi">198</span><span class="s2">                         logme.debug(__name__+&#39;:Twint:main:twitter-search&#39;)</span>
+<span class="ne">--&gt; </span><span class="mi">199</span><span class="s2">                         await self.tweets()</span>
+<span class="g g-Whitespace">    </span><span class="mi">200</span><span class="s2">                 else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">201</span><span class="s2">                     logme.debug(__name__+&#39;:Twint:main:no-more-tweets&#39;)</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">tweets</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">135</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span><span class="s2">     async def tweets(self):</span>
+<span class="ne">--&gt; </span><span class="mi">137</span><span class="s2">         await self.Feed()</span>
+<span class="g g-Whitespace">    </span><span class="mi">138</span><span class="s2">         if self.config.Location:</span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span><span class="s2">             logme.debug(__name__+&#39;:Twint:tweets:location&#39;)</span>
+
+<span class="nn">/usr/local/lib/python3.9/dist-packages/twint/run.py</span> in <span class="ni">Feed</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span><span class="s2">                     sys.stderr.write(&#39;sleeping for </span><span class="si">{}</span><span class="s2"> secs</span><span class="se">\n</span><span class="s2">&#39;.format(delay))</span>
+<span class="ne">---&gt; </span><span class="mi">98</span><span class="s2">                     time.sleep(delay)</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span><span class="s2">                     self.user_agent = await get.RandomUserAgent(wa=True)</span>
+<span class="g g-Whitespace">    </span><span class="mi">100</span><span class="s2">                     continue</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
@@ -1151,7 +858,7 @@ found 0 deleted tweets in this search.
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="crawling-pta">
-<h1>Crawling PTA<a class="headerlink" href="#crawling-pta" title="Permalink to this headline">#</a></h1>
+<h1>Crawling PTA<a class="headerlink" href="#crawling-pta" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">req</span>
@@ -2175,14 +1882,14 @@ done[854] &gt; SISTEM PEN
       <button class="colab-df-convert" onclick="convertToInteractive('df-ff1a9b58-75c4-4d7f-8dca-50503a408cec')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
-
+        
   <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
        width="24px">
     <path d="M0 0h24v24H0V0z" fill="none"/>
     <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
   </svg>
       </button>
-
+      
   <style>
     .colab-df-container {
       display:flex;
@@ -2247,11 +1954,11 @@ done[854] &gt; SISTEM PEN
       </script>
     </div>
   </div>
-</div></div>
+  </div></div>
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="crawling-berita">
-<h1>Crawling Berita<a class="headerlink" href="#crawling-berita" title="Permalink to this headline">#</a></h1>
+<h1>Crawling Berita<a class="headerlink" href="#crawling-berita" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">req</span>
@@ -2691,14 +2398,14 @@ done[57] &gt; Kapolri: T
       <button class="colab-df-convert" onclick="convertToInteractive('df-9ebe3713-e436-4222-a2bf-f977074572e5')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
-
+        
   <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
        width="24px">
     <path d="M0 0h24v24H0V0z" fill="none"/>
     <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
   </svg>
       </button>
-
+      
   <style>
     .colab-df-container {
       display:flex;
@@ -2763,7 +2470,7 @@ done[57] &gt; Kapolri: T
       </script>
     </div>
   </div>
-</div></div>
+  </div></div>
 </div>
 </div>
 
@@ -2787,43 +2494,102 @@ done[57] &gt; Kapolri: T
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome to your Jupyter Book</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Pipelines.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Pipeline</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Crawling Twitter</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-pta">Crawling PTA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-berita">Crawling Berita</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By ABD. Hanif Azhari<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By ABD. Hanif Azhari
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
 
-      </div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
