@@ -155,30 +155,13 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tugas</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas Crawling Website</strong></a></li>
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="Pipelines.html"><strong>Tugas Pipeline</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS.html"><strong>TUGAS UTS</strong></a></li>
-
-
-
-
-
-
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="Pagerank.html"><strong>Tugas Pagerank</strong></a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="Topic%20Modelling.html"><strong>Topik Modelling</strong></a></li>
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="Topik_Modelling.html"><strong>Topik Modelling</strong></a></li>
 </ul>
 
     </div>
@@ -403,12 +386,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Tugas Crawling Website</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-twitter"><strong>Crawling Twitter</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-pta"><strong>Crawling PTA</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-berita"><strong>Crawling Berita</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-twitter"><strong>Crawling Twitter</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-pta"><strong>Crawling PTA</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-berita"><strong>Crawling Berita</strong></a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -419,11 +400,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="section" id="tugas-crawling-website">
+  <div class="tex2jax_ignore mathjax_ignore section" id="tugas-crawling-website">
 <h1><strong>Tugas Crawling Website</strong><a class="headerlink" href="#tugas-crawling-website" title="Permalink to this heading">#</a></h1>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="crawling-twitter">
-<h1><strong>Crawling Twitter</strong><a class="headerlink" href="#crawling-twitter" title="Permalink to this heading">#</a></h1>
+<div class="section" id="crawling-twitter">
+<h2><strong>Crawling Twitter</strong><a class="headerlink" href="#crawling-twitter" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>uninstall<span class="w"> </span>twint
@@ -431,17 +411,20 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found existing installation: twint 2.1.20
-Uninstalling twint-2.1.20:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found existing installation: twint 2.1.21
+Uninstalling twint-2.1.21:
   Would remove:
-    /usr/local/bin/twint
-    /usr/local/lib/python3.10/dist-packages/twint-2.1.20.dist-info/*
-    /usr/local/lib/python3.10/dist-packages/twint/*
+    /root/.local/bin/twint
+    /root/.local/lib/python3.10/site-packages/twint-2.1.21.dist-info/*
+    /root/.local/lib/python3.10/site-packages/twint/*
 Proceed (Y/n)? 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: Operation cancelled by user</span>
 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
 </pre></div>
 </div>
 </div>
@@ -1119,8 +1102,8 @@ found 0 deleted tweets in this search.
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="crawling-pta">
-<h1><strong>Crawling PTA</strong><a class="headerlink" href="#crawling-pta" title="Permalink to this heading">#</a></h1>
+<div class="section" id="crawling-pta">
+<h2><strong>Crawling PTA</strong><a class="headerlink" href="#crawling-pta" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">req</span>
@@ -2219,8 +2202,8 @@ done[854] &gt; SISTEM PEN
   </div></div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="crawling-berita">
-<h1><strong>Crawling Berita</strong><a class="headerlink" href="#crawling-berita" title="Permalink to this heading">#</a></h1>
+<div class="section" id="crawling-berita">
+<h2><strong>Crawling Berita</strong><a class="headerlink" href="#crawling-berita" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">req</span>
@@ -2735,6 +2718,7 @@ done[57] &gt; Kapolri: T
   </div></div>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -2803,12 +2787,10 @@ done[57] &gt; Kapolri: T
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Tugas Crawling Website</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-twitter"><strong>Crawling Twitter</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-pta"><strong>Crawling PTA</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-berita"><strong>Crawling Berita</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-twitter"><strong>Crawling Twitter</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-pta"><strong>Crawling PTA</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-berita"><strong>Crawling Berita</strong></a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
